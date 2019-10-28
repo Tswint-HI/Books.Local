@@ -111,7 +111,22 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.config" />
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.Start.config" />
-    <Content Include="Views\Web\Layout\Default.cshtml" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Styles\print.css" />
+    <Content Include="Styles\styles.css" />
+    <Content Include="Views\Web\Layout\HomePage.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

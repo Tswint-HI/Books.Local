@@ -1,0 +1,11 @@
+﻿<Project>
+  <PropertyGroup>
+    <Site Server="http://Books.local.sc" UserName="sitecore\admin" IsRemoteSitecore="True" />
+  </PropertyGroup>
+  <File Include="Views\Web\Layout\HomePage.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{8149AAE7-B6EB-4A94-883B-39C674B997A9}</Item>
+  </File>
+  <File Include="/Views/Web/Layout/Default1.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{8149AAE7-B6EB-4A94-883B-39C674B997A9}</Item>
+  </File>
+</Project>

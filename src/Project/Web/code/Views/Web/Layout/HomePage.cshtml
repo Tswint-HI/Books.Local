@@ -2,7 +2,6 @@
 @using Books.Foundation.Assets.Models
 @using Books.Foundation.Assets.Service
 @using Sitecore.Mvc.Analytics.Extensions
-@inherits WebViewPage
 @{
     Layout = null;
 }
@@ -23,16 +22,20 @@
     <!-- Latest compiled and minified JavaScript -->
     @RenderAssetsService.Current.RenderScript(ScriptLocation.Head)
     @RenderAssetsService.Current.RenderStyles()
+    <link rel="stylesheet" href="/Styles/styles.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/Styles/print.css" media="print" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="/js/equalcolumns.js"></script>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     @Html.Sitecore().VisitorIdentification()
 </head>
 <body class="header-static @(Sitecore.Context.PageMode.IsNormal ? "" : (Sitecore.Context.PageMode.IsExperienceEditor ? "pagemode-edit" : "pagemode-preview"))">
     <div id="main-container">
         <header class="header-static">
-            @Html.Sitecore().Placeholder("header")
             @Html.Sitecore().Placeholder("navbar")
         </header>
         <main role="main">
-            @Html.Sitecore().Placeholder("main")
+            @Html.Sitecore().Placeholder("body")
         </main>
         <footer class="bg-dark">
             @Html.Sitecore().Placeholder("footer")
