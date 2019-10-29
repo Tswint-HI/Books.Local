@@ -20,12 +20,13 @@
         @Html.Sitecore().Placeholder("head")
     }
     <!-- Latest compiled and minified JavaScript -->
-    @RenderAssetsService.Current.RenderScript(ScriptLocation.Head)
     @RenderAssetsService.Current.RenderStyles()
-    <link rel="stylesheet" href="/Styles/styles.css" type="text/css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/Styles/print.css" media="print" />
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript" src="/js/equalcolumns.js"></script>
+    @RenderAssetsService.Current.RenderScript(ScriptLocation.Head)
+
+    @*<link rel="stylesheet" href="/Styles/styles.css" type="text/css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/Styles/print.css" media="print" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="/js/equalcolumns.js"></script>*@
     <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     @Html.Sitecore().VisitorIdentification()
 </head>
