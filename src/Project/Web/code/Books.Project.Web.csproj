@@ -122,7 +122,6 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,13 +137,8 @@
   <ItemGroup>
     <Folder Include="App_Config\Include\" />
     <Folder Include="App_Data\" />
+    <Folder Include="App_Start\" />
     <Folder Include="Controllers\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\Assets\code\Books.Foundation.Assets\Books.Foundation.Assets.csproj">
-      <Project>{84a40485-9eb5-4858-8485-eaab7523dffd}</Project>
-      <Name>Books.Foundation.Assets</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

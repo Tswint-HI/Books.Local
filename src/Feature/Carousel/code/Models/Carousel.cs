@@ -1,0 +1,14 @@
+﻿using Glass.Mapper.Sc.Configuration.Attributes;
+using System.Collections.Generic;
+
+namespace Books.Feature.Carousel.Models
+{
+    public partial class Carousel
+    {
+
+        public virtual string Title { get; set; }
+
+        [SitecoreChildren]
+        public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel> Items { get; set; }
+    }
+}

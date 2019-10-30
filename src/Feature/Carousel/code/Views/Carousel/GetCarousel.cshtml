@@ -1,0 +1,37 @@
+﻿@model Books.Feature.Carousel.Models.CarouselViewModel
+
+<h1 class="mt-2">@Model.Title</h1>
+<div class="row">
+    <div id="carousel" class="carousel slide col-8 offset-2" data-ride="carousel">
+        <ol class="carousel-indicators">
+            @foreach (var item in Model.Items)
+            {
+                <li data-target="#carousel" data-slide-to="@item.Index" class="@item.Class"></li>
+            }
+        </ol>
+
+        <div class="carousel-inner">
+            @foreach (var item in Model.Items)
+            {
+                <div class="carousel-item @item.Class">
+                    <img class="d-block w-100" src="@item.ImageUrl" alt="@item.ImageAlt">
+                    @if (item.ShowCaption)
+                    {
+                        <div class="carousel-caption d-none d-md-block bg-dark">
+                            <p>@item.Caption</p>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
