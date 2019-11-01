@@ -14,6 +14,10 @@ namespace Books.Foundation.DI.Infrastructure
     {
         public void Configure(IServiceCollection serviceCollection)
         {
+            serviceCollection.AddMvcControllers("*.Feature.*");
+            serviceCollection.AddClassesWithServiceAttribute("*.Feature.*");
+            serviceCollection.AddClassesWithServiceAttribute("*.Foundation.*");
+
             serviceCollection.AddSingleton<Func<Database, ISitecoreService>>(_ => CreateSitecoreService);
 
             // For injecting into Controllers and Web Forms
@@ -30,9 +34,7 @@ namespace Books.Foundation.DI.Infrastructure
             serviceCollection.AddSingleton<Func<IMvcContext>>(_ => Get<IMvcContext>);
             serviceCollection.AddSingleton<Func<IWebFormsContext>>(_ => Get<IWebFormsContext>);
 
-            serviceCollection.AddMvcControllers("*.Feature.*");
-            serviceCollection.AddClassesWithServiceAttribute("*.Feature.*");
-            serviceCollection.AddClassesWithServiceAttribute("*.Foundation.*");
+
         }
 
         private static ISitecoreService CreateSitecoreService(Database database)
@@ -43,7 +45,7 @@ namespace Books.Foundation.DI.Infrastructure
         private static ISitecoreService CreateSitecoreContextService()
         {
             var sitecoreServiceThunk = Get<Func<Database, ISitecoreService>>();
-            return sitecoreServiceThunk(Sitecore.Context.Database);
+            return sitecoreServiceThunk(Sitecore.Context.ContentDatabase ?? Sitecore.Context.Database);
         }
 
         private static T Get<T>()

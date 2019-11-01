@@ -60,6 +60,171 @@ namespace Books.Foundation.Orm.Models
         public virtual string Url { get; private set; }
 	}
 }
+namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel
+{
+
+
+ 	/// <summary>
+	/// ICarouselItem Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Carousel/CarouselItem</para>	
+	/// <para>ID: 1ca6b74e-4583-4add-8544-ae0924fa932e</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=ICarouselItemConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
+	public partial interface ICarouselItem : IGlassBase 
+	{
+								/// <summary>
+					/// The Caption field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field ID: c8490278-12b9-492d-8a68-af5e3caa5127</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(ICarouselItemConstants.CaptionFieldName)]
+					string Caption  {get; set;}
+			
+								/// <summary>
+					/// The Class field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field ID: 69a17318-c3b3-4968-b7d9-f78d91a1a89b</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(ICarouselItemConstants.ClassFieldName)]
+					string Class  {get; set;}
+			
+								/// <summary>
+					/// The Image field.
+					/// <para></para>
+					/// <para>Field Type: Image</para>		
+					/// <para>Field ID: a22e7b0a-391e-4ad2-ae1e-9f4f4488022d</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(ICarouselItemConstants.ImageFieldName)]
+					Image Image  {get; set;}
+			
+								/// <summary>
+					/// The ImageAlt field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field ID: 9d51e97b-7f5d-4a34-b390-b5afec192821</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(ICarouselItemConstants.ImageAltFieldName)]
+					string ImageAlt  {get; set;}
+			
+								/// <summary>
+					/// The ShowCaption field.
+					/// <para></para>
+					/// <para>Field Type: Checkbox</para>		
+					/// <para>Field ID: 32ac5148-d40d-4dfa-866f-db5d77c7261b</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(ICarouselItemConstants.ShowCaptionFieldName)]
+					bool ShowCaption  {get; set;}
+			
+				}
+
+
+	public static partial class ICarouselItemConstants{
+
+			public const string TemplateIdString = "1ca6b74e-4583-4add-8544-ae0924fa932e";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "CarouselItem";
+
+					
+			public static readonly ID CaptionFieldId = new ID("c8490278-12b9-492d-8a68-af5e3caa5127");
+			public const string CaptionFieldName = "Caption";
+			
+					
+			public static readonly ID ClassFieldId = new ID("69a17318-c3b3-4968-b7d9-f78d91a1a89b");
+			public const string ClassFieldName = "Class";
+			
+					
+			public static readonly ID ImageFieldId = new ID("a22e7b0a-391e-4ad2-ae1e-9f4f4488022d");
+			public const string ImageFieldName = "Image";
+			
+					
+			public static readonly ID ImageAltFieldId = new ID("9d51e97b-7f5d-4a34-b390-b5afec192821");
+			public const string ImageAltFieldName = "ImageAlt";
+			
+					
+			public static readonly ID ShowCaptionFieldId = new ID("32ac5148-d40d-4dfa-866f-db5d77c7261b");
+			public const string ShowCaptionFieldName = "ShowCaption";
+			
+			
+
+	}
+
+	
+	/// <summary>
+	/// CarouselItem
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Carousel/CarouselItem</para>	
+	/// <para>ID: 1ca6b74e-4583-4add-8544-ae0924fa932e</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=ICarouselItemConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
+	public partial class CarouselItem  : GlassBase, ICarouselItem 
+	{
+	   
+						/// <summary>
+				/// The Caption field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: c8490278-12b9-492d-8a68-af5e3caa5127</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(ICarouselItemConstants.CaptionFieldName)]
+				public virtual string Caption  {get; set;}
+					
+						/// <summary>
+				/// The Class field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: 69a17318-c3b3-4968-b7d9-f78d91a1a89b</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(ICarouselItemConstants.ClassFieldName)]
+				public virtual string Class  {get; set;}
+					
+						/// <summary>
+				/// The Image field.
+				/// <para></para>
+				/// <para>Field Type: Image</para>		
+				/// <para>Field ID: a22e7b0a-391e-4ad2-ae1e-9f4f4488022d</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(ICarouselItemConstants.ImageFieldName)]
+				public virtual Image Image  {get; set;}
+					
+						/// <summary>
+				/// The ImageAlt field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: 9d51e97b-7f5d-4a34-b390-b5afec192821</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(ICarouselItemConstants.ImageAltFieldName)]
+				public virtual string ImageAlt  {get; set;}
+					
+						/// <summary>
+				/// The ShowCaption field.
+				/// <para></para>
+				/// <para>Field Type: Checkbox</para>		
+				/// <para>Field ID: 32ac5148-d40d-4dfa-866f-db5d77c7261b</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(ICarouselItemConstants.ShowCaptionFieldName)]
+				public virtual bool ShowCaption  {get; set;}
+					
+			
+	}
+}
 namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 {
 
@@ -139,24 +304,24 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel
 	public partial interface ICarousel : IGlassBase 
 	{
 								/// <summary>
-					/// The Caption field.
+					/// The Items field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Multilist</para>		
 					/// <para>Field ID: 24071b88-2093-4f1e-9b6a-f3aa274a64ac</para>
-					/// <para>Custom Data: </para>
+					/// <para>Custom Data: generic= Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.ICarouselItem</para>
 					/// </summary>
-					[SitecoreField(ICarouselConstants.CaptionFieldName)]
-					string Caption  {get; set;}
+					[SitecoreField(ICarouselConstants.ItemsFieldName)]
+					IEnumerable< Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.ICarouselItem> Items  {get; set;}
 			
 								/// <summary>
-					/// The Image field.
+					/// The Title field.
 					/// <para></para>
-					/// <para>Field Type: Image</para>		
+					/// <para>Field Type: Single-Line Text</para>		
 					/// <para>Field ID: edaf25d3-c80a-45b2-8d90-7ca4db15080e</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
-					[SitecoreField(ICarouselConstants.ImageFieldName)]
-					Image Image  {get; set;}
+					[SitecoreField(ICarouselConstants.TitleFieldName)]
+					string Title  {get; set;}
 			
 				}
 
@@ -168,12 +333,12 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel
 			public const string TemplateName = "Carousel";
 
 					
-			public static readonly ID CaptionFieldId = new ID("24071b88-2093-4f1e-9b6a-f3aa274a64ac");
-			public const string CaptionFieldName = "Caption";
+			public static readonly ID ItemsFieldId = new ID("24071b88-2093-4f1e-9b6a-f3aa274a64ac");
+			public const string ItemsFieldName = "Items";
 			
 					
-			public static readonly ID ImageFieldId = new ID("edaf25d3-c80a-45b2-8d90-7ca4db15080e");
-			public const string ImageFieldName = "Image";
+			public static readonly ID TitleFieldId = new ID("edaf25d3-c80a-45b2-8d90-7ca4db15080e");
+			public const string TitleFieldName = "Title";
 			
 			
 
@@ -191,26 +356,26 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel
 	{
 	   
 						/// <summary>
-				/// The Caption field.
+				/// The Items field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Multilist</para>		
 				/// <para>Field ID: 24071b88-2093-4f1e-9b6a-f3aa274a64ac</para>
-				/// <para>Custom Data: </para>
+				/// <para>Custom Data: generic= Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.ICarouselItem</para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(ICarouselConstants.CaptionFieldName)]
-				public virtual string Caption  {get; set;}
+				[SitecoreField(ICarouselConstants.ItemsFieldName)]
+				public virtual IEnumerable< Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.ICarouselItem> Items  {get; set;}
 					
 						/// <summary>
-				/// The Image field.
+				/// The Title field.
 				/// <para></para>
-				/// <para>Field Type: Image</para>		
+				/// <para>Field Type: Single-Line Text</para>		
 				/// <para>Field ID: edaf25d3-c80a-45b2-8d90-7ca4db15080e</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(ICarouselConstants.ImageFieldName)]
-				public virtual Image Image  {get; set;}
+				[SitecoreField(ICarouselConstants.TitleFieldName)]
+				public virtual string Title  {get; set;}
 					
 			
 	}

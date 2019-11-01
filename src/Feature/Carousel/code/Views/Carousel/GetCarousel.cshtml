@@ -1,37 +1,29 @@
 ﻿@model Books.Feature.Carousel.Models.CarouselViewModel
-
-<h1 class="mt-2">@Model.Title</h1>
-<div class="row">
-    <div id="carousel" class="carousel slide col-8 offset-2" data-ride="carousel">
-        <ol class="carousel-indicators">
-            @foreach (var item in Model.Items)
+<!-- Slideshow container -->
+<link href="~/Styles/Carousel.css" rel="stylesheet" type="text/css" />
+<div class="slideshow-container">
+    @foreach (var item in Model.Items)
+    {
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            @*<div class="numbertext">@Model.Items.IndexOf(item) / @Model.Items.Count()</div>*@
+            <img src="@item.ImageUrl" alt="@item.ImageAlt" style="width:100%">
+            @if (item.ShowCaption)
             {
-                <li data-target="#carousel" data-slide-to="@item.Index" class="@item.Class"></li>
-            }
-        </ol>
-
-        <div class="carousel-inner">
-            @foreach (var item in Model.Items)
-            {
-                <div class="carousel-item @item.Class">
-                    <img class="d-block w-100" src="@item.ImageUrl" alt="@item.ImageAlt">
-                    @if (item.ShowCaption)
-                    {
-                        <div class="carousel-caption d-none d-md-block bg-dark">
-                            <p>@item.Caption</p>
-                        </div>
-                    }
-                </div>
-            }
+                <div class="text">@item.Caption</div>
+            }           
         </div>
-
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    }
+    <br>
+    @foreach (var item in Model.Items)
+    {
+    <!-- The dots/circles -->
+    <div @*style="text-align:center"*@>
+      <span class="dot" onclick="currentSlide(@Model.Items.IndexOf(item))"></span>
     </div>
+    }
+    <script src="~/Scripts/Carousel.js"></script>
 </div>

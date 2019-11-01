@@ -3,10 +3,10 @@
     public class CarouselItemViewModel
     {
         public int Index { get; set; }
-        public string ImageUrl { get; set; }
-        public string ImageAlt { get; set; }
-        public bool ShowCaption { get; set; }
-        public string Caption { get; set; }
-        public string Class { get; set; }
+        public virtual string ImageUrl { get; set; }
+        public virtual string ImageAlt { get; set; }
+        public virtual bool ShowCaption { get; set; }
+        public virtual string Caption { get; set; }
+        public virtual string Class { get; set; }
     }
 }

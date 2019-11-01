@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Books.Feature.Carousel.Models
 {
-    public partial class Carousel
+    public class Carousel
     {
 
         public virtual string Title { get; set; }
