@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html lang="@Sitecore.Context.Language.CultureInfo.TwoLetterISOLanguageName">
 <head>
+    <link href="~/Styles/grayscale.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -19,16 +20,21 @@
         @Html.Sitecore().Placeholder("head")
     }
     @Html.Sitecore().VisitorIdentification()
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+
+    <script src="~/Scripts/grayscale.js"></script>
 </head>
 <body class="header-static @(Sitecore.Context.PageMode.IsNormal ? "" : (Sitecore.Context.PageMode.IsExperienceEditor ? "pagemode-edit" : "pagemode-preview"))">
     <div id="main-container">
+       @* Figure out what to do here*@
         <header class="header-static">
             @Html.Sitecore().Placeholder("navbar")
         </header>
-        <main role="main">
+        <main role="main" class="masthead">
             @Html.Sitecore().Placeholder("body")
         </main>
-        <footer class="bg-dark">
+        <footer class="bg-black">
             @Html.Sitecore().Placeholder("footer")
         </footer>
     </div>
