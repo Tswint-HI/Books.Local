@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4A9E93B6-BB5D-4078-8FB6-C8D8D124AF8A}</ProjectGuid>
+    <ProjectGuid>{E25FE1E1-459E-4836-B07E-A2E4CFA8ED2F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Books.Feature.Hero</RootNamespace>
-    <AssemblyName>Books.Feature.Hero</AssemblyName>
+    <RootNamespace>Books.Feature.Navigation</RootNamespace>
+    <AssemblyName>Books.Feature.Navigation</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -51,9 +51,6 @@
     </Reference>
     <Reference Include="Glass.Mapper.Sc, Version=5.5.28.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.90.Core.5.5.28\lib\net462\Glass.Mapper.Sc.dll</HintPath>
-    </Reference>
-    <Reference Include="Glass.Mapper.Sc.Mvc, Version=5.5.28.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.90.Mvc.5.5.28\lib\net462\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -100,19 +97,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\SC.pubxml" />
+    <Content Include="App_Config\Include\Feature\NavigationLoader.config" />
+    <None Include="Properties\PublishProfiles\SCNav.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pipelines\NavigationGlassLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Views\web.config" />
     <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Config\Include\" />
+    <Folder Include="App_Config\Include\zzz\" />
     <Folder Include="App_Data\" />
-    <Folder Include="App_Start\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -127,9 +134,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51051</DevelopmentServerPort>
+          <DevelopmentServerPort>59480</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51051/</IISUrl>
+          <IISUrl>http://localhost:59480/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
