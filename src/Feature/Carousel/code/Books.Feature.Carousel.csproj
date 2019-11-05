@@ -124,7 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Config\Include\zzz\" />
-    <Folder Include="App_Start\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\ORM\code\Books.Foundation.Orm.csproj">

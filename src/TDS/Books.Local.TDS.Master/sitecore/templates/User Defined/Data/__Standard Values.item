@@ -1,33 +1,26 @@
 ----item----
 version: 1
-id: {B651325B-CF69-4B30-916D-7A8E51EA3FC5}
+id: {66D609F6-9C0C-487D-892F-12D1BE4C6009}
 database: master
-path: /sitecore/templates/User Defined/Base/_Base Navigation
-parent: {62FB419C-7AEF-494D-AFAD-FDDCA1357BA0}
-name: _Base Navigation
+path: /sitecore/templates/User Defined/Data/__Standard Values
+parent: {C2BD0EAD-3823-4A5E-AD3D-DD95758DEF1D}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
-templatekey: Template
-created: 20191028T174603Z
+template: {C2BD0EAD-3823-4A5E-AD3D-DD95758DEF1D}
+templatekey: Data
+created: 20191105T134519Z
 
 ----field----
-field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
-name: __Base template
-key: __base template
-content-length: 38
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 77
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}
-----field----
-field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
-name: __Icon
-key: __icon
-content-length: 37
-
-Applications/32x32/nav_plain_blue.png
+{D3C0F83D-45C5-4B15-A70C-A2032D119A1D}|{D3ED7AA7-33AC-46F4-A730-E5EB84CC017B}
 ----version----
 language: en
 version: 1
-revision: daf744d1-6f3b-437e-98c7-8911f548fba4
+revision: 8a3918be-b5e1-4e81-9821-8d7918a7f484
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -35,7 +28,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20191028T174603Z
+20191105T134519Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-daf744d1-6f3b-437e-98c7-8911f548fba4
+8a3918be-b5e1-4e81-9821-8d7918a7f484
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191105T154531Z
+20191105T143444Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

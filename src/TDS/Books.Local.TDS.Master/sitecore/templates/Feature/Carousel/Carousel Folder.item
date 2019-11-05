@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {B651325B-CF69-4B30-916D-7A8E51EA3FC5}
+id: {D3ED7AA7-33AC-46F4-A730-E5EB84CC017B}
 database: master
-path: /sitecore/templates/User Defined/Base/_Base Navigation
-parent: {62FB419C-7AEF-494D-AFAD-FDDCA1357BA0}
-name: _Base Navigation
+path: /sitecore/templates/Feature/Carousel/Carousel Folder
+parent: {EDB5347C-068C-4712-8A44-CEEC99C23D13}
+name: Carousel Folder
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
-created: 20191028T174603Z
+created: 20191105T143319Z
 
 ----field----
 field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
@@ -16,18 +16,32 @@ name: __Base template
 key: __base template
 content-length: 38
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}
+{AB86861A-6030-46C5-B394-E8F99E8B87DB}
+----field----
+field: {F7D48A55-2158-4F02-9356-756654404F73}
+name: __Standard values
+key: __standard values
+content-length: 38
+
+{A0669A2E-C115-416A-B329-A74CBE539C56}
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 37
+content-length: 35
 
-Applications/32x32/nav_plain_blue.png
+Applications/16x16/folder_green.png
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 1
+
+0
 ----version----
 language: en
 version: 1
-revision: daf744d1-6f3b-437e-98c7-8911f548fba4
+revision: a4c467f3-4d6c-4f62-bc91-b9abb3fec72f
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -35,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20191028T174603Z
+20191105T143319Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-daf744d1-6f3b-437e-98c7-8911f548fba4
+a4c467f3-4d6c-4f62-bc91-b9abb3fec72f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191105T154531Z
+20191105T145015Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

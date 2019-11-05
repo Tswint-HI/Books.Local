@@ -9,6 +9,6 @@ namespace Books.Feature.Carousel.Models
         public virtual string Title { get; set; }
 
         [SitecoreChildren]
-        public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel> Items { get; set; }
+        public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.Carousel> Items { get; set; }
     }
 }

@@ -23,20 +23,23 @@
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
 
-    <script src="~/Scripts/grayscale.js"></script>
 </head>
 <body class="header-static @(Sitecore.Context.PageMode.IsNormal ? "" : (Sitecore.Context.PageMode.IsExperienceEditor ? "pagemode-edit" : "pagemode-preview"))">
     <div id="main-container">
-       @* Figure out what to do here*@
-        <header class="header-static">
-            @Html.Sitecore().Placeholder("navbar")
-        </header>
+        @* Figure out what to do here*@
+        @*<header class="masthead">
+
+            </header>
+            <br>*@
+        @Html.Sitecore().Placeholder("navbar")
         <main role="main" class="masthead">
+
             @Html.Sitecore().Placeholder("body")
         </main>
         <footer class="bg-black">
             @Html.Sitecore().Placeholder("footer")
         </footer>
     </div>
+    @*<script src="~/Scripts/grayscale.js"></script>*@
 </body>
 </html>

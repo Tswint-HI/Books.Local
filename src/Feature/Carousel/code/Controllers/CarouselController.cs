@@ -1,5 +1,4 @@
 ﻿using Books.Feature.Carousel.Models;
-using Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel;
 using Glass.Mapper.Sc.Web.Mvc;
 using System;
 using System.Linq;
@@ -18,7 +17,7 @@ namespace Books.Feature.Carousel.Controllers
         // GET: Carousel
         public ActionResult GetCarousel()
         {
-            var dataSource = _context.GetDataSourceItem<ICarousel>();
+            var dataSource = _context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarousel>();
             if (dataSource != null)
             {
                 CarouselViewModel viewModel = new CarouselViewModel

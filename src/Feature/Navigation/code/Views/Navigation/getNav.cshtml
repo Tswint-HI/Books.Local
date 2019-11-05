@@ -1,0 +1,15 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model Books.Feature.Navigation.Controllers.HeaderViewModel
+<nav>
+    <link href="~/Styles/Nav.css" rel="stylesheet" type="text/css" />
+    <div class="topnav" id="myTopnav">
+        @foreach (var item in Model.Navigation)
+        {
+            <a href="#@item.Url">@item.Title</a>
+        }
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <script src="~/Scripts/Nav.js"></script>
+</nav>
