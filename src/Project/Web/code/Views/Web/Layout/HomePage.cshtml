@@ -24,7 +24,7 @@
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
 
 </head>
-<body class="header-static @(Sitecore.Context.PageMode.IsNormal ? "" : (Sitecore.Context.PageMode.IsExperienceEditor ? "pagemode-edit" : "pagemode-preview"))">
+<body class="masthead" @(Sitecore.Context.PageMode.IsNormal ? "" : (Sitecore.Context.PageMode.IsExperienceEditor ? "pagemode-edit" : "pagemode-preview"))">
     <div id="main-container">
         @* Figure out what to do here*@
         @*<header class="masthead">
@@ -32,10 +32,14 @@
             </header>
             <br>*@
         @Html.Sitecore().Placeholder("navbar")
-        <main role="main" class="masthead">
+        <main role="main" class="header-static">
 
             @Html.Sitecore().Placeholder("body")
         </main>
+        <br />
+        <br />
+        <br />
+        <br />
         <footer class="bg-black">
             @Html.Sitecore().Placeholder("footer")
         </footer>

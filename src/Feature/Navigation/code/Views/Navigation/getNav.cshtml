@@ -2,28 +2,24 @@
 @model Books.Feature.Navigation.Controllers.HeaderViewModel
 <div class="navbar">
     <link href="~/Styles/Nav.css" rel="stylesheet" type="text/css" />
-    @Html.Glass().RenderImage(x=> x.Image, new {@class = "navbar-brand"})
-    @*<a class="navbar-brand js-scroll-trigger" href="#page-top">>@Html.Glass().RenderImage(x => x.Image)</a>*@
+    @Html.Glass().RenderImage(x => x.Image, new { @class = "navbar-brand" })
     @foreach (var item in Model.Navigation)
     {
-    <div>
-        @Html.Glass().RenderLink(x => item.Link)
-    </div>
-        if (item.ChildLinks != null)
+        if (item.ChildLinks.Count() > 0)
         {
             <div class="dropdown">
+                @Html.Glass().RenderLink(x => item.Link)
                 <button class="dropbtn">
                     <i class="fa fa-caret-down"></i>
                 </button>
-                    @foreach (var child in item.ChildLinks)
-                     {
-                        <div class="dropdown-content">
-                            <a href="#@child.Url">@child.Title</a>
-                        </div>
-                    }
+            </div>
+            <div class="dropdown-content">
+                @foreach (var child in item.ChildLinks)
+                {
+                    @Html.Glass().RenderLink(x => child.Link)
+                }
             </div>
         }
-     }
-    <script src="~/Scripts/Nav.js"></script>
+    }
+    @*<script src="~/Scripts/Nav.js"></script>*@
 </div>
-
