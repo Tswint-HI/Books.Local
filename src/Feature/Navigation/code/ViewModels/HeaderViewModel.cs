@@ -8,7 +8,7 @@ namespace Books.Feature.Navigation.Controllers
     {
         public IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Navigation { get; set; }
         public IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.NavigationItem> NavigationLinks { get; set; }
-        public virtual Link NavLink { get; internal set; }
+        public Link NavLink { get; internal set; }
         public IMvcContext Context { get; internal set; }
         public virtual Image Image { get; set; }
 
