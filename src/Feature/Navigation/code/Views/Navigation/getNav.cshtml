@@ -1,15 +1,29 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @model Books.Feature.Navigation.Controllers.HeaderViewModel
-<nav>
+<div class="navbar">
     <link href="~/Styles/Nav.css" rel="stylesheet" type="text/css" />
-    <div class="topnav" id="myTopnav">
-        @foreach (var item in Model.Navigation)
-        {
-            <a href="#@item.Url">@item.Title</a>
-        }
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+    @Html.Glass().RenderImage(x=> x.Image, new {@class = "navbar-brand"})
+    @*<a class="navbar-brand js-scroll-trigger" href="#page-top">>@Html.Glass().RenderImage(x => x.Image)</a>*@
+    @foreach (var item in Model.Navigation)
+    {
+    <div>
+        @Html.Glass().RenderLink(x => item.Link)
     </div>
+        if (item.ChildLinks != null)
+        {
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    @foreach (var child in item.ChildLinks)
+                     {
+                        <div class="dropdown-content">
+                            <a href="#@child.Url">@child.Title</a>
+                        </div>
+                    }
+            </div>
+        }
+     }
     <script src="~/Scripts/Nav.js"></script>
-</nav>
+</div>
+

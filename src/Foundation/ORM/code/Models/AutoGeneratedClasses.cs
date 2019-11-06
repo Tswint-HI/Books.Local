@@ -556,12 +556,12 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation
 								/// <summary>
 					/// The Link field.
 					/// <para></para>
-					/// <para>Field Type: link</para>		
+					/// <para>Field Type: General Link</para>		
 					/// <para>Field ID: 2ed8e0bb-2dcc-4b29-8fa4-a16b06c48be2</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(INavigationItemConstants.LinkFieldName)]
-					object /* UNKNOWN */ Link  {get; set;}
+					Link Link  {get; set;}
 			
 								/// <summary>
 					/// The Title field.
@@ -638,13 +638,13 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation
 						/// <summary>
 				/// The Link field.
 				/// <para></para>
-				/// <para>Field Type: link</para>		
+				/// <para>Field Type: General Link</para>		
 				/// <para>Field ID: 2ed8e0bb-2dcc-4b29-8fa4-a16b06c48be2</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(INavigationItemConstants.LinkFieldName)]
-				public virtual object /* UNKNOWN */ Link  {get; set;}
+				public virtual Link Link  {get; set;}
 					
 						/// <summary>
 				/// The Title field.
@@ -684,6 +684,16 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 					bool ExcludeFromNavigation  {get; set;}
 			
 								/// <summary>
+					/// The Logo field.
+					/// <para></para>
+					/// <para>Field Type: Image</para>		
+					/// <para>Field ID: bc85b31c-3d91-42d7-a006-07115abd58b0</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(I_Base_NavigationConstants.LogoFieldName)]
+					Image Logo  {get; set;}
+			
+								/// <summary>
 					/// The Nav field.
 					/// <para></para>
 					/// <para>Field Type: Multilist</para>		
@@ -705,6 +715,10 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 					
 			public static readonly ID ExcludeFromNavigationFieldId = new ID("c7e1e333-3593-40ae-8a54-4317665e813c");
 			public const string ExcludeFromNavigationFieldName = "ExcludeFromNavigation";
+			
+					
+			public static readonly ID LogoFieldId = new ID("bc85b31c-3d91-42d7-a006-07115abd58b0");
+			public const string LogoFieldName = "Logo";
 			
 					
 			public static readonly ID NavsFieldId = new ID("ebea49d4-1e27-4bc9-aae5-701ff22bd923");
@@ -735,6 +749,17 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(I_Base_NavigationConstants.ExcludeFromNavigationFieldName)]
 				public virtual bool ExcludeFromNavigation  {get; set;}
+					
+						/// <summary>
+				/// The Logo field.
+				/// <para></para>
+				/// <para>Field Type: Image</para>		
+				/// <para>Field ID: bc85b31c-3d91-42d7-a006-07115abd58b0</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(I_Base_NavigationConstants.LogoFieldName)]
+				public virtual Image Logo  {get; set;}
 					
 						/// <summary>
 				/// The Nav field.
@@ -970,6 +995,10 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 			public const string ExcludeFromNavigationFieldName = "ExcludeFromNavigation";
 			
 					
+			public static readonly ID LogoFieldId = new ID("bc85b31c-3d91-42d7-a006-07115abd58b0");
+			public const string LogoFieldName = "Logo";
+			
+					
 			public static readonly ID NavsFieldId = new ID("ebea49d4-1e27-4bc9-aae5-701ff22bd923");
 			public const string NavsFieldName = "Nav";
 			
@@ -1020,6 +1049,17 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IHomeConstants.ExcludeFromNavigationFieldName)]
 				public virtual bool ExcludeFromNavigation  {get; set;}
+					
+						/// <summary>
+				/// The Logo field.
+				/// <para></para>
+				/// <para>Field Type: Image</para>		
+				/// <para>Field ID: bc85b31c-3d91-42d7-a006-07115abd58b0</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IHomeConstants.LogoFieldName)]
+				public virtual Image Logo  {get; set;}
 					
 						/// <summary>
 				/// The Nav field.

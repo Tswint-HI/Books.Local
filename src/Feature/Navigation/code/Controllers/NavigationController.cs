@@ -18,10 +18,12 @@ namespace Books.Feature.Navigation.Controllers
             {
 
                 var home = _context.GetHomeItem<Foundation.Orm.Models.sitecore.templates.Project.Page_Types.IHome>();
-                HeaderViewModel vm = new HeaderViewModel
+                //var logo = _context.GetPageContextItem<>
+                HeaderViewModel vm = new HeaderViewModel(_context)
                 {
                     Navigation = home.Navs
                 };
+
                 return View(vm);
 
             }
