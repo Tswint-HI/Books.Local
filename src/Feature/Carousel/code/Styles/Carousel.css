@@ -7,6 +7,7 @@
     max-width: 1000px;
     position: relative;
     margin: auto;
+    margin-top: 2.5rem
 }
 
 /* Hide the images by default */
@@ -43,7 +44,8 @@
 
 /* Caption text */
 .text {
-    color: grey;
+    font-family: "Impact", Charcoal, sans-serif;
+    color: white;
     font-size: 25px;
     padding: 50px 12px;
     position: absolute;

@@ -58,6 +58,10 @@
       <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.90.Mvc.5.5.28\lib\net462\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.Kernel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\..\..\Project\Web\code\bin\Sitecore.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />

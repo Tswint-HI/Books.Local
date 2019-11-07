@@ -1,4 +1,5 @@
-﻿using Glass.Mapper.Sc;
+﻿using Books.Foundation.Orm.Repo;
+using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Web;
 using Glass.Mapper.Sc.Web.Mvc;
 using Glass.Mapper.Sc.Web.WebForms;
@@ -26,6 +27,7 @@ namespace Books.Foundation.DI.Infrastructure
             serviceCollection.AddScoped(_ => CreateGlassHtml());
             serviceCollection.AddScoped(_ => CreateMvcContext());
             serviceCollection.AddScoped(_ => CreateWebFormsContext());
+            serviceCollection.AddScoped(_ => CreateSitecoreRepository(CreateRequestContext()));
 
             // For injecting into Configuration Factory types like pipeline processors
             serviceCollection.AddSingleton<Func<ISitecoreService>>(_ => Get<ISitecoreService>);
@@ -33,6 +35,7 @@ namespace Books.Foundation.DI.Infrastructure
             serviceCollection.AddSingleton<Func<IGlassHtml>>(_ => Get<IGlassHtml>);
             serviceCollection.AddSingleton<Func<IMvcContext>>(_ => Get<IMvcContext>);
             serviceCollection.AddSingleton<Func<IWebFormsContext>>(_ => Get<IWebFormsContext>);
+            //serviceCollection.AddSingleton<Func<SitecoreRepository>>(_ => Get<SitecoreRepository>);
 
 
         }
@@ -72,5 +75,11 @@ namespace Books.Foundation.DI.Infrastructure
         {
             return new WebFormsContext(Get<ISitecoreService>(), Get<IGlassHtml>());
         }
+
+        private static SitecoreRepository CreateSitecoreRepository(IRequestContext requestContext)
+        {
+            return new SitecoreRepository(CreateRequestContext());
+        }
+
     }
 }
