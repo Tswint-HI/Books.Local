@@ -1,34 +1,41 @@
 ----item----
 version: 1
-id: {9FD8E149-83EC-48EC-AE75-4C96CEBFE284}
+id: {BB319C5B-6AAA-48ED-B241-A4D286D99042}
 database: master
-path: /sitecore/templates/User Defined/Base/_Base Navigation/__Standard Values
-parent: {B651325B-CF69-4B30-916D-7A8E51EA3FC5}
+path: /sitecore/templates/User Defined/Base/Base Footer/__Standard Values
+parent: {E1860135-0069-461D-A435-08602253FB5C}
 name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {B651325B-CF69-4B30-916D-7A8E51EA3FC5}
-templatekey: _Base Navigation
-created: 20191106T005018Z
+template: {E1860135-0069-461D-A435-08602253FB5C}
+templatekey: Base Footer
+created: 20191108T135606Z
 
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-300
 ----version----
 language: en
 version: 1
-revision: dae9da63-b213-44f5-8fad-217233532f33
+revision: f21e9fc0-ee82-4a79-abf7-be1ed201e71d
 
 ----field----
-field: {BC85B31C-3D91-42D7-A006-07115ABD58B0}
-name: Logo
-key: logo
-content-length: 165
+field: {672C7E6A-6E84-4936-A07E-0FF82AA2F957}
+name: Header
+key: header
+content-length: 18
 
-<image mediapath="" alt="LogoWhite" width="" height="" hspace="" vspace="" showineditor="" usethumbnail="" src="" mediaid="{50C813FB-3D3C-4068-8560-4A7FD111D615}" />
+This is the header
+----field----
+field: {CB8BD673-36F1-4793-8310-3F02FDCA1A86}
+name: Subhead
+key: subhead
+content-length: 18
+
+Enter subhead here
+----field----
+field: {FF5CE688-42C6-47FE-97FC-ACE47571A222}
+name: Content
+key: content
+content-length: 31
+
+Enter supplemental content here
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20191106T005018Z
+20191108T135606Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dae9da63-b213-44f5-8fad-217233532f33
+f21e9fc0-ee82-4a79-abf7-be1ed201e71d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191106T180503Z
+20191108T135747Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

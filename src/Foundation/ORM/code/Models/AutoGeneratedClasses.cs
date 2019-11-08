@@ -290,6 +290,46 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 			
 	}
 }
+namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Footer
+{
+
+
+ 	/// <summary>
+	/// IFooter_Folder Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Footer/Footer Folder</para>	
+	/// <para>ID: 30c11690-92f2-457e-846c-804368424e1a</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=IFooter_FolderConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
+	public partial interface IFooter_Folder : IGlassBase 
+	{
+				}
+
+
+	public static partial class IFooter_FolderConstants{
+
+			public const string TemplateIdString = "30c11690-92f2-457e-846c-804368424e1a";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "Footer Folder";
+
+			
+
+	}
+
+	
+	/// <summary>
+	/// Footer_Folder
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Footer/Footer Folder</para>	
+	/// <para>ID: 30c11690-92f2-457e-846c-804368424e1a</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=IFooter_FolderConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
+	public partial class Footer_Folder  : GlassBase, IFooter_Folder 
+	{
+	   
+			
+	}
+}
 namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 {
 
@@ -1071,6 +1111,121 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IHomeConstants.NavsFieldName)]
 				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Navs  {get; set;}
+					
+			
+	}
+}
+namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
+{
+
+
+ 	/// <summary>
+	/// IBase_Footer Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/User Defined/Base/Base Footer</para>	
+	/// <para>ID: e1860135-0069-461d-a435-08602253fb5c</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=IBase_FooterConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
+	public partial interface IBase_Footer : IGlassBase 
+	{
+								/// <summary>
+					/// The Content field.
+					/// <para></para>
+					/// <para>Field Type: Multi-Line Text</para>		
+					/// <para>Field ID: ff5ce688-42c6-47fe-97fc-ace47571a222</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_FooterConstants.ContentFieldName)]
+					string Content  {get; set;}
+			
+								/// <summary>
+					/// The Header field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field ID: 672c7e6a-6e84-4936-a07e-0ff82aa2f957</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_FooterConstants.HeaderFieldName)]
+					string Header  {get; set;}
+			
+								/// <summary>
+					/// The Subhead field.
+					/// <para></para>
+					/// <para>Field Type: Rich Text</para>		
+					/// <para>Field ID: cb8bd673-36f1-4793-8310-3f02fdca1a86</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_FooterConstants.SubheadFieldName)]
+					string Subhead  {get; set;}
+			
+				}
+
+
+	public static partial class IBase_FooterConstants{
+
+			public const string TemplateIdString = "e1860135-0069-461d-a435-08602253fb5c";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "Base Footer";
+
+					
+			public static readonly ID ContentFieldId = new ID("ff5ce688-42c6-47fe-97fc-ace47571a222");
+			public const string ContentFieldName = "Content";
+			
+					
+			public static readonly ID HeaderFieldId = new ID("672c7e6a-6e84-4936-a07e-0ff82aa2f957");
+			public const string HeaderFieldName = "Header";
+			
+					
+			public static readonly ID SubheadFieldId = new ID("cb8bd673-36f1-4793-8310-3f02fdca1a86");
+			public const string SubheadFieldName = "Subhead";
+			
+			
+
+	}
+
+	
+	/// <summary>
+	/// Base_Footer
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/User Defined/Base/Base Footer</para>	
+	/// <para>ID: e1860135-0069-461d-a435-08602253fb5c</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=IBase_FooterConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
+	public partial class Base_Footer  : GlassBase, IBase_Footer 
+	{
+	   
+						/// <summary>
+				/// The Content field.
+				/// <para></para>
+				/// <para>Field Type: Multi-Line Text</para>		
+				/// <para>Field ID: ff5ce688-42c6-47fe-97fc-ace47571a222</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_FooterConstants.ContentFieldName)]
+				public virtual string Content  {get; set;}
+					
+						/// <summary>
+				/// The Header field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: 672c7e6a-6e84-4936-a07e-0ff82aa2f957</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_FooterConstants.HeaderFieldName)]
+				public virtual string Header  {get; set;}
+					
+						/// <summary>
+				/// The Subhead field.
+				/// <para></para>
+				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field ID: cb8bd673-36f1-4793-8310-3f02fdca1a86</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_FooterConstants.SubheadFieldName)]
+				public virtual string Subhead  {get; set;}
 					
 			
 	}

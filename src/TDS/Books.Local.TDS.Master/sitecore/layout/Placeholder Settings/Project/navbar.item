@@ -1,0 +1,66 @@
+----item----
+version: 1
+id: {D4E23516-BF65-4BD9-9D55-B161CA8AB09C}
+database: master
+path: /sitecore/layout/Placeholder Settings/Project/navbar
+parent: {F5F0FBE3-61AD-4967-A5D8-8D760331D6A1}
+name: navbar
+master: {00000000-0000-0000-0000-000000000000}
+template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
+templatekey: Placeholder
+created: 20191028T201439Z
+
+----field----
+field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
+name: Placeholder Key
+key: placeholder key
+content-length: 6
+
+navbar
+----field----
+field: {E391B526-D0C5-439D-803E-17512EAE6222}
+name: Allowed Controls
+key: allowed controls
+content-length: 38
+
+{1E7637FB-3778-4A80-9C9A-146C8B53B6A7}
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 2
+
+94
+----version----
+language: en
+version: 1
+revision: 93022fb5-2213-4039-9e7e-597cb146b59c
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20191028T201439Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+93022fb5-2213-4039-9e7e-597cb146b59c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20191108T140940Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

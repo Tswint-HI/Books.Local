@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {79FFE07D-4106-4A1A-8F0F-E60373197522}
+id: {6BAC1F8A-139D-481E-BFFD-FB3A8EA1058B}
 database: master
-path: /sitecore/templates/User Defined/Base/BasePage/__Standard Values
-parent: {38C71966-B6AC-4280-A086-157CF33FA6ED}
+path: /sitecore/templates/Feature/Footer/Footer Folder/__Standard Values
+parent: {30C11690-92F2-457E-846C-804368424E1A}
 name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {38C71966-B6AC-4280-A086-157CF33FA6ED}
-templatekey: BasePage
-created: 20191105T142636Z
+template: {30C11690-92F2-457E-846C-804368424E1A}
+templatekey: Footer Folder
+created: 20191108T151402Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -16,42 +16,19 @@ name: __Masters
 key: __masters
 content-length: 38
 
-{38C71966-B6AC-4280-A086-157CF33FA6ED}
-----field----
-field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
-name: __Renderings
-key: __renderings
-content-length: 105
-
-<r>
-  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{8149AAE7-B6EB-4A94-883B-39C674B997A9}" />
-</r>
+{E1860135-0069-461D-A435-08602253FB5C}
 ----version----
 language: en
 version: 1
-revision: 81d77f32-f248-4337-8437-9bddb77716ef
+revision: 31615d29-d791-4173-90aa-68f057390d7a
 
-----field----
-field: {E8674014-F36C-407F-8217-9C16BD3D9ADF}
-name: Title
-key: title
-content-length: 5
-
-$name
-----field----
-field: {0F80D938-D0AA-4191-9F44-7F1C32A39CE4}
-name: MetaTitle
-key: metatitle
-content-length: 5
-
-$name
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20191105T142636Z
+20191108T151402Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -65,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-81d77f32-f248-4337-8437-9bddb77716ef
+31615d29-d791-4173-90aa-68f057390d7a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191106T182508Z
+20191108T151803Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

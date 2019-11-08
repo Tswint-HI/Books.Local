@@ -1,26 +1,26 @@
 ----item----
 version: 1
-id: {66D609F6-9C0C-487D-892F-12D1BE4C6009}
+id: {8149AAE7-B6EB-4A94-883B-39C674B997A9}
 database: master
-path: /sitecore/templates/User Defined/Data/__Standard Values
-parent: {C2BD0EAD-3823-4A5E-AD3D-DD95758DEF1D}
-name: __Standard Values
+path: /sitecore/layout/Layouts/Project/Home Page
+parent: {DA04B275-8838-4A3A-AFEE-817CF1FDD2EB}
+name: Home Page
 master: {00000000-0000-0000-0000-000000000000}
-template: {C2BD0EAD-3823-4A5E-AD3D-DD95758DEF1D}
-templatekey: Data
-created: 20191105T134519Z
+template: {3A45A723-64EE-4919-9D41-02FD40FD1466}
+templatekey: Layout
+created: 20191028T180443Z
 
 ----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 116
+field: {A036B2BC-BA04-44F6-A75F-BAE6CD242ABF}
+name: Path
+key: path
+content-length: 33
 
-{D3C0F83D-45C5-4B15-A70C-A2032D119A1D}|{D3ED7AA7-33AC-46F4-A730-E5EB84CC017B}|{30C11690-92F2-457E-846C-804368424E1A}
+/Views/Web/Layout/HomePage.cshtml
 ----version----
 language: en
 version: 1
-revision: b28b6982-d401-4704-bf3e-fd65d81075f8
+revision: e6f71c99-04f2-4e3e-a4c6-bcd85497003a
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -28,7 +28,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20191105T134519Z
+20191028T180443Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -42,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b28b6982-d401-4704-bf3e-fd65d81075f8
+e6f71c99-04f2-4e3e-a4c6-bcd85497003a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191108T170445Z
+20191028T193951Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
