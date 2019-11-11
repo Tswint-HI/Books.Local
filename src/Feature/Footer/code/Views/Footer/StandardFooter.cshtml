@@ -1,0 +1,16 @@
+﻿@model Books.Feature.Footer.Models.StandardFooterViewModel
+@using Glass.Mapper.Sc.Web.Mvc
+<link href="~/Styles/Footer.css" rel="stylesheet" type="text/css" />
+<div class="footer">
+    <div class="row">
+        <div class="column" id="one">
+                <h3>@Model.Head</h3>
+                <h6>@Model.Content</h6>
+        </div>
+        <div class="column" id="two">
+                <h3>@Model.Subhead</h3>
+                <h5>@Model.Copy</h5>
+        </div>
+    </div>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+</div>

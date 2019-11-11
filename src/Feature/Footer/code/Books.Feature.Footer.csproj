@@ -108,6 +108,8 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\FooterLoader.config" />
     <None Include="Properties\PublishProfiles\Sc.Footer.pubxml" />
+    <Content Include="Styles\Footer.css" />
+    <Content Include="Views\Footer\StandardFooter.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -121,7 +123,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Footer\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\ORM\code\Books.Foundation.Orm.csproj">

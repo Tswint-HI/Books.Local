@@ -18,9 +18,10 @@ namespace Books.Feature.Footer.Controllers
         {
             if (RenderingContext.Current.Rendering.Item != null)
             {
-                var home = _context.GetHomeItem<Foundation.Orm.Models.sitecore.templates.Project.Page_Types.IHome>();
-                StandardFooterViewModel vm = new StandardFooterViewModel(_context);
-                return View();
+                StandardFooterViewModel vm = null;
+
+                var datasource = _context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Footer>();
+                return datasource == null ? null : View(vm = new StandardFooterViewModel(datasource));
             }
 
             return null;

@@ -30,11 +30,11 @@ name: __Icon
 key: __icon
 content-length: 31
 
-WordProcessing/16x16/footer.png
+WordProcessing/32x32/footer.png
 ----version----
 language: en
 version: 1
-revision: aa1b3247-0871-407e-8950-bf94bea66958
+revision: 3c78a2de-1bdd-40ff-a7ae-f506593919d0
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-aa1b3247-0871-407e-8950-bf94bea66958
+3c78a2de-1bdd-40ff-a7ae-f506593919d0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191108T135823Z
+20191111T191904Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

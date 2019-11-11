@@ -1,0 +1,32 @@
+﻿footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: Courier New;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    flex: 50%;
+    padding: 10px;
+    height: auto;
+    padding: 0;
+}
+
+#one {
+    background-color: #333;
+    text-align: left;
+}
+
+#two {
+    background-color: #aaa;
+    text-align: center;
+}

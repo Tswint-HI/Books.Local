@@ -13,7 +13,7 @@ created: 20191108T135606Z
 ----version----
 language: en
 version: 1
-revision: f21e9fc0-ee82-4a79-abf7-be1ed201e71d
+revision: f881657a-db89-4a3a-8121-86c22d529cd4
 
 ----field----
 field: {672C7E6A-6E84-4936-A07E-0FF82AA2F957}
@@ -36,6 +36,13 @@ key: content
 content-length: 31
 
 Enter supplemental content here
+----field----
+field: {477C7DB6-CEB4-4DA4-84D4-C482D897AC2C}
+name: Copyright
+key: copyright
+content-length: 35
+
+©--Enter Copyright information here
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f21e9fc0-ee82-4a79-abf7-be1ed201e71d
+f881657a-db89-4a3a-8121-86c22d529cd4
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191108T135747Z
+20191111T195012Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1139,6 +1139,16 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 					string Content  {get; set;}
 			
 								/// <summary>
+					/// The Copyright field.
+					/// <para></para>
+					/// <para>Field Type: Rich Text</para>		
+					/// <para>Field ID: 477c7db6-ceb4-4da4-84d4-c482d897ac2c</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_FooterConstants.CopyrightFieldName)]
+					string Copyright  {get; set;}
+			
+								/// <summary>
 					/// The Header field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -1170,6 +1180,10 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 					
 			public static readonly ID ContentFieldId = new ID("ff5ce688-42c6-47fe-97fc-ace47571a222");
 			public const string ContentFieldName = "Content";
+			
+					
+			public static readonly ID CopyrightFieldId = new ID("477c7db6-ceb4-4da4-84d4-c482d897ac2c");
+			public const string CopyrightFieldName = "Copyright";
 			
 					
 			public static readonly ID HeaderFieldId = new ID("672c7e6a-6e84-4936-a07e-0ff82aa2f957");
@@ -1204,6 +1218,17 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBase_FooterConstants.ContentFieldName)]
 				public virtual string Content  {get; set;}
+					
+						/// <summary>
+				/// The Copyright field.
+				/// <para></para>
+				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field ID: 477c7db6-ceb4-4da4-84d4-c482d897ac2c</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_FooterConstants.CopyrightFieldName)]
+				public virtual string Copyright  {get; set;}
 					
 						/// <summary>
 				/// The Header field.
