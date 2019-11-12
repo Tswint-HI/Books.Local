@@ -13,7 +13,7 @@ namespace Books.Feature.BookCard.Controllers
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public ActionResult ActionResult()
+        public ActionResult BookCard()
         {
 
             return View();
