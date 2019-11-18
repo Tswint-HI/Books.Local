@@ -1,0 +1,15 @@
+﻿@using Sitecore.Mvc
+@inherits WebViewPage
+@{
+    Layout = null;
+}
+<link href="~/Styles/Card2.css" rel="stylesheet" type="text/css" />
+<br />
+<br />
+<br />
+<div class="row">
+@Html.Sitecore().DynamicPlaceholder("card")
+</div>
+    <br />
+    <br />
+    <br />

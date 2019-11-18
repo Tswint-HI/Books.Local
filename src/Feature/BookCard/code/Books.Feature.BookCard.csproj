@@ -56,6 +56,12 @@
       <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\..\..\Project\Web\code\bin\Sitecore.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -102,10 +108,15 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\BookCardLoader.config" />
     <None Include="Properties\PublishProfiles\SC.BC.pubxml" />
+    <Content Include="Styles\Card.css" />
+    <Content Include="Styles\Card2.css" />
+    <Content Include="Views\BookCard\Layout\BookCardLayout.cshtml" />
+    <Content Include="Views\BookCard\BookCard.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BookCardController.cs" />
+    <Compile Include="Models\BookCardViewModel.cs" />
     <Compile Include="Pipelines\BookCardGlassLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -115,8 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\BookCard\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\ORM\code\Books.Foundation.Orm.csproj">
+      <Project>{dc69f037-d421-4792-8e5a-2fdbeaac8a50}</Project>
+      <Name>Books.Foundation.Orm</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

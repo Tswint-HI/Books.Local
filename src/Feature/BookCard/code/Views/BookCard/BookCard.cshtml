@@ -1,0 +1,22 @@
+﻿@model Books.Feature.BookCard.Models.BookCardViewModel
+@using Glass.Mapper.Sc.Web.Mvc
+
+@*<link href="~/Styles/Card2.css" rel="stylesheet" type="text/css" />*@
+@*<div class="col-sm-12">*@
+    <div class="card w-50">
+        @Html.Glass().RenderImage(x => x.Image, new
+                        {
+                         @class = "card-img-top"
+                        }, isEditable: true)
+            <div class="card-body">
+                <p>@Model.Authour</p>
+                <h5 class="card-title">@Model.Title</h5>
+                <p>@Model.Rating</p>
+                <p class="card-text">@Model.Introduction</p>
+                @Html.Glass().RenderLink(x => x.Link, new
+                        {
+                            @class = "btn btn-primary"
+                        }, isEditable: true)
+            </div>
+        </div>
+    @*</div>*@
