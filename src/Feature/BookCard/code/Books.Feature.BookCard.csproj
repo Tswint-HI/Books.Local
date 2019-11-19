@@ -108,7 +108,6 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\BookCardLoader.config" />
     <None Include="Properties\PublishProfiles\SC.BC.pubxml" />
-    <Content Include="Styles\Card.css" />
     <Content Include="Styles\Card2.css" />
     <Content Include="Views\BookCard\Layout\BookCardLayout.cshtml" />
     <Content Include="Views\BookCard\BookCard.cshtml" />

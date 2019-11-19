@@ -1,9 +1,7 @@
 ﻿@model Books.Feature.BookCard.Models.BookCardViewModel
 @using Glass.Mapper.Sc.Web.Mvc
 
-@*<link href="~/Styles/Card2.css" rel="stylesheet" type="text/css" />*@
-@*<div class="col-sm-12">*@
-<div class="card-deck col-auto">
+<div class="col-md">
     <div class="card text-white bg-dark mb-3">
         @Html.Glass().RenderImage(x => x.Image, new
                         {
