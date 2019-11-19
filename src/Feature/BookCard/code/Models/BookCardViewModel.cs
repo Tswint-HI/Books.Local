@@ -1,5 +1,6 @@
 ﻿using Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard;
 using Glass.Mapper.Sc.Fields;
+using System;
 using System.Collections.Generic;
 using IBookCard = Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard.IBookCard;
 
@@ -9,7 +10,7 @@ namespace Books.Feature.BookCard.Models
     {
         private readonly ICard_Folder _cfDatasource;
         private readonly IBookCard _bcDatasource;
-
+        public Guid Id { get; set; }
         public IEnumerable<IBookCard> Cards { get; set; }
         public Image Image { get; set; }
         public string Title { get; set; }
@@ -24,6 +25,7 @@ namespace Books.Feature.BookCard.Models
         public BookCardViewModel(IBookCard datasource)
         {
             this._bcDatasource = datasource;
+            Id = _bcDatasource.Id;
             Authour = _bcDatasource.Author;
             Image = _bcDatasource.Image;
             Title = _bcDatasource.Title;

@@ -3,20 +3,21 @@
 
 @*<link href="~/Styles/Card2.css" rel="stylesheet" type="text/css" />*@
 @*<div class="col-sm-12">*@
-    <div class="card w-50">
+<div class="card-deck col-auto">
+    <div class="card text-white bg-dark mb-3">
         @Html.Glass().RenderImage(x => x.Image, new
                         {
                          @class = "card-img-top"
                         }, isEditable: true)
-            <div class="card-body">
-                <p>@Model.Authour</p>
-                <h5 class="card-title">@Model.Title</h5>
-                <p>@Model.Rating</p>
-                <p class="card-text">@Model.Introduction</p>
-                @Html.Glass().RenderLink(x => x.Link, new
-                        {
-                            @class = "btn btn-primary"
-                        }, isEditable: true)
-            </div>
+        <div class="card-body">
+            <p>Author: @Model.Authour</p>
+            <p class="card-title">Title: @Model.Title</p>
+            <p>Rating: @Model.Rating/5</p>
+            <p class="card-text">Description: @Model.Introduction</p>
+            @Html.Glass().RenderLink(x => x.Link, new
+                    {
+                        @class = "btn btn-primary"
+                    }, isEditable: true)
         </div>
-    @*</div>*@
+    </div>
+</div>
