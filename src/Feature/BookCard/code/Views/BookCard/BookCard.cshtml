@@ -1,8 +1,8 @@
 ﻿@model Books.Feature.BookCard.Models.BookCardViewModel
 @using Glass.Mapper.Sc.Web.Mvc
 
-<div class="col-md">
-    <div class="card text-white bg-dark mb-3">
+@*<div class="col-md">*@
+    <div class="col-sm-2 card text-white bg-dark">
         @Html.Glass().RenderImage(x => x.Image, new
                         {
                          @class = "card-img-top"
@@ -18,4 +18,4 @@
                     }, isEditable: true)
         </div>
     </div>
-</div>
+@*</div>*@
