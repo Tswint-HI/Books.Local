@@ -47,6 +47,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookCard", "BookCard", "{C4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Feature.BookCard", "src\Feature\BookCard\code\Books.Feature.BookCard.csproj", "{417E4780-8BA3-4325-A6FA-470876FB9611}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomErrors", "CustomErrors", "{7A18B43A-7A55-48CA-9904-27E071C8AD1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Foundation.CustomErrors", "src\Foundation\CustomErrors\code\Books.Foundation.CustomErrors.csproj", "{7F8D75AB-5DF3-4CD2-9AE3-CC67622B0B62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +95,10 @@ Global
 		{417E4780-8BA3-4325-A6FA-470876FB9611}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{417E4780-8BA3-4325-A6FA-470876FB9611}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{417E4780-8BA3-4325-A6FA-470876FB9611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F8D75AB-5DF3-4CD2-9AE3-CC67622B0B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F8D75AB-5DF3-4CD2-9AE3-CC67622B0B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F8D75AB-5DF3-4CD2-9AE3-CC67622B0B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F8D75AB-5DF3-4CD2-9AE3-CC67622B0B62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,6 +122,8 @@ Global
 		{A9D8AC51-D2DD-432E-A0A3-34EA15091024} = {B000DD6A-D100-4A4D-9266-29FD7C84E652}
 		{C4F9DFAC-5826-48D7-8DCD-6425E6234B68} = {9805BFF6-6C6D-41AA-ACA7-145DBD0D5C64}
 		{417E4780-8BA3-4325-A6FA-470876FB9611} = {C4F9DFAC-5826-48D7-8DCD-6425E6234B68}
+		{7A18B43A-7A55-48CA-9904-27E071C8AD1C} = {3D0B37A3-65F3-4A5B-87E0-862BE6632D65}
+		{7F8D75AB-5DF3-4CD2-9AE3-CC67622B0B62} = {7A18B43A-7A55-48CA-9904-27E071C8AD1C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {774C4309-5446-499B-92D6-9A1D9E07A24C}

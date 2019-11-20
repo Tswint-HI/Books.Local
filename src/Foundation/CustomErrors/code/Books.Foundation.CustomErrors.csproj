@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{417E4780-8BA3-4325-A6FA-470876FB9611}</ProjectGuid>
+    <ProjectGuid>{7F8D75AB-5DF3-4CD2-9AE3-CC67622B0B62}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Books.Feature.BookCard</RootNamespace>
-    <AssemblyName>Books.Feature.BookCard</AssemblyName>
+    <RootNamespace>Books.Foundation.CustomErrors</RootNamespace>
+    <AssemblyName>Books.Foundation.CustomErrors</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -43,24 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Glass.Mapper, Version=5.5.28.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.90.Core.5.5.28\lib\net462\Glass.Mapper.dll</HintPath>
-    </Reference>
-    <Reference Include="Glass.Mapper.Sc, Version=5.5.28.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.90.Core.5.5.28\lib\net462\Glass.Mapper.Sc.dll</HintPath>
-    </Reference>
-    <Reference Include="Glass.Mapper.Sc.Mvc">
-      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Glass.Mapper.Sc.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.Kernel.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Mvc">
-      <HintPath>..\..\..\Project\Web\code\bin\Sitecore.Mvc.dll</HintPath>
+      <HintPath>..\..\..\Project\Web\code\bin\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -106,29 +91,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Feature\BookCardLoader.config" />
-    <None Include="Properties\PublishProfiles\SC.BC.pubxml" />
-    <Content Include="Styles\Card2.css" />
-    <Content Include="Views\BookCard\Layout\BookCardLayout.cshtml" />
-    <Content Include="Views\BookCard\BookCard.cshtml" />
+    <Content Include="App_Config\Include\Foundation\CustomErrors.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\BookCardController.cs" />
-    <Compile Include="Models\BookCardViewModel.cs" />
-    <Compile Include="Pipelines\BookCardGlassLoader.cs" />
+    <Compile Include="Pipelines\Custom404Resolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\web.config" />
     <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\ORM\code\Books.Foundation.Orm.csproj">
-      <Project>{dc69f037-d421-4792-8e5a-2fdbeaac8a50}</Project>
-      <Name>Books.Foundation.Orm</Name>
-    </ProjectReference>
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -143,9 +126,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50512</DevelopmentServerPort>
+          <DevelopmentServerPort>56341</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50512/</IISUrl>
+          <IISUrl>http://localhost:56341/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
