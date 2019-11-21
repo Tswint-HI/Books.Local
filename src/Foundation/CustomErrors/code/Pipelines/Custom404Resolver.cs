@@ -12,6 +12,7 @@ namespace Books.Foundation.CustomErrors.Pipelines
             Assert.ArgumentNotNull(args, "args");
 
             var url = HttpContext.Current.Request.Url;
+            string path = HttpContext.Current.Request.Url.AbsolutePath.ToLower();
             var siteContext = Sitecore.Sites.SiteContextFactory.GetSiteContext(url.Host, url.PathAndQuery);
             string path404 = siteContext.StartPath + "/404";
 
@@ -22,7 +23,7 @@ namespace Books.Foundation.CustomErrors.Pipelines
 
             // all the icons and media library items 
             // for the sitecore client need to be ignored
-            if (args.Url.FilePath.StartsWith("/-/"))
+            if (path.StartsWith("/-/") || path.StartsWith("/_dev") || path.StartsWith("/sitecore") || path.StartsWith("/api"))
                 return;
 
             // Get the 404 not found item in Sitecore.
@@ -37,6 +38,10 @@ namespace Books.Foundation.CustomErrors.Pipelines
 
             // Switch to the 404 item
             Sitecore.Context.Item = notFoundPage;
+
+            //HttpContext.Response.StatusCode.GetTypeCode();
+            //args.HttpContext.Response.StatusCode = 404;
+
         }
     }
 }

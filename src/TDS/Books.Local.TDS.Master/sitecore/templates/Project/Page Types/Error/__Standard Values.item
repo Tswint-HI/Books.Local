@@ -1,0 +1,94 @@
+----item----
+version: 1
+id: {C8D710E0-BCF4-4080-8455-A7860827EAD9}
+database: master
+path: /sitecore/templates/Project/Page Types/Error/__Standard Values
+parent: {E6FBF178-9A2E-4C9F-8D77-3C5C428E43B2}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {E6FBF178-9A2E-4C9F-8D77-3C5C428E43B2}
+templatekey: Error
+created: 20191121T172537Z
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 145
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{8149AAE7-B6EB-4A94-883B-39C674B997A9}" /></r>
+----version----
+language: en
+version: 1
+revision: fc3aea46-1017-45b3-ab71-e8e4e912ba2b
+
+----field----
+field: {207A38EE-390D-4E76-9FD0-06225F9BC984}
+name: Image
+key: image
+content-length: 161
+
+<image mediapath="" alt="Error" width="" height="" hspace="" vspace="" showineditor="" usethumbnail="" src="" mediaid="{F9C2D0E7-468B-47EE-B69B-AF2CECEA8BD3}" />
+----field----
+field: {D7F75437-3B1D-4ED6-88CA-D2AFC7B02478}
+name: Description__Error
+key: description__error
+content-length: 27
+
+Whoops, Nothing to see here
+----field----
+field: {8D62CDED-21D8-437E-BAA2-AD39FED1F623}
+name: Type_Error
+key: type_error
+content-length: 3
+
+404
+----field----
+field: {6FCE48B7-50AB-4427-96D5-FC074F252A1C}
+name: Link
+key: link
+content-length: 140
+
+<link text="" linktype="internal" url="" anchor="" title="" class="" querystring="" target="" id="{4D2A3B18-11C8-4578-A3C5-A758DAA57941}" />
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 213
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><p:da name="xsd" /><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2FAC74B5-DDA3-468D-AF32-0033AF0E33A9}" s:id="{2EA52E2B-1C24-4B86-8466-D2977E156AF6}" s:ph="" /></d></r>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20191121T172537Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+fc3aea46-1017-45b3-ab71-e8e4e912ba2b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20191121T220535Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

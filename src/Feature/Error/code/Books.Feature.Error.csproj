@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7F8D75AB-5DF3-4CD2-9AE3-CC67622B0B62}</ProjectGuid>
+    <ProjectGuid>{2F66C4B8-4AA2-4110-A275-4D4A74EC1121}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Books.Foundation.CustomErrors</RootNamespace>
-    <AssemblyName>Books.Foundation.CustomErrors</AssemblyName>
+    <RootNamespace>Books.Feature.Error</RootNamespace>
+    <AssemblyName>Books.Feature.Error</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -43,9 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Glass.Mapper, Version=5.5.28.0, Culture=neutral, PublicKeyToken=null" />
-    <Reference Include="Glass.Mapper.Sc, Version=5.5.28.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Glass.Mapper">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Glass.Mapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper.Sc">
       <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Glass.Mapper.Sc.dll</HintPath>
     </Reference>
     <Reference Include="Glass.Mapper.Sc.Mvc">
@@ -53,7 +54,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\..\Project\Web\code\bin\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\..\..\Foundation\ORM\code\bin\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc">
       <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.Mvc.dll</HintPath>
@@ -102,23 +103,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\CustomErrors.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="Properties\PublishProfiles\SC.CE.pubxml" />
+    <Content Include="App_Config\Include\Feature\ErrorLoader.config" />
+    <Content Include="Style\Error.css" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\SC.Ft.E.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pipelines\Custom404Resolver.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Pipelines\ErrorLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Views\web.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\ORM\code\Books.Foundation.Orm.csproj">
-      <Project>{dc69f037-d421-4792-8e5a-2fdbeaac8a50}</Project>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\ORM\code\Books.Foundation.Orm.csproj">
+      <Project>{DC69F037-D421-4792-8E5A-2FDBEAAC8A50}</Project>
       <Name>Books.Foundation.Orm</Name>
     </ProjectReference>
   </ItemGroup>
@@ -135,9 +140,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56341</DevelopmentServerPort>
+          <DevelopmentServerPort>53026</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56341/</IISUrl>
+          <IISUrl>http://localhost:53026/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

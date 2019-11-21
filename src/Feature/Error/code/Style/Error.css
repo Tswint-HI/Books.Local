@@ -1,0 +1,25 @@
+﻿.text-white {
+    color: #fff !important;
+    font-size: 25px;
+    bottom: 2px;
+    width: 100%;
+    text-align: center;
+}
+
+.error-image {
+    opacity: .71;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.error-image {
+    opacity: 0.785;
+}
+
+.container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 2.5rem
+}
