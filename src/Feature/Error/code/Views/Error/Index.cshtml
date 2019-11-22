@@ -2,14 +2,23 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @model Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types.Error
 <link href="~/Style/Error.css" rel="stylesheet" type="text/css" />
-Copy
-<div class="container">
+<br />
+<br />
+<br />
+<div class="card bg-dark text-white">
     @Html.Glass().RenderImage(x => x.Image, new
     {
-        @class = "error-image"
-    }, isEditable: true))
-
-    <p class="text-white">@Model.Description__Error</p>
-
-    @Html.Glass().BeginRenderLink(x => x.Link)
+        @class = "card-img"
+    }, isEditable: true)
+        <div class="card-body">
+                <h5 class="card-title">Error: @Model.Type_Error</h5>
+                <p class="text-white card-text">@Model.Description__Error</p>
+                    <div class="card-footer text-muted">
+                        @Html.Glass().RenderLink(x => x.Link, new
+                        {
+                            @class = "btn btn-dark"
+                        }, isEditable: false)
+                    </div>
+        </div>
 </div>
+
