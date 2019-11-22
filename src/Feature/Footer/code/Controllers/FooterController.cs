@@ -3,7 +3,7 @@ using Glass.Mapper.Sc.Web.Mvc;
 using Sitecore.Mvc.Presentation;
 using System;
 using System.Web.Mvc;
-
+using IBaseFooter = Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Footer;
 namespace Books.Feature.Footer.Controllers
 {
 
@@ -19,8 +19,9 @@ namespace Books.Feature.Footer.Controllers
             if (RenderingContext.Current.Rendering.Item != null)
             {
                 StandardFooterViewModel vm = null;
-
-                var datasource = _context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Footer>();
+                var datasource = _context.HasDataSource
+                    ? _context.SitecoreService.Cast<IBaseFooter>(_context.DataSourceItem)
+                    : _context.GetDataSourceItem<IBaseFooter>();
                 return datasource == null ? null : View(vm = new StandardFooterViewModel(datasource));
             }
 

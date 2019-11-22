@@ -145,7 +145,8 @@
     transition: opacity .5s ease-in-out;
     -moz-transition: opacity .15s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
-    opacity: 0.785;
+    opacity: .6;
+    ;
 }
 
 .card-img-top {

@@ -470,6 +470,211 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 			
 	}
 }
+namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
+{
+
+
+ 	/// <summary>
+	/// IGenres Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Project/Page Types/Genres</para>	
+	/// <para>ID: 3cc45f70-a4cd-47ce-b4a1-aa05aa67a19d</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=IGenresConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
+	public partial interface IGenres : IGlassBase , global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.I_Base_Navigation, global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Footer, global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBasePage
+	{
+				}
+
+
+	public static partial class IGenresConstants{
+
+			public const string TemplateIdString = "3cc45f70-a4cd-47ce-b4a1-aa05aa67a19d";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "Genres";
+
+					
+			public static readonly ID ExcludeFromNavigationFieldId = new ID("c7e1e333-3593-40ae-8a54-4317665e813c");
+			public const string ExcludeFromNavigationFieldName = "ExcludeFromNavigation";
+			
+					
+			public static readonly ID LogoFieldId = new ID("bc85b31c-3d91-42d7-a006-07115abd58b0");
+			public const string LogoFieldName = "Logo";
+			
+					
+			public static readonly ID NavsFieldId = new ID("ebea49d4-1e27-4bc9-aae5-701ff22bd923");
+			public const string NavsFieldName = "Nav";
+			
+					
+			public static readonly ID ContentFieldId = new ID("ff5ce688-42c6-47fe-97fc-ace47571a222");
+			public const string ContentFieldName = "Content";
+			
+					
+			public static readonly ID CopyrightFieldId = new ID("477c7db6-ceb4-4da4-84d4-c482d897ac2c");
+			public const string CopyrightFieldName = "Copyright";
+			
+					
+			public static readonly ID HeaderFieldId = new ID("672c7e6a-6e84-4936-a07e-0ff82aa2f957");
+			public const string HeaderFieldName = "Header";
+			
+					
+			public static readonly ID SubheadFieldId = new ID("cb8bd673-36f1-4793-8310-3f02fdca1a86");
+			public const string SubheadFieldName = "Subhead";
+			
+					
+			public static readonly ID Sub_TitleFieldId = new ID("43260204-717e-421e-aeb0-5b8e572a4d26");
+			public const string Sub_TitleFieldName = "Sub Title";
+			
+					
+			public static readonly ID TitleFieldId = new ID("e8674014-f36c-407f-8217-9c16bd3d9adf");
+			public const string TitleFieldName = "Title";
+			
+					
+			public static readonly ID MetaDescriptionFieldId = new ID("ed4089e1-c500-4c02-beaf-bd624ca82270");
+			public const string MetaDescriptionFieldName = "MetaDescription";
+			
+					
+			public static readonly ID MetaTitleFieldId = new ID("0f80d938-d0aa-4191-9f44-7f1c32a39ce4");
+			public const string MetaTitleFieldName = "MetaTitle";
+			
+			
+
+	}
+
+	
+	/// <summary>
+	/// Genres
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Project/Page Types/Genres</para>	
+	/// <para>ID: 3cc45f70-a4cd-47ce-b4a1-aa05aa67a19d</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=IGenresConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
+	public partial class Genres  : GlassBase, IGenres 
+	{
+	   
+						/// <summary>
+				/// The ExcludeFromNavigation field.
+				/// <para></para>
+				/// <para>Field Type: Checkbox</para>		
+				/// <para>Field ID: c7e1e333-3593-40ae-8a54-4317665e813c</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.ExcludeFromNavigationFieldName)]
+				public virtual bool ExcludeFromNavigation  {get; set;}
+					
+						/// <summary>
+				/// The Logo field.
+				/// <para></para>
+				/// <para>Field Type: Image</para>		
+				/// <para>Field ID: bc85b31c-3d91-42d7-a006-07115abd58b0</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.LogoFieldName)]
+				public virtual Image Logo  {get; set;}
+					
+						/// <summary>
+				/// The Nav field.
+				/// <para></para>
+				/// <para>Field Type: Multilist</para>		
+				/// <para>Field ID: ebea49d4-1e27-4bc9-aae5-701ff22bd923</para>
+				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem</para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.NavsFieldName)]
+				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Navs  {get; set;}
+					
+						/// <summary>
+				/// The Content field.
+				/// <para></para>
+				/// <para>Field Type: Multi-Line Text</para>		
+				/// <para>Field ID: ff5ce688-42c6-47fe-97fc-ace47571a222</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.ContentFieldName)]
+				public virtual string Content  {get; set;}
+					
+						/// <summary>
+				/// The Copyright field.
+				/// <para></para>
+				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field ID: 477c7db6-ceb4-4da4-84d4-c482d897ac2c</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.CopyrightFieldName)]
+				public virtual string Copyright  {get; set;}
+					
+						/// <summary>
+				/// The Header field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: 672c7e6a-6e84-4936-a07e-0ff82aa2f957</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.HeaderFieldName)]
+				public virtual string Header  {get; set;}
+					
+						/// <summary>
+				/// The Subhead field.
+				/// <para></para>
+				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field ID: cb8bd673-36f1-4793-8310-3f02fdca1a86</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.SubheadFieldName)]
+				public virtual string Subhead  {get; set;}
+					
+						/// <summary>
+				/// The Sub Title field.
+				/// <para></para>
+				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field ID: 43260204-717e-421e-aeb0-5b8e572a4d26</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.Sub_TitleFieldName)]
+				public virtual string Sub_Title  {get; set;}
+					
+						/// <summary>
+				/// The Title field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: e8674014-f36c-407f-8217-9c16bd3d9adf</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.TitleFieldName)]
+				public virtual string Title  {get; set;}
+					
+						/// <summary>
+				/// The MetaDescription field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: ed4089e1-c500-4c02-beaf-bd624ca82270</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.MetaDescriptionFieldName)]
+				public virtual string MetaDescription  {get; set;}
+					
+						/// <summary>
+				/// The MetaTitle field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: 0f80d938-d0aa-4191-9f44-7f1c32a39ce4</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.MetaTitleFieldName)]
+				public virtual string MetaTitle  {get; set;}
+					
+			
+	}
+}
 namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard
 {
 
