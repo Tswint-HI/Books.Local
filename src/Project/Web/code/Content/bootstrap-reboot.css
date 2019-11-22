@@ -55,7 +55,7 @@ p {
 
 abbr[title],
 abbr[data-original-title] {
-  text-decoration: underline;
+  
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
@@ -130,7 +130,7 @@ a {
 
 a:hover {
   color: #0056b3;
-  text-decoration: underline;
+  
 }
 
 a:not([href]):not([tabindex]) {

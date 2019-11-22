@@ -19,25 +19,25 @@
     font-size: x-small;
 }
 
-    .card:hover {
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
-    }
+.card-img-top:hover {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
 
-    .card > hr {
-        margin-right: 0;
-        margin-left: 0;
-    }
+.card > hr {
+    margin-right: 0;
+    margin-left: 0;
+}
 
-    .card > .list-group:first-child .list-group-item:first-child {
-        border-top-left-radius: 0.25rem;
-        border-top-right-radius: 0.25rem;
-    }
+.card > .list-group:first-child .list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
 
-    .card > .list-group:last-child .list-group-item:last-child {
-        border-bottom-right-radius: 0.25rem;
-        border-bottom-left-radius: 0.25rem;
-    }
+.card > .list-group:last-child .list-group-item:last-child {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
 
 .card-body {
     -ms-flex: 1 1 auto;
@@ -928,11 +928,11 @@ fieldset:disabled a.btn {
 
     .btn-link:hover {
         color: #0056b3;
-        text-decoration: underline;
+        
     }
 
     .btn-link:focus, .btn-link.focus {
-        text-decoration: underline;
+        
         box-shadow: none;
     }
 
