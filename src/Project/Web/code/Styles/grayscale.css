@@ -99,7 +99,7 @@
     width: auto%;
     height: auto;
     min-height: 35rem;
-    padding: 15rem 0;
+    /*padding: 15rem 0;*/
     background: linear-gradient(to bottom, rgba(1, 1, 1, .4) 4%, rgba(2, 2, 2, .4) 24%, #333 199%), url("../Images/bocker_svartvit_display.jpg");
     background-position: center;
     background-repeat: repeat;

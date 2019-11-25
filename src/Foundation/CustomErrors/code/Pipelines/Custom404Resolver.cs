@@ -21,6 +21,9 @@ namespace Books.Foundation.CustomErrors.Pipelines
             if ((Sitecore.Context.Item != null && !Sitecore.Context.Item.Paths.Path.Equals(path404)) || Sitecore.Context.Database == null)
                 return;
 
+            if (Sitecore.Context.Site.Name.ToLower() != "website")
+                return;
+
             // all the icons and media library items 
             // for the sitecore client need to be ignored
             if (path.StartsWith("/-/") || path.StartsWith("/_dev") || path.StartsWith("/sitecore") || path.StartsWith("/api"))
