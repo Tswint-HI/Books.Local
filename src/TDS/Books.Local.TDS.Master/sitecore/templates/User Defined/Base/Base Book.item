@@ -30,11 +30,11 @@ name: __Icon
 key: __icon
 content-length: 25
 
-People/16x16/book_red.png
+People/32x32/book_red.png
 ----version----
 language: en
 version: 1
-revision: 0bb8e8ca-8b7a-4b5e-ba4f-702ab048312a
+revision: 9808ca35-39f6-4ac9-9c9f-8a52654b8974
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0bb8e8ca-8b7a-4b5e-ba4f-702ab048312a
+9808ca35-39f6-4ac9-9c9f-8a52654b8974
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191122T195208Z
+20191126T143202Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

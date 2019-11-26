@@ -1046,12 +1046,12 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 								/// <summary>
 					/// The BookGenre field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Droplink</para>		
 					/// <para>Field ID: 5399d9b2-b652-4561-a2fe-73002e3b93be</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBase_BookConstants.BookGenreFieldName)]
-					string BookGenre  {get; set;}
+					Guid BookGenre  {get; set;}
 			
 								/// <summary>
 					/// The BookImg field.
@@ -1155,13 +1155,13 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 						/// <summary>
 				/// The BookGenre field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Droplink</para>		
 				/// <para>Field ID: 5399d9b2-b652-4561-a2fe-73002e3b93be</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBase_BookConstants.BookGenreFieldName)]
-				public virtual string BookGenre  {get; set;}
+				public virtual Guid BookGenre  {get; set;}
 					
 						/// <summary>
 				/// The BookImg field.

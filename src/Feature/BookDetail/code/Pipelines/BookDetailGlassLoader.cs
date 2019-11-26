@@ -1,13 +1,13 @@
 ﻿using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Pipelines.GetGlassLoaders;
 
-namespace Books.Feature.Navigation.Pipelines
+namespace Books.Feature.BookDetail.Pipelines
 {
-    public class NavigationGlassLoader : GetGlassLoadersProcessor
+    public class BookDetailGlassLoader : GetGlassLoadersProcessor
     {
         public override void Process(GetGlassLoadersPipelineArgs args)
         {
-            SitecoreAttributeConfigurationLoader loader = new SitecoreAttributeConfigurationLoader("Books.Feature.Navigation");
+            SitecoreAttributeConfigurationLoader loader = new SitecoreAttributeConfigurationLoader("Books.Feature.BookDetail");
             args.Loaders.Add(loader);
         }
     }

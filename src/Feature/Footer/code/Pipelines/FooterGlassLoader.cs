@@ -1,7 +1,7 @@
 ﻿using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Pipelines.GetGlassLoaders;
 
-namespace Books.Feature.Footer
+namespace Books.Feature.Footer.Pipelines
 {
     public class FooterGlassLoader : GetGlassLoadersProcessor
     {

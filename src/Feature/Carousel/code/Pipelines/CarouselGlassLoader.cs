@@ -1,7 +1,7 @@
 ﻿using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Pipelines.GetGlassLoaders;
 
-namespace Books.Feature.Carousel
+namespace Books.Feature.Carousel.Pipelines
 {
     public class CarouselGlassLoader : GetGlassLoadersProcessor
     {

@@ -59,6 +59,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomLinks", "CustomLinks"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Foundation.CustomLinks", "src\Foundation\CustomLinks\code\Books.Foundation.CustomLinks.csproj", "{8C2FE902-C7AA-4059-9364-B453F2DF8CFB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookDetail", "BookDetail", "{087615F8-5AB5-4F63-B23A-2A32A0016C31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Feature.BookDetail", "src\Feature\BookDetail\code\Books.Feature.BookDetail.csproj", "{B8BD4771-DBB1-4E5F-8C8C-766B52358710}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +119,10 @@ Global
 		{8C2FE902-C7AA-4059-9364-B453F2DF8CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C2FE902-C7AA-4059-9364-B453F2DF8CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C2FE902-C7AA-4059-9364-B453F2DF8CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8BD4771-DBB1-4E5F-8C8C-766B52358710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8BD4771-DBB1-4E5F-8C8C-766B52358710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8BD4771-DBB1-4E5F-8C8C-766B52358710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8BD4771-DBB1-4E5F-8C8C-766B52358710}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,6 +152,8 @@ Global
 		{2F66C4B8-4AA2-4110-A275-4D4A74EC1121} = {732546F0-7B22-40E2-A42B-F43BD97EAA20}
 		{8B7FF0D2-F2C7-41F6-821B-045236FD4176} = {3D0B37A3-65F3-4A5B-87E0-862BE6632D65}
 		{8C2FE902-C7AA-4059-9364-B453F2DF8CFB} = {8B7FF0D2-F2C7-41F6-821B-045236FD4176}
+		{087615F8-5AB5-4F63-B23A-2A32A0016C31} = {9805BFF6-6C6D-41AA-ACA7-145DBD0D5C64}
+		{B8BD4771-DBB1-4E5F-8C8C-766B52358710} = {087615F8-5AB5-4F63-B23A-2A32A0016C31}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {774C4309-5446-499B-92D6-9A1D9E07A24C}

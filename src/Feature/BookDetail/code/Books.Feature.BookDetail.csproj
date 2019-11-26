@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8C2FE902-C7AA-4059-9364-B453F2DF8CFB}</ProjectGuid>
+    <ProjectGuid>{B8BD4771-DBB1-4E5F-8C8C-766B52358710}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Books.Foundation.CustomLinks</RootNamespace>
-    <AssemblyName>Books.Foundation.CustomLinks</AssemblyName>
+    <RootNamespace>Books.Feature.BookDetail</RootNamespace>
+    <AssemblyName>Books.Feature.BookDetail</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -43,10 +43,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\..\Project\Web\code\bin\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Glass.Mapper">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Glass.Mapper.dll</HintPath>
     </Reference>
+    <Reference Include="Glass.Mapper.Sc">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Glass.Mapper.Sc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -91,24 +94,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\CustonLinks.config" />
-    <Content Include="App_Config\Include\Foundation\CustomItemResolver.config" />
-    <None Include="Properties\PublishProfiles\SC.Cu.pubxml" />
+    <Content Include="App_Config\Include\Feature\BookDetailLoader.config" />
+    <None Include="Properties\PublishProfiles\SC.BD.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pipelines\BookDetailGlassLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility\CustomLinkManager.cs" />
-    <Compile Include="Utility\ItemResolver.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Views\web.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ORM\code\Books.Foundation.Orm.csproj">
-      <Project>{dc69f037-d421-4792-8e5a-2fdbeaac8a50}</Project>
-      <Name>Books.Foundation.Orm</Name>
-    </ProjectReference>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -123,9 +123,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50201</DevelopmentServerPort>
+          <DevelopmentServerPort>55884</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50201/</IISUrl>
+          <IISUrl>http://localhost:55884/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
