@@ -105,6 +105,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\BookDetailLoader.config" />
     <None Include="Properties\PublishProfiles\SC.BD.pubxml" />
+    <Content Include="Style\Detail.css" />
     <Content Include="Views\BookDetail\GetDetail.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>

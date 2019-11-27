@@ -11,7 +11,7 @@ namespace Books.Feature.BookCard.Models
         private readonly ICard_Folder _cfDatasource;
         private readonly IBookCard _bcDatasource;
         public Guid Id { get; set; }
-        public IEnumerable<IBookCard> Cards { get; set; }
+        public ICollection<IBookCard> Cards { get; set; }
         public Image Image { get; set; }
         public string Title { get; set; }
         public string Genre { get; set; }
@@ -20,7 +20,11 @@ namespace Books.Feature.BookCard.Models
         public int Rating { get; set; }
         public string Authour { get; set; }
 
-        public BookCardViewModel(ICard_Folder datasource) => this._cfDatasource = datasource;
+        public BookCardViewModel(ICard_Folder datasource)
+        {
+            this._cfDatasource = datasource;
+            //Cards = (ICollection<IBookCard>)_cfDatasource.BookCards;
+        }
 
         public BookCardViewModel(IBookCard datasource)
         {
@@ -35,17 +39,23 @@ namespace Books.Feature.BookCard.Models
             Link = _bcDatasource.Link;
         }
 
-        public static IEnumerable<IBookCard> GetBooksWithHighestRating(ICard_Folder datasource)
+        public BookCardViewModel()
         {
-            List<IBookCard> list = new List<IBookCard>();
+        }
+
+        public static List<BookCardViewModel> GetBooksWithHighestRating(ICard_Folder datasource)
+        {
+            List<BookCardViewModel> bcVM = new List<BookCardViewModel>();
             foreach (var card in datasource.BookCards)
             {
                 if (card.Rating >= 4)
                 {
-                    list.Add(card);
+                    BookCardViewModel tempVm = new BookCardViewModel(card);
+                    bcVM.Add(tempVm);
                 }
+
             }
-            return list;
+            return bcVM;
         }
 
     }

@@ -1,17 +1,33 @@
-﻿
-@{
-    Layout = null;
-}
+﻿@model Books.Feature.BookDetail.ViewlModels.BookViewModel
+@using Glass.Mapper.Sc.Web.Mvc
 
-<!DOCTYPE html>
+<link href="~/Style/Detail.css" rel="stylesheet" type="text/css" />
+<!-- Page Content -->
+<div class="container-fluid">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>GetDetail</title>
-</head>
-<body>
-    <div> 
+    <!-- Heading Row -->
+    @*my-5*@
+    @*align-items-center*@
+    <div class="row mt-5">
+        <div class="col-sm-3 col-md-6 col-lg-4">
+            @Html.Glass().RenderImage(x =>x.Img, new
+       {
+           @class = "img-fluid rounded mb-4 mb-lg-0"
+       }, isEditable: true)
+        </div>
+            <!-- /.col-lg-8 -->
+            @*<div class="col-md-4">*@
+        <div class="col-sm-9 col-md-6 col-lg-8">
+            <span class="badge badge-secondary">
+                    <p class="font-weight-light">Title:@Model.Title</p>
+                    <p class="font-weight-light">By: @Model.Author</p>
+                    <p class="font-weight-light">Published: @Model.PublishDate.ToString("MMMM dd,yyyy")</p>
+            </span>
+        </div>
     </div>
-</body>
-</html>
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+        <div class="card-body">
+            <p class="text-white m-0">@Model.BookReview</p>
+        </div>
+    </div>
+</div>

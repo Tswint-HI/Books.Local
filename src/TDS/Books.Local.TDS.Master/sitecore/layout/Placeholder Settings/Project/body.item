@@ -21,13 +21,13 @@ body
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 116
+content-length: 155
 
-{173CE3D9-A0D7-497C-87D4-FDB8B76FE581}|{6A4CC9ED-11C5-45E2-97CE-3345BA26570E}|{FE1CEC72-BABA-4959-957C-48E4462D26E0}
+{173CE3D9-A0D7-497C-87D4-FDB8B76FE581}|{6A4CC9ED-11C5-45E2-97CE-3345BA26570E}|{FE1CEC72-BABA-4959-957C-48E4462D26E0}|{F44A05D0-8018-42F3-AD64-9CC130E6A034}
 ----version----
 language: en
 version: 1
-revision: be84d217-6d7f-4966-a7c7-99a01122eb92
+revision: d9987b76-8904-477b-a044-e283957dc7f1
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -42,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-be84d217-6d7f-4966-a7c7-99a01122eb92
+d9987b76-8904-477b-a044-e283957dc7f1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191121T203908Z
+20191127T143837Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,0 +1,22 @@
+﻿@model List<Books.Feature.BookCard.Models.BookCardViewModel>
+@using Glass.Mapper.Sc.Web.Mvc
+@foreach (var item in Model)
+{
+    <div class="col-sm-2 card text-white bg-dark">
+        @Html.Glass().RenderImage(item, x=> x.Image, new
+   {
+       @class = "card-img-top"
+   }, isEditable: true)
+        <div class="card-body">
+            <p>Author: @item.Authour</p>
+            <p class="card-title">Title: @item.Title</p>
+            <p>Rating: @item.Rating/5</p>
+            <p class="card-text">Description: @item.Introduction </p>
+            @Html.Glass().RenderLink(item , x => x.Link, new
+       {
+           @class = "btn btn-secondary"
+       }, isEditable: true)
+        </div>
+        
+    </div>
+}

@@ -43,6 +43,7 @@
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 11rem;
     width: 50%;
     font-size: x-small;
 }
@@ -272,9 +273,9 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;
     margin-right: -15px;
-    margin-left: -15px;
+    margin-left: -15px;*/
 }
 
 .no-gutters > .col,
@@ -963,11 +964,9 @@ fieldset:disabled a.btn {
 
     .btn-link:hover {
         color: #0056b3;
-        
     }
 
     .btn-link:focus, .btn-link.focus {
-        
         box-shadow: none;
     }
 
@@ -1066,15 +1065,6 @@ button.bg-dark:focus {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-}
-
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
 }
 
 .no-gutters {
