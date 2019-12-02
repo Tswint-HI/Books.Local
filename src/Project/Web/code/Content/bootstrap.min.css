@@ -148,7 +148,6 @@ a {
 
     a:hover {
         color: #0056b3;
-        text-decoration: underline
     }
 
     a:not([href]):not([tabindex]) {
@@ -2963,11 +2962,9 @@ a.btn.disabled, fieldset:disabled a.btn {
 
     .btn-link:hover {
         color: #0056b3;
-        text-decoration: underline
     }
 
     .btn-link.focus, .btn-link:focus {
-        text-decoration: underline;
         box-shadow: none
     }
 
@@ -10076,7 +10073,6 @@ a.text-dark:focus, a.text-dark:hover {
     }
 
     a:not(.btn) {
-        text-decoration: underline
     }
 
     abbr[title]::after {

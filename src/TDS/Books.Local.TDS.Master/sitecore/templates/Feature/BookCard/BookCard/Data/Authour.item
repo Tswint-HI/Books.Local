@@ -1,40 +1,33 @@
 ----item----
 version: 1
-id: {5399D9B2-B652-4561-A2FE-73002E3B93BE}
+id: {7A184E83-7D1B-49B8-A19B-B9493BC3BF82}
 database: master
-path: /sitecore/templates/User Defined/Base/Base Book/Data/BookGenre
-parent: {9DA6BB2C-4078-4F7A-B440-86DC6F2BF0E9}
-name: BookGenre
+path: /sitecore/templates/Feature/BookCard/BookCard/Data/Authour
+parent: {1C9C3415-C893-40B0-8693-B53854B8B269}
+name: Authour
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
-created: 20191122T175440Z
+created: 20191111T212139Z
 
 ----field----
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 8
+content-length: 16
 
-Droplink
-----field----
-field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
-name: Source
-key: source
-content-length: 95
-
-query:/sitecore/content/Home/Genres//*[@@templateid = '{3CC45F70-A4CD-47CE-B4A1-AA05AA67A19D}']
+Single-Line Text
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
 key: __sortorder
 content-length: 3
 
-400
+700
 ----version----
 language: en
 version: 1
-revision: 87594194-2052-44ec-91a5-a337c0f93a6c
+revision: b0f5fb66-8f7b-4ac4-8d7e-ed4dac47749f
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -42,21 +35,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20191122T175440Z
+20191111T212139Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-87594194-2052-44ec-91a5-a337c0f93a6c
+b0f5fb66-8f7b-4ac4-8d7e-ed4dac47749f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191127T142630Z
+20191202T170434Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

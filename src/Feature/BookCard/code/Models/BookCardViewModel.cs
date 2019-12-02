@@ -13,9 +13,9 @@ namespace Books.Feature.BookCard.Models
         public Guid Id { get; set; }
         public ICollection<IBookCard> Cards { get; set; }
         public Image Image { get; set; }
-        public string Title { get; set; }
-        public string Genre { get; set; }
-        public string Introduction { get; set; }
+        public string BookTitle { get; set; }
+        public string BookGenre { get; set; }
+        public string Intro { get; set; }
         public Link Link { get; set; }
         public int Rating { get; set; }
         public string Authour { get; set; }
@@ -23,18 +23,17 @@ namespace Books.Feature.BookCard.Models
         public BookCardViewModel(ICard_Folder datasource)
         {
             this._cfDatasource = datasource;
-            //Cards = (ICollection<IBookCard>)_cfDatasource.BookCards;
         }
 
         public BookCardViewModel(IBookCard datasource)
         {
             this._bcDatasource = datasource;
             Id = _bcDatasource.Id;
-            Authour = _bcDatasource.Author;
+            Authour = _bcDatasource.Authour;
             Image = _bcDatasource.Image;
-            Title = _bcDatasource.Title;
-            Genre = _bcDatasource.Genre;
-            Introduction = _bcDatasource.Intro;
+            BookTitle = _bcDatasource.BookTitle;
+            BookGenre = _bcDatasource.BookGenre;
+            Intro = _bcDatasource.Intro;
             Rating = _bcDatasource.Rating;
             Link = _bcDatasource.Link;
         }

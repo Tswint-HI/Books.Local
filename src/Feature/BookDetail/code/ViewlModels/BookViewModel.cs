@@ -17,11 +17,11 @@ namespace Books.Feature.BookDetail.ViewlModels
         {
             this._datasource = datasource;
             Id = _datasource.Id;
-            Img = _datasource.BookImg;
-            Title = _datasource.BookTitle;
-            Author = _datasource.BookAuthor;
-            Genre = _datasource.BookGenre;
-            PublishDate = _datasource.BookPublishDate;
+            Img = _datasource.Img;
+            Title = _datasource.Title;
+            Author = _datasource.Author;
+            Genre = _datasource.Genre;
+            PublishDate = _datasource.PublishDate;
             BookReview = _datasource.BookReview;
         }
 

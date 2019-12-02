@@ -7,10 +7,10 @@
                          @class = "card-img-top"
                         }, isEditable: true)
         <div class="card-body">
-            <p>Author: @Model.Authour</p>
-            <p class="card-title">Title: @Model.Title</p>
+            <p>Author: @Html.Glass().Editable(Model, x=> x.Authour)</p>
+            <p class="card-title">Title: @Html.Glass().Editable(Model, x=>x.BookTitle)</p>
             <p>Rating: @Model.Rating/5</p>
-            <p class="card-text">Description: @Model.Introduction</p>
+            <p class="card-text">Description: @Html.Glass().Editable(Model, x=>x.Intro)</p>
             @Html.Glass().RenderLink(x => x.Link, new
                     {
                         @class = "btn btn-primary"

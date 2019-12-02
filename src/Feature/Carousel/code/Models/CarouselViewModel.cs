@@ -18,7 +18,8 @@ namespace Books.Feature.Carousel.Models
                 Items.Add(new CarouselItemViewModel
                 {
                     Index = i,
-                    ImageUrl = item.Image?.Src,
+                    Id = item.Id,
+                    Image = item.Image,
                     ImageAlt = item.Image?.Alt,
                     ShowCaption = item.ShowCaption,
                     Caption = item.Caption,

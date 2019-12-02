@@ -11,8 +11,8 @@
         @class = "card-img"
     }, isEditable: true)
         <div class="card-body">
-                <h5 class="card-title">Error: @Model.Type_Error</h5>
-                <p class="text-white card-text">@Model.Description__Error</p>
+                <h5 class="card-title">Error: @Html.Glass().Editable(Model, x=>x.Type_Error)</h5>
+                <p class="text-white card-text">@Html.Glass().Editable(Model, x=>x.Description__Error)</p>
                     <div class="card-footer text-muted">
                         @Html.Glass().RenderLink(x => x.Link, new
                         {
