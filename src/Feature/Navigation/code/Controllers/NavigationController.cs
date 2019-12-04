@@ -1,4 +1,5 @@
-﻿using Glass.Mapper.Sc.Web.Mvc;
+﻿using Books.Feature.Navigation.ViewModels;
+using Glass.Mapper.Sc.Web.Mvc;
 using Sitecore.Mvc.Presentation;
 using System;
 using System.Web.Mvc;
@@ -16,18 +17,17 @@ namespace Books.Feature.Navigation.Controllers
         {
             if (RenderingContext.Current.Rendering.Item != null)
             {
+                var dataSource = _context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigation_Links_Folder>();
+                if (dataSource == null)
+                    return null;
 
-                var home = _context.GetHomeItem<Foundation.Orm.Models.sitecore.templates.Project.Page_Types.IHome>();
-                HeaderViewModel vm = new HeaderViewModel(_context)
-                {
-                    Navigation = home.Navs
-                };
+                HeaderViewModel viewModel = new HeaderViewModel(dataSource, _context);
 
-                return View(vm);
-
+                return View(viewModel);
             }
             return null;
         }
+
 
     }
 }

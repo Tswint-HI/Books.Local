@@ -1,19 +1,26 @@
 ----item----
 version: 1
-id: {889F0B24-68E9-40CE-9AC9-1B1B8C77806D}
+id: {C7E1E333-3593-40AE-8A54-4317665E813C}
 database: master
-path: /sitecore/templates/Feature/BookCard/Card Folder/Data
-parent: {B828D791-A324-48AC-9F96-6BDAE535590A}
-name: Data
+path: /sitecore/templates/User Defined/Base/Base Navigation/Data/ExcludeFromNavigation
+parent: {A1502407-58EB-413F-9725-CF3799D4CB24}
+name: ExcludeFromNavigation
 master: {00000000-0000-0000-0000-000000000000}
-template: {E269FBB5-3750-427A-9149-7AA950B49301}
-templatekey: Template section
-created: 20191114T142118Z
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
+created: 20191028T174625Z
 
+----field----
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 8
+
+Checkbox
 ----version----
 language: en
 version: 1
-revision: 9fa7ee39-bd75-41c7-b960-f2e42c4c5242
+revision: 3035b11a-73e7-4071-8b06-666f7c8aacf7
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -21,28 +28,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20191114T142118Z
-----field----
-field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
-name: __Created by
-key: __created by
-content-length: 14
-
-sitecore\admin
+20191028T174625Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-9fa7ee39-bd75-41c7-b960-f2e42c4c5242
+3035b11a-73e7-4071-8b06-666f7c8aacf7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191114T142118Z
+20191203T190544Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

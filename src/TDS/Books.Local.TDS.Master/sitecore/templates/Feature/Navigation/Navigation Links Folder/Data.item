@@ -1,26 +1,19 @@
 ----item----
 version: 1
-id: {4313316A-6D10-442C-A3C8-FE0D2A08C4CE}
+id: {B450C865-6C25-4EC7-9B65-23D94C072F36}
 database: master
-path: /sitecore/templates/Feature/BookCard/Card Folder/__Standard Values
-parent: {B828D791-A324-48AC-9F96-6BDAE535590A}
-name: __Standard Values
+path: /sitecore/templates/Feature/Navigation/Navigation Links Folder/Data
+parent: {D3C0F83D-45C5-4B15-A70C-A2032D119A1D}
+name: Data
 master: {00000000-0000-0000-0000-000000000000}
-template: {B828D791-A324-48AC-9F96-6BDAE535590A}
-templatekey: Card Folder
-created: 20191111T205731Z
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
+created: 20191202T212242Z
 
-----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 38
-
-{42C0B316-5245-4FBC-879F-B533C27CCBC1}
 ----version----
 language: en
 version: 1
-revision: 15bf52ae-c6f0-4da5-baf1-22cb6e6d77e3
+revision: cc257538-001d-436d-92ac-f714bdfaa811
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -28,7 +21,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20191111T205731Z
+20191202T212243Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -42,14 +35,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-15bf52ae-c6f0-4da5-baf1-22cb6e6d77e3
+cc257538-001d-436d-92ac-f714bdfaa811
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191111T211954Z
+20191202T212243Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

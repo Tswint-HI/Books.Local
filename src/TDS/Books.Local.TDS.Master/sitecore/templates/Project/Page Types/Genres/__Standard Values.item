@@ -14,21 +14,21 @@ created: 20191122T152824Z
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
 name: __Masters
 key: __masters
-content-length: 77
+content-length: 38
 
-{38C71966-B6AC-4280-A086-157CF33FA6ED}|{3CC45F70-A4CD-47CE-B4A1-AA05AA67A19D}
+{3CC45F70-A4CD-47CE-B4A1-AA05AA67A19D}
 ----version----
 language: en
 version: 1
-revision: 00133e95-190c-40db-add8-4545d5adf1ad
+revision: 0964f562-00d5-4331-b68a-3d13a1e1d1e7
 
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 186
+content-length: 570
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{66B96BAD-744B-4E51-A85F-152205C9D4B6}" s:ds="{E1860135-0069-461D-A435-08602253FB5C}" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{DD5C255E-BAF2-4321-9A5F-4FEC93FBE7B8}" p:before="*" s:ds="{9906C4FE-25E8-446B-BE61-907E8486FB74}" s:id="{2EA52E2B-1C24-4B86-8466-D2977E156AF6}" s:ph="footer" /><r uid="{E8E809C1-2FB2-45CC-9D0D-CAB93C961767}" p:after="r[@uid='{DD5C255E-BAF2-4321-9A5F-4FEC93FBE7B8}']" s:ds="{F471D630-4ED3-40A2-ABB5-F2E38922AFA0}" s:id="{1E7637FB-3778-4A80-9C9A-146C8B53B6A7}" s:ph="navbar" /><r uid="{66B96BAD-744B-4E51-A85F-152205C9D4B6}" s:ds="{E1860135-0069-461D-A435-08602253FB5C}" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -42,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-00133e95-190c-40db-add8-4545d5adf1ad
+0964f562-00d5-4331-b68a-3d13a1e1d1e7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191127T142351Z
+20191204T141949Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

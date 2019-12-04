@@ -2,9 +2,9 @@
 version: 1
 id: {A1502407-58EB-413F-9725-CF3799D4CB24}
 database: master
-path: /sitecore/templates/User Defined/Base/_Base Navigation/Navigation
+path: /sitecore/templates/User Defined/Base/Base Navigation/Data
 parent: {B651325B-CF69-4B30-916D-7A8E51EA3FC5}
-name: Navigation
+name: Data
 master: {00000000-0000-0000-0000-000000000000}
 template: {E269FBB5-3750-427A-9149-7AA950B49301}
 templatekey: Template section
@@ -13,7 +13,7 @@ created: 20191028T174625Z
 ----version----
 language: en
 version: 1
-revision: 978bbf33-0f63-40b8-86fd-ba2986a91496
+revision: 77e5199f-488b-4ea7-890c-05ea47e4ddfb
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -35,14 +35,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-978bbf33-0f63-40b8-86fd-ba2986a91496
+77e5199f-488b-4ea7-890c-05ea47e4ddfb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191028T174625Z
+20191203T190544Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

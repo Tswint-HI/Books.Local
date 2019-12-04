@@ -26,7 +26,12 @@ namespace Books.Foundation.CustomErrors.Pipelines
 
             // all the icons and media library items 
             // for the sitecore client need to be ignored
-            if (path.StartsWith("/-/") || path.StartsWith("/_dev") || path.StartsWith("/sitecore") || path.StartsWith("/api"))
+            if (path.StartsWith("/-/") ||
+                path.StartsWith("/_dev") ||
+                path.StartsWith("/sitecore") ||
+                path.StartsWith("/api") ||
+                path.StartsWith("/genres") ||
+                path.StartsWith("/about"))
                 return;
 
             // Get the 404 not found item in Sitecore.

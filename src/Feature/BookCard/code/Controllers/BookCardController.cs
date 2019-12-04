@@ -3,8 +3,8 @@ using Glass.Mapper.Sc.Web.Mvc;
 using Sitecore.Mvc.Presentation;
 using System;
 using System.Web.Mvc;
-using Card = Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard.IBookCard;
-using Folder = Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard.ICard_Folder;
+using Card = Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Book;
+using Folder = Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.Book_Folder;
 
 namespace Books.Feature.BookCard.Controllers
 {
