@@ -17,7 +17,11 @@
                 <p class="font-weight-light">Title: @Html.Glass().Editable(Model, x => x.Title)</p>
                 <p class="font-weight-light">By: @Html.Glass().Editable(Model, x => x.Author)</p>
                 <p class="font-weight-light">
-                    Published: @Html.Glass().Editable(Model, x => x.PublishDate, new { Format = "dd/MM/yyyy" })
+                    Published:
+                    @(Sitecore.Context.PageMode.IsNormal?
+                       @Html.Glass().Editable(Model, x => x.PublishDate.ToShortDateString(), new { Format = "mm/dd/yyyy" }) : 
+                        @Html.Glass().Editable(Model, x => x.PublishDate, new { Format = "MM/dd/yyyy" }))
+                    
                 </p>
             </span>
         </div>
