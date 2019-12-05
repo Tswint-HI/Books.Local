@@ -14,12 +14,12 @@ namespace Books.Feature.Navigation.ViewModels
         public IMvcContext _context;
         public IEnumerable<Sitecore.Data.Items.Item> _parentItems;
         public IEnumerable<Sitecore.Data.Items.Item> _childItems;
-        public Image Logo;
-
+        public INavigation_Links_Folder _folder;
         public HeaderViewModel(INavigation_Links_Folder dataSource, IMvcContext context)
         {
             _context = context;
-            Logo = dataSource.Logo;
+            _folder = dataSource;
+            //_folder.Logo = dataSource.Logo;
             GatherParents();
             GrabTheKids();
             RemoveItem(context);
@@ -60,7 +60,8 @@ namespace Books.Feature.Navigation.ViewModels
                 _parentItems = temp;
             }
             List<Item> temp2 = new List<Item>();
-            foreach (var items in _childItems)
+            foreach (var items in
+                _childItems)
             {
                 temp2.Add(items);
                 if (items.DisplayName.ToLowerInvariant() == contextName)

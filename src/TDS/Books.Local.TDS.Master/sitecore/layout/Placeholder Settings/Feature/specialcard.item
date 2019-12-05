@@ -1,40 +1,33 @@
 ----item----
 version: 1
-id: {9EE23947-5812-4F69-A120-A49596651CF7}
+id: {7A9E16F1-E506-4A6A-B8CC-397FF54ED1CB}
 database: master
-path: /sitecore/layout/Placeholder Settings/Project/body
-parent: {F5F0FBE3-61AD-4967-A5D8-8D760331D6A1}
-name: body
+path: /sitecore/layout/Placeholder Settings/Feature/specialcard
+parent: {1B59149D-7ED3-4D58-86A9-32EDED8C0368}
+name: specialcard
 master: {00000000-0000-0000-0000-000000000000}
 template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
 templatekey: Placeholder
-created: 20191028T200229Z
+created: 20191204T174850Z
 
 ----field----
 field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
 name: Placeholder Key
 key: placeholder key
-content-length: 4
+content-length: 11
 
-body
+specialcard
 ----field----
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 233
+content-length: 38
 
-{173CE3D9-A0D7-497C-87D4-FDB8B76FE581}|{6A4CC9ED-11C5-45E2-97CE-3345BA26570E}|{FE1CEC72-BABA-4959-957C-48E4462D26E0}|{F44A05D0-8018-42F3-AD64-9CC130E6A034}|{B13FEE52-8FD9-4CF7-B83A-6D1A7FBC3407}|{0A6D5A2D-BB03-4036-B88D-49D60EA82E37}
-----field----
-field: {14D0728A-82F9-4B01-AB16-1FE1577CEDE2}
-name: Editable
-key: editable
-content-length: 0
-
-
+{7264A2E8-F6C7-46AB-A43A-0EDCE97C1A04}
 ----version----
 language: en
 version: 1
-revision: 95a98e7c-b2ce-4c9f-8dfa-dea9b2042442
+revision: 810049cd-1ea0-43aa-9612-34ca92400354
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -42,21 +35,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20191028T200229Z
+20191204T174850Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-95a98e7c-b2ce-4c9f-8dfa-dea9b2042442
+810049cd-1ea0-43aa-9612-34ca92400354
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191205T202822Z
+20191204T174915Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

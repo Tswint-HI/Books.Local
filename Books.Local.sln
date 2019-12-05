@@ -59,6 +59,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookDetail", "BookDetail", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Feature.BookDetail", "src\Feature\BookDetail\code\Books.Feature.BookDetail.csproj", "{B8BD4771-DBB1-4E5F-8C8C-766B52358710}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Banner", "Banner", "{0C5DE535-4781-4DA4-9D77-D9D64E959153}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Feature.Banner", "src\Feature\Banner\code\Books.Feature.Banner.csproj", "{732FCAD4-2CB0-4405-BD97-AFE280458270}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +119,10 @@ Global
 		{B8BD4771-DBB1-4E5F-8C8C-766B52358710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8BD4771-DBB1-4E5F-8C8C-766B52358710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8BD4771-DBB1-4E5F-8C8C-766B52358710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732FCAD4-2CB0-4405-BD97-AFE280458270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732FCAD4-2CB0-4405-BD97-AFE280458270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732FCAD4-2CB0-4405-BD97-AFE280458270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732FCAD4-2CB0-4405-BD97-AFE280458270}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,6 +152,8 @@ Global
 		{8C2FE902-C7AA-4059-9364-B453F2DF8CFB} = {8B7FF0D2-F2C7-41F6-821B-045236FD4176}
 		{087615F8-5AB5-4F63-B23A-2A32A0016C31} = {9805BFF6-6C6D-41AA-ACA7-145DBD0D5C64}
 		{B8BD4771-DBB1-4E5F-8C8C-766B52358710} = {087615F8-5AB5-4F63-B23A-2A32A0016C31}
+		{0C5DE535-4781-4DA4-9D77-D9D64E959153} = {9805BFF6-6C6D-41AA-ACA7-145DBD0D5C64}
+		{732FCAD4-2CB0-4405-BD97-AFE280458270} = {0C5DE535-4781-4DA4-9D77-D9D64E959153}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {774C4309-5446-499B-92D6-9A1D9E07A24C}

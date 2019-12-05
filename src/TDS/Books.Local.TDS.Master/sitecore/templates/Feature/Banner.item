@@ -1,26 +1,26 @@
 ----item----
 version: 1
-id: {EDB5347C-068C-4712-8A44-CEEC99C23D13}
+id: {B4E9A2EC-FAF2-4865-9D94-BE4A32187BCF}
 database: master
-path: /sitecore/templates/Feature/Carousel
+path: /sitecore/templates/Feature/Banner
 parent: {8F343079-3CC5-4EF7-BC27-32ADDB46F45E}
-name: Carousel
+name: Banner
 master: {00000000-0000-0000-0000-000000000000}
-template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
-templatekey: Folder
-created: 20191029T203334Z
+template: {0437FEE2-44C9-46A6-ABE9-28858D9FEE8C}
+templatekey: Template Folder
+created: 20191205T190504Z
 
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
 key: __sortorder
-content-length: 3
+content-length: 1
 
-200
+0
 ----version----
 language: en
 version: 1
-revision: 039de1f9-9cf0-4650-8420-3e64b4e4329e
+revision: 3c1e5daa-478f-4a6a-8224-f927967dab57
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -28,7 +28,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20191029T203334Z
+20191205T190504Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -42,7 +42,7 @@ name: __Revision
 key: __revision
 content-length: 36
 
-039de1f9-9cf0-4650-8420-3e64b4e4329e
+3c1e5daa-478f-4a6a-8224-f927967dab57
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
