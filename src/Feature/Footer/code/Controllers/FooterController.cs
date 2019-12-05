@@ -31,7 +31,6 @@ namespace Books.Feature.Footer.Controllers
 
         public ActionResult FooterVariant2()
         {
-
             return View();
         }
     }

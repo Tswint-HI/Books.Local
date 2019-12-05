@@ -29,9 +29,7 @@ namespace Books.Foundation.CustomErrors.Pipelines
             if (path.StartsWith("/-/") ||
                 path.StartsWith("/_dev") ||
                 path.StartsWith("/sitecore") ||
-                path.StartsWith("/api") ||
-                path.StartsWith("/genres") ||
-                path.StartsWith("/about"))
+                path.StartsWith("/api"))
                 return;
 
             // Get the 404 not found item in Sitecore.
@@ -39,17 +37,14 @@ namespace Books.Foundation.CustomErrors.Pipelines
             // from multisite solutions. In a production 
             // environment you would probably get the item from
             // your website configuration.
-
             var notFoundPage = Sitecore.Context.Database.GetItem(path404);
             if (notFoundPage == null)
                 return;
 
             // Switch to the 404 item
             Sitecore.Context.Item = notFoundPage;
-
             //HttpContext.Response.StatusCode.GetTypeCode();
             //args.HttpContext.Response.StatusCode = 404;
-
         }
     }
 }

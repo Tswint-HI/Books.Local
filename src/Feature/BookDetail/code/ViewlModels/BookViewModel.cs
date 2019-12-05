@@ -25,7 +25,7 @@ namespace Books.Feature.BookDetail.ViewlModels
             BookReview = _datasource.BookReview;
         }
 
-        public static BookViewModel VariantOne(BookViewModel vm)
+        internal static BookViewModel VariantOne(BookViewModel vm)
         {
             return vm;
         }

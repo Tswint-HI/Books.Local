@@ -1,8 +1,4 @@
-﻿@using Books.Foundation.Assets
-@using Books.Foundation.Assets.Models
-@using Books.Foundation.Assets.Service
-
-@using Sitecore.Mvc.Analytics.Extensions
+﻿@using Sitecore.Mvc.Analytics.Extensions
 @inherits WebViewPage
 @{
     Layout = null;
@@ -27,11 +23,6 @@
 </head>
 <body class="masthead" @(Sitecore.Context.PageMode.IsNormal ? "" : (Sitecore.Context.PageMode.IsExperienceEditor ? "pagemode-edit" : "pagemode-preview"))">
     <div id="main-container">
-        @* Figure out what to do here*@
-        @*<header class="masthead">
-
-            </header>
-            <br>*@
         @Html.Sitecore().Placeholder("navbar")
         <main role="main" class="header-static">
             @Html.Sitecore().Placeholder("body")
@@ -44,6 +35,5 @@
             @Html.Sitecore().Placeholder("footer")
         </footer>
     </div>
-    @*<script src="~/Scripts/grayscale.js"></script>*@
 </body>
 </html>

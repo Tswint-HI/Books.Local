@@ -5332,4 +5332,10 @@ html {
         margin-left: auto !important;
     }
 }
+
+.w-100 {
+    width: 100% !important;
+}
+
+
 /*# sourceMappingURL=bootstrap-grid.css.map */

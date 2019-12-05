@@ -1,5 +1,6 @@
 ﻿using Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base;
 using Glass.Mapper.Sc.Fields;
+using Glass.Mapper.Sc.Web.Mvc;
 using System;
 using System.Collections.Generic;
 using IBookCard = Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Book;
@@ -10,6 +11,7 @@ namespace Books.Feature.BookCard.Models
     {
         private readonly IBook_Folder _bfDatasource;
         private readonly IBookCard _bcDatasource;
+        public IMvcContext _context;
         public Guid Id { get; set; }
         public ICollection<IBookCard> Cards { get; set; }
         public Image Img { get; set; }
@@ -46,7 +48,7 @@ namespace Books.Feature.BookCard.Models
         {
         }
 
-        public static List<BookCardViewModel> GetBooksWithHighestRating(IBook_Folder datasource)
+        internal static List<BookCardViewModel> GetBooksWithHighestRating(IBook_Folder datasource)
         {
             List<BookCardViewModel> bcVM = new List<BookCardViewModel>();
             foreach (var card in datasource.Books)
@@ -56,10 +58,24 @@ namespace Books.Feature.BookCard.Models
                     BookCardViewModel tempVm = new BookCardViewModel(card);
                     bcVM.Add(tempVm);
                 }
-
             }
             return bcVM;
         }
 
+        internal static List<BookCardViewModel> AllBooks(IBook_Folder ds, IMvcContext context)
+        {
+            string contextName = context.ContextItem.DisplayName.ToLowerInvariant();
+            var genre = context.GetPageContextItem<Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types.Genres>().Id;
+            List<BookCardViewModel> bcVM = new List<BookCardViewModel>();
+            foreach (var card in ds.Books)
+            {
+                if (card.Genre == genre)
+                {
+                    BookCardViewModel tempVm = new BookCardViewModel(card);
+                    bcVM.Add(tempVm);
+                }
+            }
+            return bcVM;
+        }
     }
 }
