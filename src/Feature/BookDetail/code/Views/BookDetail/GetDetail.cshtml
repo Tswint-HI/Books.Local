@@ -21,7 +21,6 @@
                     @(Sitecore.Context.PageMode.IsNormal?
                        @Html.Glass().Editable(Model, x => x.PublishDate.ToShortDateString(), new { Format = "mm/dd/yyyy" }) : 
                         @Html.Glass().Editable(Model, x => x.PublishDate, new { Format = "MM/dd/yyyy" }))
-                    
                 </p>
             </span>
         </div>

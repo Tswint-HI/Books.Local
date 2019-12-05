@@ -41,5 +41,17 @@ namespace Books.Feature.BookCard.Controllers
 
             return View();
         }
+
+
+        public ActionResult BooksByGenre()
+        {
+            if (RenderingContext.Current.Rendering.Item != null)
+            {
+                var ds = _context.GetDataSourceItem<Folder>();
+                object bookList = BookCardViewModel.AllBooks(ds, _context);
+                return ds == null ? null : View(bookList);
+            }
+            return View();
+        }
     }
 }

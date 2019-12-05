@@ -22,12 +22,9 @@ namespace Books.Feature.Navigation.Controllers
                     return null;
 
                 HeaderViewModel viewModel = new HeaderViewModel(dataSource, _context);
-
                 return View(viewModel);
             }
             return null;
         }
-
-
     }
 }

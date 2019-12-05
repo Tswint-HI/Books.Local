@@ -12,16 +12,12 @@ namespace Books.Feature.Error.Controllers
         public ErrorController(SitecoreRepository repository)
         {
             this.Repository = repository;
-
         }
 
         // GET: Error
         public ActionResult Index()
         {
-
             Errors model = null;
-
-
             var contextId = Sitecore.Context.Item.ID.Guid;
             try
             {
@@ -29,18 +25,8 @@ namespace Books.Feature.Error.Controllers
             }
             catch (Exception ex)
             {
-
                 Sitecore.Diagnostics.Log.Error("UH OH", ex);
             }
-
-            //if (model != null)
-            //{
-            //    if (int.TryParse(model.Type_Error, out int status))
-            //    {
-            //        Response.StatusCode = status;
-            //    }
-            //}
-
             return View(model);
         }
     }

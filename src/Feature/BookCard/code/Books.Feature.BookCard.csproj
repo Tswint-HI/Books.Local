@@ -112,6 +112,8 @@
     <Content Include="Views\BookCard\Layout\BookCardLayout.cshtml" />
     <Content Include="Views\BookCard\BookCard.cshtml" />
     <Content Include="Views\BookCard\BookCardHighRatings.cshtml" />
+    <Content Include="Views\BookCard\BooksByGenre.cshtml" />
+    <Content Include="Views\BookCard\Layout\BookCardLayoutTwo.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
