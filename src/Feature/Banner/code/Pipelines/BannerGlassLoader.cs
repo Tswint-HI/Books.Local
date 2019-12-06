@@ -7,7 +7,7 @@ namespace Books.Feature.Banner.Pipelines
     {
         public override void Process(GetGlassLoadersPipelineArgs args)
         {
-            SitecoreAttributeConfigurationLoader loader = new SitecoreAttributeConfigurationLoader("Books.Feature.BookCard");
+            SitecoreAttributeConfigurationLoader loader = new SitecoreAttributeConfigurationLoader("Books.Feature.Banner");
             args.Loaders.Add(loader);
         }
     }

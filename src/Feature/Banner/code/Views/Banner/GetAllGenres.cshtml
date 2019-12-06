@@ -1,0 +1,25 @@
+﻿@model List<Books.Feature.Banner.ViewModels.BannerViewModel>
+<link href="~/Style/Banner.css" rel="stylesheet" type="text/css" />
+
+@foreach (var banner in Model)
+{
+   <hr />
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-lg-6">
+                @Html.Glass().RenderImage(banner, x => x.Img, isEditable: true)
+            </div>
+            <div class="col-lg-6">
+                <h3 class="display-4">@Html.Glass().Editable(banner, x => x.Title)</h3>
+                <p class="lead">@Html.Glass().Editable(banner, x => x.Sub)</p>
+                <hr class="my-4">
+                <p>@Html.Glass().Editable(banner, x => x.Content)</p>
+                <p class="lead">
+                    @Html.Glass().RenderLink(banner, x => x.CTA, isEditable: true)
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="w-100"></div>
+}

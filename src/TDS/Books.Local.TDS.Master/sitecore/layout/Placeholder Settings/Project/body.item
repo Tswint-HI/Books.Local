@@ -28,13 +28,13 @@ content-length: 233
 field: {14D0728A-82F9-4B01-AB16-1FE1577CEDE2}
 name: Editable
 key: editable
-content-length: 0
+content-length: 1
 
-
+1
 ----version----
 language: en
 version: 1
-revision: 95a98e7c-b2ce-4c9f-8dfa-dea9b2042442
+revision: 782caa27-6f27-4602-b619-ef430e093a94
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -49,18 +49,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-95a98e7c-b2ce-4c9f-8dfa-dea9b2042442
+782caa27-6f27-4602-b619-ef430e093a94
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191205T202822Z
+20191205T215950Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

@@ -766,12 +766,12 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner
 								/// <summary>
 					/// The Sub field.
 					/// <para></para>
-					/// <para>Field Type: Message Text Line</para>		
+					/// <para>Field Type: Multi-Line Text</para>		
 					/// <para>Field ID: 7c4c7eeb-fe18-4bdb-b532-f0eb1f84f606</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBannerConstants.SubFieldName)]
-					object /* UNKNOWN */ Sub  {get; set;}
+					string Sub  {get; set;}
 			
 								/// <summary>
 					/// The Title field.
@@ -863,13 +863,13 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner
 						/// <summary>
 				/// The Sub field.
 				/// <para></para>
-				/// <para>Field Type: Message Text Line</para>		
+				/// <para>Field Type: Multi-Line Text</para>		
 				/// <para>Field ID: 7c4c7eeb-fe18-4bdb-b532-f0eb1f84f606</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBannerConstants.SubFieldName)]
-				public virtual object /* UNKNOWN */ Sub  {get; set;}
+				public virtual string Sub  {get; set;}
 					
 						/// <summary>
 				/// The Title field.
@@ -898,6 +898,16 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner
 	[SitecoreType(TemplateId=IBanner_FolderConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface IBanner_Folder : IGlassBase 
 	{
+								/// <summary>
+					/// The Banners field.
+					/// <para></para>
+					/// <para>Field Type: Multilist</para>		
+					/// <para>Field ID: b77a0399-4dd0-43f9-a122-feb9c89a23b6</para>
+					/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner</para>
+					/// </summary>
+					[SitecoreField(IBanner_FolderConstants.BannersFieldName)]
+					IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner> Banners  {get; set;}
+			
 				}
 
 
@@ -907,6 +917,10 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Banner Folder";
 
+					
+			public static readonly ID BannersFieldId = new ID("b77a0399-4dd0-43f9-a122-feb9c89a23b6");
+			public const string BannersFieldName = "Banners";
+			
 			
 
 	}
@@ -922,6 +936,17 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner
 	public partial class Banner_Folder  : GlassBase, IBanner_Folder 
 	{
 	   
+						/// <summary>
+				/// The Banners field.
+				/// <para></para>
+				/// <para>Field Type: Multilist</para>		
+				/// <para>Field ID: b77a0399-4dd0-43f9-a122-feb9c89a23b6</para>
+				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner</para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBanner_FolderConstants.BannersFieldName)]
+				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner> Banners  {get; set;}
+					
 			
 	}
 }

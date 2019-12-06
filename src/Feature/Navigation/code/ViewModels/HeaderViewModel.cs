@@ -1,5 +1,4 @@
 ﻿using Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation;
-using Glass.Mapper.Sc.Fields;
 using Glass.Mapper.Sc.Web.Mvc;
 using System;
 using System.Collections.Generic;
@@ -54,22 +53,19 @@ namespace Books.Feature.Navigation.ViewModels
             {
                 temp.Add(item);
                 if (item.DisplayName.ToLowerInvariant() == contextName)
-                {
                     temp.Remove(item);
-                }
+
                 _parentItems = temp;
             }
             List<Item> temp2 = new List<Item>();
-            foreach (var items in
-                _childItems)
+            foreach (var items in _childItems)
             {
+                string itemName = items.DisplayName.ToString().Replace("-", string.Empty).ToLowerInvariant();
                 temp2.Add(items);
-                if (items.DisplayName.ToLowerInvariant() == contextName)
-                {
+                if (itemName == contextName)
                     temp2.Remove(items);
-                }
-                _childItems = temp2;
             }
+            _childItems = temp2;
         }
     }
 }
