@@ -44,8 +44,8 @@
 
     .dropdown-content a {
         float: none;
-        color: black;
-        padding: 12px 26px;
+        color: black !important;
+        padding: 12px 28px;
         margin-top: 4;
         text-decoration: none;
         display: block;
@@ -53,7 +53,7 @@
     }
 
         .dropdown-content a:hover {
-            background-color: #ddd;
+            background-color: #ffccdd
         }
 
 .dropdown:hover .dropdown-content {
