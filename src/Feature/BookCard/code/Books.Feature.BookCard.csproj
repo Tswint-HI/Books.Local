@@ -107,13 +107,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\BookCardLoader.config" />
-    <None Include="Properties\PublishProfiles\SC.BC.pubxml" />
     <Content Include="Styles\Card2.css" />
     <Content Include="Views\BookCard\Layout\BookCardLayout.cshtml" />
     <Content Include="Views\BookCard\BookCard.cshtml" />
     <Content Include="Views\BookCard\BookCardHighRatings.cshtml" />
     <Content Include="Views\BookCard\BooksByGenre.cshtml" />
     <Content Include="Views\BookCard\Layout\BookCardLayoutTwo.cshtml" />
+    <None Include="Properties\PublishProfiles\BookCard.sc.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

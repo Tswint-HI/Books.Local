@@ -32,7 +32,7 @@ namespace Books.Feature.Banner.Controllers
             if (RenderingContext.Current.Rendering.Item != null)
             {
                 var ds = _context.GetDataSourceItem<BannerFolder>();
-                object bannerList = BannerViewModel.GetGenresBanner(ds, _context);
+                object bannerList = BannerViewModel.GetAllBanners(ds, _context);
                 return ds == null ? null : View(bannerList);
             }
             return View();

@@ -112,6 +112,7 @@
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.config" />
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Glass\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
+    <None Include="Properties\PublishProfiles\ORM.sc.pubxml" />
     <None Include="Properties\PublishProfiles\SC.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>

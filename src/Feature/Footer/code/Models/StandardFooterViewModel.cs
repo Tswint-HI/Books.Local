@@ -11,6 +11,7 @@ namespace Books.Feature.Footer.Models
         public string Subhead { get; set; }
         public string Content { get; set; }
         public string Copyright { get; set; }
+        public string Disclosure { get; set; }
 
         public StandardFooterViewModel(IBase_Footer datasource)
         {
@@ -20,6 +21,7 @@ namespace Books.Feature.Footer.Models
             Subhead = _datasource.Subhead;
             Content = _datasource.Content;
             Copyright = _datasource.Copyright;
+            Disclosure = datasource.Disclosure;
         }
 
     }

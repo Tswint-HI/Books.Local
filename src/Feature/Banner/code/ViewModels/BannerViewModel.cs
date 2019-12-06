@@ -9,6 +9,7 @@ namespace Books.Feature.Banner.ViewModels
     public class BannerViewModel
     {
         public Guid Id { get; set; }
+        public string Headline { get; set; }
         public string Title { get; set; }
         public string Sub { get; set; }
         public Image Img { get; set; }
@@ -20,6 +21,7 @@ namespace Books.Feature.Banner.ViewModels
         {
             _bannerDatasource = ds;
             Id = ds.Id;
+            Headline = ds.HeadLine;
             Title = ds.Title;
             Sub = ds.Sub;
             Img = ds.Img;
@@ -30,7 +32,7 @@ namespace Books.Feature.Banner.ViewModels
         {
             _bfDatasource = _Folder;
         }
-        internal static List<BannerViewModel> GetGenresBanner(IBanner_Folder ds, IMvcContext _context)
+        internal static List<BannerViewModel> GetAllBanners(IBanner_Folder ds, IMvcContext _context)
         {
             List<BannerViewModel> bcVM = new List<BannerViewModel>();
             var bf = _context.SitecoreService.GetItem<IBanner_Folder>(ds.Id);

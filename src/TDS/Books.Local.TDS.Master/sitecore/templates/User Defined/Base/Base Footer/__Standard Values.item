@@ -13,7 +13,7 @@ created: 20191108T135606Z
 ----version----
 language: en
 version: 1
-revision: f881657a-db89-4a3a-8121-86c22d529cd4
+revision: f6c03a20-ae37-4c32-bd41-b814364ab300
 
 ----field----
 field: {672C7E6A-6E84-4936-A07E-0FF82AA2F957}
@@ -44,6 +44,13 @@ content-length: 35
 
 ©--Enter Copyright information here
 ----field----
+field: {64881C52-B774-47B7-B946-07AB0A92C508}
+name: Disclosure
+key: disclosure
+content-length: 62
+
+Enter in finer details here maybe even add a link to something
+----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner
@@ -70,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f881657a-db89-4a3a-8121-86c22d529cd4
+f6c03a20-ae37-4c32-bd41-b814364ab300
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191111T195012Z
+20191206T153859Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

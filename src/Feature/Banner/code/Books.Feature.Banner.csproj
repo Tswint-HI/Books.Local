@@ -104,11 +104,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\BannerLoader.config" />
-    <None Include="Properties\PublishProfiles\Banner.SC.pubxml" />
     <Content Include="Style\Banner.css" />
     <Content Include="Views\Banner\FeaturedGenre.cshtml" />
     <Content Include="Views\Banner\Layout\GenreBannerLayout.cshtml" />
     <Content Include="Views\Banner\GetAllGenres.cshtml" />
+    <None Include="Properties\PublishProfiles\Banner.SC.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

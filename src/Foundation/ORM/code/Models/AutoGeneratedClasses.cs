@@ -501,6 +501,10 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 			public const string CopyrightFieldName = "Copyright";
 			
 					
+			public static readonly ID DisclosureFieldId = new ID("64881c52-b774-47b7-b946-07ab0a92c508");
+			public const string DisclosureFieldName = "Disclosure";
+			
+					
 			public static readonly ID HeaderFieldId = new ID("672c7e6a-6e84-4936-a07e-0ff82aa2f957");
 			public const string HeaderFieldName = "Header";
 			
@@ -560,6 +564,17 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IGenresConstants.CopyrightFieldName)]
 				public virtual string Copyright  {get; set;}
+					
+						/// <summary>
+				/// The Disclosure field.
+				/// <para></para>
+				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field ID: 64881c52-b774-47b7-b946-07ab0a92c508</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.DisclosureFieldName)]
+				public virtual string Disclosure  {get; set;}
 					
 						/// <summary>
 				/// The Header field.
@@ -754,6 +769,16 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner
 					Link CTA  {get; set;}
 			
 								/// <summary>
+					/// The HeadLine field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field ID: 6ad9e896-a753-4ad8-8448-3dfa44a8241d</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBannerConstants.HeadLineFieldName)]
+					string HeadLine  {get; set;}
+			
+								/// <summary>
 					/// The Img field.
 					/// <para></para>
 					/// <para>Field Type: Image</para>		
@@ -799,6 +824,10 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner
 					
 			public static readonly ID CTAFieldId = new ID("4d96c033-0158-4b1b-87ef-cd5ce563fd6c");
 			public const string CTAFieldName = "CTA";
+			
+					
+			public static readonly ID HeadLineFieldId = new ID("6ad9e896-a753-4ad8-8448-3dfa44a8241d");
+			public const string HeadLineFieldName = "HeadLine";
 			
 					
 			public static readonly ID ImgFieldId = new ID("ae012d8d-e0c9-4b93-a141-61b0e6ee3acf");
@@ -848,6 +877,17 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBannerConstants.CTAFieldName)]
 				public virtual Link CTA  {get; set;}
+					
+						/// <summary>
+				/// The HeadLine field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: 6ad9e896-a753-4ad8-8448-3dfa44a8241d</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBannerConstants.HeadLineFieldName)]
+				public virtual string HeadLine  {get; set;}
 					
 						/// <summary>
 				/// The Img field.
@@ -1884,6 +1924,16 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 					string Copyright  {get; set;}
 			
 								/// <summary>
+					/// The Disclosure field.
+					/// <para></para>
+					/// <para>Field Type: Rich Text</para>		
+					/// <para>Field ID: 64881c52-b774-47b7-b946-07ab0a92c508</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_FooterConstants.DisclosureFieldName)]
+					string Disclosure  {get; set;}
+			
+								/// <summary>
 					/// The Header field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -1919,6 +1969,10 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 					
 			public static readonly ID CopyrightFieldId = new ID("477c7db6-ceb4-4da4-84d4-c482d897ac2c");
 			public const string CopyrightFieldName = "Copyright";
+			
+					
+			public static readonly ID DisclosureFieldId = new ID("64881c52-b774-47b7-b946-07ab0a92c508");
+			public const string DisclosureFieldName = "Disclosure";
 			
 					
 			public static readonly ID HeaderFieldId = new ID("672c7e6a-6e84-4936-a07e-0ff82aa2f957");
@@ -1964,6 +2018,17 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBase_FooterConstants.CopyrightFieldName)]
 				public virtual string Copyright  {get; set;}
+					
+						/// <summary>
+				/// The Disclosure field.
+				/// <para></para>
+				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field ID: 64881c52-b774-47b7-b946-07ab0a92c508</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_FooterConstants.DisclosureFieldName)]
+				public virtual string Disclosure  {get; set;}
 					
 						/// <summary>
 				/// The Header field.

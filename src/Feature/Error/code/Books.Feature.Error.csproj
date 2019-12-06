@@ -106,7 +106,7 @@
     <Content Include="App_Config\Include\Feature\ErrorLoader.config" />
     <Content Include="Style\Error.css" />
     <Content Include="Views\Error\Index.cshtml" />
-    <None Include="Properties\PublishProfiles\SC.Ft.E.pubxml" />
+    <None Include="Properties\PublishProfiles\Error.sc.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -30,7 +30,7 @@ name: Datasource Location
 key: datasource location
 content-length: 38
 
-{F471D630-4ED3-40A2-ABB5-F2E38922AFA0}
+{BBF62B78-4F2F-4474-907A-7FB1FC9FE29E}
 ----field----
 field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
 name: Datasource Template
@@ -55,7 +55,7 @@ content-length: 1
 ----version----
 language: en
 version: 1
-revision: 10ed189d-60c7-49b6-8d28-3981b119c682
+revision: cc024b8f-2d93-45a6-aab9-0e30553a080f
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -70,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-10ed189d-60c7-49b6-8d28-3981b119c682
+cc024b8f-2d93-45a6-aab9-0e30553a080f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191203T143725Z
+20191206T135850Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

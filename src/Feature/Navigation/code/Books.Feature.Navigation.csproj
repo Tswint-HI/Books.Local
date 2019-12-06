@@ -107,12 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\NavigationLoader.config" />
-    <None Include="Properties\PublishProfiles\SCNav.pubxml" />
     <Content Include="Scripts\Nav.js" />
     <Content Include="Scripts\Nav2.js" />
     <Content Include="Styles\Nav.css" />
     <Content Include="Views\Navigation\getNav.cshtml" />
     <Content Include="Styles\Nav2.scss" />
+    <None Include="Properties\PublishProfiles\Navigation.sc.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -2,9 +2,9 @@
 version: 1
 id: {0A6D5A2D-BB03-4036-B88D-49D60EA82E37}
 database: master
-path: /sitecore/layout/Renderings/Feature/Featured Genre
+path: /sitecore/layout/Renderings/Feature/Featured Banner
 parent: {DA61AD50-8FDB-4252-A68F-B4470B1C9FE8}
-name: Featured Genre
+name: Featured Banner
 master: {00000000-0000-0000-0000-000000000000}
 template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
 templatekey: Controller rendering
@@ -30,7 +30,7 @@ name: Datasource Location
 key: datasource location
 content-length: 38
 
-{A77852F9-2FD5-4AC6-843F-DEF89324D365}
+{BBF62B78-4F2F-4474-907A-7FB1FC9FE29E}
 ----field----
 field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
 name: Datasource Template
@@ -48,7 +48,7 @@ Applications/16x16/star_yellow_new.png
 ----version----
 language: en
 version: 1
-revision: 787d2f7b-af59-4e33-a3f5-5b0d0c0a9955
+revision: 036149a1-50ad-41e6-9ae0-4ba41c865cd0
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -63,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-787d2f7b-af59-4e33-a3f5-5b0d0c0a9955
+036149a1-50ad-41e6-9ae0-4ba41c865cd0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191205T203009Z
+20191206T135736Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,13 +1,12 @@
 ﻿@model List<Books.Feature.Banner.ViewModels.BannerViewModel>
 <link href="~/Style/Banner.css" rel="stylesheet" type="text/css" />
-
 @foreach (var banner in Model)
 {
    <hr />
     <div class="jumbotron">
         <div class="row">
             <div class="col-lg-6">
-                @Html.Glass().RenderImage(banner, x => x.Img, isEditable: true)
+                @Html.Glass().RenderImage(banner, x => x.Img, new { @class = "img" }, isEditable: true)
             </div>
             <div class="col-lg-6">
                 <h3 class="display-4">@Html.Glass().Editable(banner, x => x.Title)</h3>

@@ -110,6 +110,7 @@
     <Content Include="Styles\Carousel.css" />
     <Content Include="Views\Carousel\GetCarousel.cshtml" />
     <Content Include="App_Config\Include\Feature\CarouselLoader.config" />
+    <None Include="Properties\PublishProfiles\Carousel.sc.pubxml" />
     <None Include="Properties\PublishProfiles\SC.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>

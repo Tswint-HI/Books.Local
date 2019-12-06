@@ -1,11 +1,12 @@
 ﻿@model Books.Feature.Banner.ViewModels.BannerViewModel
-<link href="~/Style/Banner.css" rel="stylesheet" type="text/css"/>
-<h3 class="text-white" id="Title">This Months Featured Genre</h3>
+<link href="~/Style/Banner.css" rel="stylesheet" type="text/css" />
+<br />
+<h3 class="text-special">@Html.Glass().Editable(Model, x => x.Headline)</h3>
 <hr />
 <div class="jumbotron">
     <div class="row">
         <div class="col-lg-6">
-            @Html.Glass().RenderImage(Model, x=>x.Img, isEditable: true)
+            @Html.Glass().RenderImage(Model, x => x.Img, new { @class = "img" }, isEditable: true)
         </div>
         <div class="col-lg-6">
             <h3 class="display-4">@Html.Glass().Editable(Model, x => x.Title)</h3>
@@ -13,8 +14,18 @@
             <hr class="my-4">
             <p>@Html.Glass().Editable(Model, x => x.Content)</p>
             <p class="lead">
-                @Html.Glass().RenderLink(Model, x => x.CTA)
+                @Html.Glass().RenderLink(Model, x => x.CTA, isEditable: true)
             </p>
         </div>
     </div>
 </div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
