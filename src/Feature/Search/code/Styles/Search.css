@@ -32,6 +32,7 @@
 
 .search_icon {
     height: 40px;
+    background-color: #333;
     width: 40px;
     font-family: "Glyphicons Halflings";
     float: right;
