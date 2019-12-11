@@ -1,15 +1,14 @@
 ﻿@model Books.Feature.Search.Models.Data
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <link href="~/Styles/Search.css" rel="stylesheet" />
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-@using (@Html.BeginForm("Results", "Search", FormMethod.Post))
-{
+@*<script src="https://code.jquery.com/jquery-3.4.1.js"></script>*@
+<form method="post" action="Search">
     <div class="container h-100">
-    <div class="d-flex justify-content-center h-100">
-        <div class="searchbar">
-            @Html.TextBoxFor(model => model.SearchTerm, new { placeholder = "Search...", @class = "search_input" })
-             <button class="search_icon"><i class="fas fa-search"></i></button>
+        <div class="d-flex justify-content-center h-100">
+            <div class="searchbar">
+                @Html.TextBoxFor(model => model.SearchTerm, new { placeholder = "Search...", @class = "search_input" })
+                <button class="search_icon"><i class="fas fa-search"></i></button>
+            </div>
         </div>
     </div>
-    </div>
-}
+</form>

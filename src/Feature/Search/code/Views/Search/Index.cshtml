@@ -1,0 +1,34 @@
+﻿@model Books.Feature.Search.Models.ResponseItem
+
+<link href="~/Styles/Search.css" rel="stylesheet" />
+@if (Model != null && (Model.Books != null || (Model.Pages != null)))
+{
+    if (Model.Books != null)
+    {
+        foreach (var book in Model.Books)
+        {
+            <div class="results list-group list-group-flush">
+                @Html.Glass().RenderLink(book, x => x.Link, new { @class = "list-group-item list-group-item-action" })
+                @*@Html.Sitecore().Field("Link", item)*@
+            </div>
+        }
+
+    }
+    if (Model.Pages != null)
+    {
+        foreach (var page in Model.Pages)
+        {
+            <div class="results list-group list-group-flush">
+                @Html.Glass().RenderLink(page, x => x.Link, new {@class = "list-group-item list-group-item-action" })
+                @*@Html.Sitecore().Field("Link", item)*@
+            </div>
+        }
+    }
+}
+else
+{
+            <div class="jumbotron text-white">
+                <h2 class="display-4"> Whoa Such Emptiness</h2>
+                <p class="lead">Either nothing came back in the results or you entered blank</p>
+            </div>
+}

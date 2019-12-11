@@ -136,13 +136,14 @@
     <Content Include="Scripts\Search.js" />
     <Content Include="Styles\Search.css" />
     <Content Include="Views\SearchBar.cshtml" />
-    <Content Include="Views\Search\Results.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RegisterCustomRoute.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Models\Data.cs" />
+    <Compile Include="Models\ResponseItem.cs" />
     <Compile Include="Models\SearchItem.cs" />
     <Compile Include="Pipelines\SearchGlassLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -154,6 +155,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\CustomErrors\code\Books.Foundation.CustomErrors.csproj">
+      <Project>{7F8D75AB-5DF3-4CD2-9AE3-CC67622B0B62}</Project>
+      <Name>Books.Foundation.CustomErrors</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\ORM\code\Books.Foundation.Orm.csproj">
       <Project>{dc69f037-d421-4792-8e5a-2fdbeaac8a50}</Project>
       <Name>Books.Foundation.Orm</Name>
