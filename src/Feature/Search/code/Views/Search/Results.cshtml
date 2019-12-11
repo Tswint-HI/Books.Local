@@ -1,0 +1,10 @@
+﻿@using Sitecore.Mvc;
+@using Sitecore.Mvc.Presentation;
+@model List<Sitecore.Data.Items.Item>
+@foreach (var item in Model)
+{
+    <div>
+        @item.DisplayName
+        @Html.Sitecore().Field("Link", item)
+    </div>
+}
