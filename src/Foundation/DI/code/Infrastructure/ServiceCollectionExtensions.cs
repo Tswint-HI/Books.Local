@@ -53,7 +53,6 @@ namespace Books.Foundation.DI.Infrastructure
             serviceCollection.Add(lifetime, types.ToArray());
         }
 
-
         public static void Add(this IServiceCollection serviceCollection, Lifetime lifetime, params Type[] types)
         {
             foreach (var type in types)
@@ -74,9 +73,11 @@ namespace Books.Foundation.DI.Infrastructure
                 case Lifetime.Singleton:
                     serviceCollection.AddSingleton(type);
                     break;
+
                 case Lifetime.Transient:
                     serviceCollection.AddTransient(type);
                     break;
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(lifetime), lifetime, null);
             }
@@ -89,9 +90,11 @@ namespace Books.Foundation.DI.Infrastructure
                 case Lifetime.Singleton:
                     serviceCollection.AddSingleton(serviceType, implementationType);
                     break;
+
                 case Lifetime.Transient:
                     serviceCollection.AddTransient(serviceType, implementationType);
                     break;
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(lifetime), lifetime, null);
             }
@@ -216,6 +219,5 @@ namespace Books.Foundation.DI.Infrastructure
         {
             return input == wildcard || Regex.IsMatch(input, "^" + Regex.Escape(wildcard).Replace("\\*", ".*").Replace("\\?", ".") + "$", RegexOptions.IgnoreCase);
         }
-
     }
 }

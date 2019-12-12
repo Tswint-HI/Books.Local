@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Books.Foundation.DI.Infrastructure
 {
     [AttributeUsage(AttributeTargets.Class, Inherited = false)]
@@ -6,7 +7,6 @@ namespace Books.Foundation.DI.Infrastructure
     {
         public ServiceAttribute()
         {
-
         }
 
         public ServiceAttribute(Type serviceType)

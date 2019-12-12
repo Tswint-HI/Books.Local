@@ -1,6 +1,7 @@
 ﻿using Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base;
 using Glass.Mapper.Sc.Fields;
 using System;
+
 namespace Books.Feature.BookDetail.ViewlModels
 {
     public class BookViewModel
@@ -13,6 +14,7 @@ namespace Books.Feature.BookDetail.ViewlModels
         public Guid Genre { get; set; }
         public DateTime PublishDate { get; set; }
         public string BookReview { get; set; }
+
         public BookViewModel(IBase_Book datasource)
         {
             this._datasource = datasource;

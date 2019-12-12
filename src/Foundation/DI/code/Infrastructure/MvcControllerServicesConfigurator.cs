@@ -8,7 +8,6 @@ using Sitecore.Data;
 using Sitecore.DependencyInjection;
 using System;
 
-
 namespace Books.Foundation.DI.Infrastructure
 {
     public class MvcControllerServicesConfigurator : IServicesConfigurator
@@ -36,8 +35,6 @@ namespace Books.Foundation.DI.Infrastructure
             serviceCollection.AddSingleton<Func<IMvcContext>>(_ => Get<IMvcContext>);
             serviceCollection.AddSingleton<Func<IWebFormsContext>>(_ => Get<IWebFormsContext>);
             //serviceCollection.AddSingleton<Func<SitecoreRepository>>(_ => Get<SitecoreRepository>);
-
-
         }
 
         private static ISitecoreService CreateSitecoreService(Database database)
@@ -80,6 +77,5 @@ namespace Books.Foundation.DI.Infrastructure
         {
             return new SitecoreRepository(CreateRequestContext());
         }
-
     }
 }

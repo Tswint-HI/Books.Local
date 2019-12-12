@@ -1,4 +1,5 @@
 #region GlassMapperSc generated code
+
 /*************************************
 
 DO NOT CHANGE THIS FILE - UPDATE GlassMapperScCustom.cs
@@ -25,8 +26,6 @@ namespace Books.Foundation.Orm.App_Start
 
         public override IConfigurationLoader[] GetGlassLoaders(Context context)
         {
-
-
             var loaders1 = GlassMapperScCustom.GlassLoaders();
             var loaders2 = base.GetGlassLoaders(context);
 
@@ -58,7 +57,7 @@ namespace Books.Foundation.Orm.App_Start
             GlassMapperScCustom.PostLoad();
             base.PostLoad(dependencyResolver);
         }
-
     }
 }
-#endregion
+
+#endregion GlassMapperSc generated code

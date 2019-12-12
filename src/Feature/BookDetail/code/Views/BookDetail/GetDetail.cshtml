@@ -2,8 +2,8 @@
 <link href="~/Style/Detail.css" rel="stylesheet" type="text/css" />
 <!-- Page Content -->
 <div class="container-fluid">
-<!-- Heading Row -->
-   <div class="row mt-5">
+    <!-- Heading Row -->
+    <div class="row mt-5">
         <div class="col-sm-3 col-md-6 col-lg-4">
             @Html.Glass().RenderImage(x =>x.Img, new
                 {
@@ -17,7 +17,7 @@
                 <p class="font-weight-light">
                     Published:
                     @(Sitecore.Context.PageMode.IsNormal?
-                       @Html.Glass().Editable(Model, x => x.PublishDate.ToShortDateString(), new { Format = "mm/dd/yyyy" }) : 
+                       @Html.Glass().Editable(Model, x => x.PublishDate.ToShortDateString(), new { Format = "mm/dd/yyyy" }) :
                         @Html.Glass().Editable(Model, x => x.PublishDate, new { Format = "MM/dd/yyyy" }))
                 </p>
             </span>

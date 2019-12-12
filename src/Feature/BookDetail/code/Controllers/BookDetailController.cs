@@ -4,6 +4,7 @@ using Sitecore.Mvc.Presentation;
 using System;
 using System.Web.Mvc;
 using Book = Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Book;
+
 namespace Books.Feature.BookDetail.Controllers
 {
     public class BookDetailController : Controller
@@ -14,6 +15,7 @@ namespace Books.Feature.BookDetail.Controllers
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
+
         // GET: BookDetail
         public ActionResult GetDetail()
         {

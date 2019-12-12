@@ -1,5 +1,6 @@
 ﻿using Glass.Mapper.Sc.Fields;
 using System;
+
 namespace Books.Feature.Carousel.Models
 {
     public class CarouselItem

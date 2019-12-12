@@ -9,11 +9,11 @@ namespace Books.Feature.Search.Solr
     {
         public string FieldName { get; set; }
         public string ReturnType { get; set; }
+
         public object ComputeFieldValue(IIndexable indexable)
         {
             Item item = indexable as SitecoreIndexableItem;
             return StandardValuesManager.IsStandardValuesHolder(item);
         }
-
     }
 }

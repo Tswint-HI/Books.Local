@@ -8,14 +8,15 @@ namespace Books.Feature.Carousel.Controllers
 {
     public class CarouselController : Controller
     {
-
         private readonly IMvcContext _context;
         public SitecoreRepository _repository;
+
         public CarouselController(IMvcContext context, SitecoreRepository repo)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
             _repository = repo ?? throw new ArgumentNullException(nameof(repo));
         }
+
         // GET: Carousel
         public ActionResult GetCarousel()
         {

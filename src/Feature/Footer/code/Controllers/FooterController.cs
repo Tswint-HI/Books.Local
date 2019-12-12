@@ -4,16 +4,18 @@ using Sitecore.Mvc.Presentation;
 using System;
 using System.Web.Mvc;
 using IBaseFooter = Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Footer;
+
 namespace Books.Feature.Footer.Controllers
 {
-
     public class FooterController : Controller
     {
         private readonly IMvcContext _context;
+
         public FooterController(IMvcContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
+
         public ActionResult StandardFooter()
         {
             if (RenderingContext.Current.Rendering.Item != null)
@@ -27,7 +29,6 @@ namespace Books.Feature.Footer.Controllers
 
             return null;
         }
-
 
         public ActionResult FooterVariant2()
         {

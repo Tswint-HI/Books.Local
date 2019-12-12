@@ -71,6 +71,5 @@ namespace Books.Foundation.Orm.Repo
         {
             return _sitecoreRequestContext.GetHomeItem<T>();
         }
-
     }
 }

@@ -23,6 +23,5 @@ namespace Books.Feature.Footer.Models
             Copyright = _datasource.Copyright;
             Disclosure = datasource.Disclosure;
         }
-
     }
 }

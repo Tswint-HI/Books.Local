@@ -4,26 +4,26 @@
         @{var count = 0;}
         @foreach (var item in Model)
         {
-            <div class="col-md-3 card m-4 text-white bg-dark">
-                @Html.Glass().RenderImage(item, x=> x.Img, new
+        <div class="col-md-3 card m-4 text-white bg-dark">
+            @Html.Glass().RenderImage(item, x=> x.Img, new
+                {
+                    @class = "card-img-top"
+                }, isEditable: true)
+            <div class="card-body">
+                <p>Author: @Html.Glass().Editable(item, x => x.Author)</p>
+                <p class="card-title">Title: @Html.Glass().Editable(item, x => x.Title)</p>
+                <p>Rating: @item.Rating/5</p>
+                <p class="card-text">Description: @Html.Glass().Editable(item, x => x.Intro)</p>
+                @Html.Glass().RenderLink(item , x => x.Link, new
                     {
-                        @class = "card-img-top"
+                        @class = "btn btn-secondary"
                     }, isEditable: true)
-                <div class="card-body">
-                    <p>Author: @Html.Glass().Editable(item, x => x.Author)</p>
-                    <p class="card-title">Title: @Html.Glass().Editable(item, x => x.Title)</p>
-                    <p>Rating: @item.Rating/5</p>
-                    <p class="card-text">Description: @Html.Glass().Editable(item, x => x.Intro)</p>
-                    @Html.Glass().RenderLink(item , x => x.Link, new
-                        {
-                            @class = "btn btn-secondary"
-                        }, isEditable: true)
-                </div>
             </div>
+        </div>
             count++;
             if (count % 3 == 0)
             {
-                <div class="w-100"></div>
+        <div class="w-100"></div>
             }
         }
     </div>

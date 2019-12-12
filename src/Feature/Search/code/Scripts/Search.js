@@ -5,8 +5,6 @@
 //        searchTerm: $('#search_input').val().trim()
 //    };
 
-
-
 //    $.ajax({
 //        type: "POST",
 //        url: "/Search",

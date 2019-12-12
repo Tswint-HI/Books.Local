@@ -1,6 +1,7 @@
 ﻿using Sitecore;
 using Sitecore.Diagnostics;
 using Sitecore.Pipelines.HttpRequest;
+
 namespace Books.Foundation.CustomLinks.Utility
 {
     public class ItemResolver : HttpRequestProcessor

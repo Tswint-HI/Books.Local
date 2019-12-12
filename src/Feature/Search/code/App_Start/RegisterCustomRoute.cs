@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Sitecore.Pipelines;
 using System.Web.Mvc;
 using System.Web.Routing;
-using System.Web.UI.WebControls;
-using Sitecore.Pipelines;
 
 namespace Books.Feature.Search.App_Start
 {
@@ -15,11 +10,12 @@ namespace Books.Feature.Search.App_Start
         {
             Register();
         }
+
         public static void Register()
         {
             RouteTable.Routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             RouteTable.Routes.MapRoute("CustomRoute", "bookapi/{controller}/{action}",
-                new {Controller =  "Search", Action = "Index", Id = UrlParameter.Optional});
+                new { Controller = "Search", Action = "Index", Id = UrlParameter.Optional });
         }
     }
 }

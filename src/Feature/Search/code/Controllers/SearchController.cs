@@ -12,12 +12,12 @@ namespace Books.Feature.Search.Controllers
     {
         private readonly IMvcContext _context;
         private readonly IRequestContext _sitecoreRequestContext;
+
         public SearchController(IMvcContext context, IRequestContext requestContext)
         {
             _sitecoreRequestContext = requestContext ?? throw new ArgumentNullException(nameof(requestContext));
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-
 
         public ActionResult Index(Data data)
         {

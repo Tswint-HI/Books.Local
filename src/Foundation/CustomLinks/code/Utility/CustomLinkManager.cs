@@ -6,6 +6,7 @@ namespace Books.Foundation.CustomLinks.Utility
     {
         private const string _pathToRemove = "/data/book-folder/";
         private const string _apiPathtoRemove = "/api/sitecore/";
+
         public override string GetItemUrl(Sitecore.Data.Items.Item item, UrlOptions options)
         {
             // Ensure path is relative regarding Bookdeail page....everything else leave alone

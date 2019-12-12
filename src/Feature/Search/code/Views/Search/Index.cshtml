@@ -3,30 +3,29 @@
 <link href="~/Styles/Search.css" rel="stylesheet" />
 @if (Model != null && (Model.Books != null || (Model.Pages != null)))
 {
-<div class="justify-content-center">
+    <div class="justify-content-center">
 
+        @if (Model.Books != null)
+        {
+            foreach (var book in Model.Books)
+            {
+                <div class="results list-group list-group-flush">
+                    @Html.Glass().RenderLink(book, x => x.Link, new { @class = "list-group-item list-group-item-action" })
+                    @Html.Glass().Editable(book, x => x.Img)
+                </div>
+            }
 
-    @if (Model.Books != null)
-    {
-    foreach (var book in Model.Books)
-    {
-    <div class="results list-group list-group-flush">
-        @Html.Glass().RenderLink(book, x => x.Link, new { @class = "list-group-item list-group-item-action" })
-        @Html.Glass().Editable(book, x => x.Img)
+        }
+        @if (Model.Pages != null)
+        {
+            foreach (var page in Model.Pages)
+            {
+                <div class="results list-group list-group-flush">
+                    @Html.Glass().RenderLink(page, x => x.Link, new { @class = "list-group-item list-group-item-action" })
+                </div>
+            }
+        }
     </div>
-    }
-
-    }
-    @if (Model.Pages != null)
-    {
-    foreach (var page in Model.Pages)
-    {
-    <div class="results list-group list-group-flush">
-        @Html.Glass().RenderLink(page, x => x.Link, new { @class = "list-group-item list-group-item-action" })
-    </div>
-    }
-    }
-</div>
 }
 else
 {

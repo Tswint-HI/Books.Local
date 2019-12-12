@@ -5,6 +5,7 @@ using System;
 using System.Web.Mvc;
 using BannerFolder = Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner_Folder;
 using FeatureItem = Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner;
+
 namespace Books.Feature.Banner.Controllers
 {
     public class BannerController : Controller
@@ -15,6 +16,7 @@ namespace Books.Feature.Banner.Controllers
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
+
         // Featured Genre for the home page
         public ActionResult FeaturedGenre()
         {

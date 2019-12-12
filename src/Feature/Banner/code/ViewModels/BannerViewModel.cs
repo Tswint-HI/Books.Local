@@ -17,6 +17,7 @@ namespace Books.Feature.Banner.ViewModels
         public Link CTA { get; set; }
         private readonly IBanner _bannerDatasource;
         private readonly IBanner_Folder _bfDatasource;
+
         public BannerViewModel(IBanner ds)
         {
             _bannerDatasource = ds;
@@ -28,10 +29,12 @@ namespace Books.Feature.Banner.ViewModels
             Content = ds.Content;
             CTA = ds.CTA;
         }
+
         public BannerViewModel(IBanner_Folder _Folder)
         {
             _bfDatasource = _Folder;
         }
+
         internal static List<BannerViewModel> GetAllBanners(IBanner_Folder ds, IMvcContext _context)
         {
             List<BannerViewModel> bcVM = new List<BannerViewModel>();

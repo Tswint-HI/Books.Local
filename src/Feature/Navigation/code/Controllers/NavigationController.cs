@@ -9,10 +9,12 @@ namespace Books.Feature.Navigation.Controllers
     public class NavigationController : Controller
     {
         private readonly IMvcContext _context;
+
         public NavigationController(IMvcContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
+
         public ActionResult getNav()
         {
             if (RenderingContext.Current.Rendering.Item != null)

@@ -6,20 +6,20 @@
       @Html.Glass().RenderImage(Model, x => x._folder.Logo, new { @class = "navbar-brand" }))
     @foreach (var item in Model._parentItems)
     {
-        <div class="dropdown">
-            @Html.Sitecore().Field("Link", item)
-            <button class="dropbtn">
-                <i></i>
-            </button>
-            @if (item.HasChildren)
+    <div class="dropdown">
+        @Html.Sitecore().Field("Link", item)
+        <button class="dropbtn">
+            <i></i>
+        </button>
+        @if (item.HasChildren)
             {
-                <div class="dropdown-content">
-                    @foreach (var child in Model._childItems)
+        <div class="dropdown-content">
+            @foreach (var child in Model._childItems)
                     {
-                        @Html.Sitecore().Field("Link", child)
+            @Html.Sitecore().Field("Link", child)
                     }
-                </div>
-            }
         </div>
+            }
+    </div>
     }
 </div>

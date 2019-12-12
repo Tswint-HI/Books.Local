@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Book = Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.Base_Book;
 using Page = Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.NavigationItem;
+
 namespace Books.Feature.Search.Models
 {
     public class ResponseItem

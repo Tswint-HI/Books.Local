@@ -28,7 +28,6 @@ namespace Books.Feature.BookCard.Controllers
             return View();
         }
 
-
         public ActionResult BookCardHighRatings()
         {
             if (RenderingContext.Current.Rendering.Item != null)
@@ -36,12 +35,10 @@ namespace Books.Feature.BookCard.Controllers
                 var ds = _context.GetDataSourceItem<Folder>();
                 var bookList = BookCardViewModel.GetBooksWithHighestRating(ds);
                 return ds == null ? null : View(bookList);
-
             }
 
             return View();
         }
-
 
         public ActionResult BooksByGenre()
         {

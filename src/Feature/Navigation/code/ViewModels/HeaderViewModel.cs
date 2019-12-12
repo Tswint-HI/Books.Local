@@ -14,6 +14,7 @@ namespace Books.Feature.Navigation.ViewModels
         public IEnumerable<Sitecore.Data.Items.Item> _parentItems;
         public IEnumerable<Sitecore.Data.Items.Item> _childItems;
         public INavigation_Links_Folder _folder;
+
         public HeaderViewModel(INavigation_Links_Folder dataSource, IMvcContext context)
         {
             _context = context;
@@ -23,7 +24,9 @@ namespace Books.Feature.Navigation.ViewModels
             GrabTheKids();
             RemoveItem(context);
         }
+
         private IEnumerable<Item> GatherParents() => _parentItems = _context.DataSourceItem.GetChildren().ToList();
+
         // Goes through Parents property checks for children and assigns them to to child property
         private IEnumerable<Item> GrabTheKids()
         {
@@ -44,6 +47,7 @@ namespace Books.Feature.Navigation.ViewModels
             }
             return _childItems;
         }
+
         // Checks what link item is == to contextname
         private void RemoveItem(IMvcContext context)
         {

@@ -85,6 +85,9 @@
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\..\Project\Web\code\bin\Sitecore.Kernel.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
