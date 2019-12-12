@@ -4,8 +4,8 @@ namespace Books.Foundation.CustomLinks.Utility
 {
     public class CustomLinkManager : LinkProvider
     {
-        private const string _pathToRemove = "/data/book-folder/";
         private const string _apiPathtoRemove = "/api/sitecore/";
+        private const string _pathToRemove = "/data/book-folder/";
 
         public override string GetItemUrl(Sitecore.Data.Items.Item item, UrlOptions options)
         {

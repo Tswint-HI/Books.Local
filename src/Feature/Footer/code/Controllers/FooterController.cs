@@ -16,6 +16,11 @@ namespace Books.Feature.Footer.Controllers
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
+        public ActionResult FooterVariant2()
+        {
+            return View();
+        }
+
         public ActionResult StandardFooter()
         {
             if (RenderingContext.Current.Rendering.Item != null)
@@ -28,11 +33,6 @@ namespace Books.Feature.Footer.Controllers
             }
 
             return null;
-        }
-
-        public ActionResult FooterVariant2()
-        {
-            return View();
         }
     }
 }

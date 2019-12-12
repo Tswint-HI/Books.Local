@@ -17,6 +17,12 @@ namespace Books.Foundation.Orm.Repo
             _sitecoreRequestContext = requestContext ?? throw new ArgumentNullException(nameof(requestContext));
         }
 
+        public T CastItem<T>(Item item) where T : GlassBase
+        {
+            var resolvedItem = _sitecoreRequestContext.SitecoreService.ResolveItem(item);
+            return _sitecoreRequestContext.SitecoreService.GetItem<T>(new GetItemByIdOptions() { Id = resolvedItem.ID.Guid, Lazy = Glass.Mapper.LazyLoading.Enabled });
+        }
+
         public T CurrentEntity<T>() where T : GlassBase
         {
             return _sitecoreRequestContext.GetContextItem<T>(new GetKnownOptions() { Lazy = Glass.Mapper.LazyLoading.Enabled });
@@ -59,12 +65,6 @@ namespace Books.Foundation.Orm.Repo
         public Item FindItemByPath(string path)
         {
             return Sitecore.Context.Database.GetItem(path);
-        }
-
-        public T CastItem<T>(Item item) where T : GlassBase
-        {
-            var resolvedItem = _sitecoreRequestContext.SitecoreService.ResolveItem(item);
-            return _sitecoreRequestContext.SitecoreService.GetItem<T>(new GetItemByIdOptions() { Id = resolvedItem.ID.Guid, Lazy = Glass.Mapper.LazyLoading.Enabled });
         }
 
         public T HomeItem<T>() where T : GlassBase

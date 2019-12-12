@@ -3,36 +3,36 @@
 <link href="~/Styles/Search.css" rel="stylesheet" />
 @if (Model != null && (Model.Books != null || (Model.Pages != null)))
 {
-    <div class="justify-content-center">
+<div class="justify-content-center">
 
-        @if (Model.Books != null)
+    @if (Model.Books != null)
         {
             foreach (var book in Model.Books)
             {
-                <div class="results list-group list-group-flush">
-                    @Html.Glass().RenderLink(book, x => x.Link, new { @class = "list-group-item list-group-item-action" })
-                    @Html.Glass().Editable(book, x => x.Img)
-                </div>
+    <div class="results list-group list-group-flush">
+        @Html.Glass().RenderLink(book, x => x.Link, new { @class = "list-group-item list-group-item-action" })
+        @Html.Glass().Editable(book, x => x.Img)
+    </div>
             }
 
         }
-        @if (Model.Pages != null)
+    @if (Model.Pages != null)
         {
             foreach (var page in Model.Pages)
             {
-                <div class="results list-group list-group-flush">
-                    @Html.Glass().RenderLink(page, x => x.Link, new { @class = "list-group-item list-group-item-action" })
-                </div>
+    <div class="results list-group list-group-flush">
+        @Html.Glass().RenderLink(page, x => x.Link, new { @class = "list-group-item list-group-item-action" })
+    </div>
             }
         }
-    </div>
+</div>
 }
 else
 {
-    <div class="jumbotron text-white">
-        <h2 class="display-4"> Whoa Such Emptiness</h2>
-        <p class="lead">Either nothing came back in the results or you entered blank</p>
-    </div>
+<div class="jumbotron text-white">
+    <h2 class="display-4"> Whoa Such Emptiness</h2>
+    <p class="lead">Either nothing came back in the results or you entered blank</p>
+</div>
 }
 <br />
 <br />

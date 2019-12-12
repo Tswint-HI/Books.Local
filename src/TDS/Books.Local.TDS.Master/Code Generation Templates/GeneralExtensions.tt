@@ -5,7 +5,7 @@
 /// <typeparam name="T"></typeparam>
 /// <param name="source">The source.</param>
 /// <param name="n">The number of elements to skip.</param>
-/// <example> 
+/// <example>
 /// This sample shows how to call the <see cref="SkipLast"/> method.
 /// <code>
 ///     int[] ary = new int[5]{ 1, 2, 3, 4, 5};

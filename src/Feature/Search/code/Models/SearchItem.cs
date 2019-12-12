@@ -10,9 +10,9 @@ namespace Books.Feature.Search.Models
         [IndexField("_latestversion")]
         public bool IsLatestVersion { get; set; }
 
+        public bool IsStandardValue { get; internal set; }
+
         [IndexField("title_t_en")]
         public string Title { get; set; }
-
-        public bool IsStandardValue { get; internal set; }
     }
 }

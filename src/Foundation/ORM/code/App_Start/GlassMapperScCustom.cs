@@ -10,6 +10,12 @@ namespace Books.Foundation.Orm.App_Start
 {
     public static class GlassMapperScCustom
     {
+        public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory)
+        {
+            // Add maps here
+            // mapsConfigFactory.Add(() => new SeoMap());
+        }
+
         public static IDependencyResolver CreateResolver()
         {
             var config = new Glass.Mapper.Sc.Config();
@@ -48,12 +54,6 @@ namespace Books.Foundation.Orm.App_Start
             }
              * CODE FIRST END
              */
-        }
-
-        public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory)
-        {
-            // Add maps here
-            // mapsConfigFactory.Add(() => new SeoMap());
         }
     }
 }

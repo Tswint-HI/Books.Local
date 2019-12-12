@@ -5,8 +5,8 @@ namespace Books.Feature.Carousel.Models
 {
     public class CarouselViewModel
     {
-        public string Title { get; set; }
         public IList<CarouselItemViewModel> Items { get; set; }
+        public string Title { get; set; }
 
         public CarouselViewModel(Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarousel dataSource)
         {

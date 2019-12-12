@@ -10,10 +10,10 @@ namespace Books.Feature.Navigation.ViewModels
     public class HeaderViewModel
     {
         public Guid Id { get; set; }
-        public IMvcContext _context;
-        public IEnumerable<Sitecore.Data.Items.Item> _parentItems;
         public IEnumerable<Sitecore.Data.Items.Item> _childItems;
+        public IMvcContext _context;
         public INavigation_Links_Folder _folder;
+        public IEnumerable<Sitecore.Data.Items.Item> _parentItems;
 
         public HeaderViewModel(INavigation_Links_Folder dataSource, IMvcContext context)
         {

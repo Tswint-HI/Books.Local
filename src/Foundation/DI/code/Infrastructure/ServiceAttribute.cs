@@ -5,6 +5,10 @@ namespace Books.Foundation.DI.Infrastructure
     [AttributeUsage(AttributeTargets.Class, Inherited = false)]
     public class ServiceAttribute : Attribute
     {
+        public Lifetime Lifetime { get; set; } = Lifetime.Singleton;
+
+        public Type ServiceType { get; set; }
+
         public ServiceAttribute()
         {
         }
@@ -13,8 +17,5 @@ namespace Books.Foundation.DI.Infrastructure
         {
             this.ServiceType = serviceType;
         }
-
-        public Lifetime Lifetime { get; set; } = Lifetime.Singleton;
-        public Type ServiceType { get; set; }
     }
 }

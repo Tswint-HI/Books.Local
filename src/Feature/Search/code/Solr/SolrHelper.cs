@@ -14,35 +14,6 @@ namespace Books.Feature.Search.Solr
 {
     public class SolrHelper
     {
-        public static List<Pages> GetPageResults(string searchTerm, IMvcContext context, IRequestContext requestContext)
-        {
-            SitecoreRepository repo = new SitecoreRepository(requestContext);
-            string siteSearchIndexName = context.SitecoreService.Database.Name;
-            using (var searchContext = ContentSearchManager.GetIndex("sitecore_" + siteSearchIndexName + "_index").CreateSearchContext(SearchSecurityOptions.DisableSecurityCheck))
-            {
-                var query = searchContext.GetQueryable<SearchItem>()
-                    .Where(i => i.Title.Contains(searchTerm)
-                    && i.IsLatestVersion
-                    && i.TemplateId == Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItemConstants.TemplateId
-                    && i.Name != "__Standard Values");
-
-                var results = query.GetResults();
-
-                List<Sitecore.Data.Items.Item> descriptiveVariableName = results.Select(e => e.Document.GetItem()).ToList();
-                Pages page = new Pages();
-                List<Pages> pageList = new List<Pages>();
-                foreach (var item in descriptiveVariableName)
-                {
-                    page = repo.FindById<Pages>(item.ID.ToGuid());
-                    if (page.Link != null)
-                    {
-                        pageList.Add(page);
-                    }
-                }
-                return pageList;
-            };
-        }
-
         public static List<Book> GetBookResults(string searchTerm, IMvcContext context, IRequestContext requestContext)
         {
             SitecoreRepository repo = new SitecoreRepository(requestContext);
@@ -70,6 +41,35 @@ namespace Books.Feature.Search.Solr
                     }
                 }
                 return bookList;
+            };
+        }
+
+        public static List<Pages> GetPageResults(string searchTerm, IMvcContext context, IRequestContext requestContext)
+        {
+            SitecoreRepository repo = new SitecoreRepository(requestContext);
+            string siteSearchIndexName = context.SitecoreService.Database.Name;
+            using (var searchContext = ContentSearchManager.GetIndex("sitecore_" + siteSearchIndexName + "_index").CreateSearchContext(SearchSecurityOptions.DisableSecurityCheck))
+            {
+                var query = searchContext.GetQueryable<SearchItem>()
+                    .Where(i => i.Title.Contains(searchTerm)
+                    && i.IsLatestVersion
+                    && i.TemplateId == Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItemConstants.TemplateId
+                    && i.Name != "__Standard Values");
+
+                var results = query.GetResults();
+
+                List<Sitecore.Data.Items.Item> descriptiveVariableName = results.Select(e => e.Document.GetItem()).ToList();
+                Pages page = new Pages();
+                List<Pages> pageList = new List<Pages>();
+                foreach (var item in descriptiveVariableName)
+                {
+                    page = repo.FindById<Pages>(item.ID.ToGuid());
+                    if (page.Link != null)
+                    {
+                        pageList.Add(page);
+                    }
+                }
+                return pageList;
             };
         }
     }

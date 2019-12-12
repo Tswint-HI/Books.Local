@@ -22,20 +22,20 @@
 This TDS Code Generation template is used to generate objects that are compatible with the
 Glass Sitecore Mapper that is available @ http://www.glass.lu/
 
-There are a few things you can put in the 'Custom Data' property of a field in TDS. 
+There are a few things you can put in the 'Custom Data' property of a field in TDS.
 To use multiple settings put them in as a querystring (key1=value&key2=value)
 
 ignore=true
 	Sets a field to be skipped over for code gen
 name=[name]
-	Forces the name of the generated property. 
-	If not specified, then the generated property is the name of the Sitecore field. 
+	Forces the name of the generated property.
+	If not specified, then the generated property is the name of the Sitecore field.
 	If the field stores multiple values, the property name is pluralized.
 type=[type]
 	Sets the return type of the generated property
 generic=[type]
 	In the event the type (either specificed or auto mapped) is a generic it will use this generic type. i.e. List<generic>
-		
+
 */
 #>
 
@@ -54,12 +54,11 @@ string ToolVersion = "1.0";
 namespace <#= GetNamespace(DefaultNamespace, template)#>
 {
 
-
  	/// <summary>
 	/// <#= AsInterfaceName(template.Name) #> Interface
 	/// <para><#= GetValue(template.SitecoreFields, "__Short description")#></para>
-	/// <para>Path: <#= template.Path #></para>	
-	/// <para>ID: <#= template.ID.ToString() #></para>	
+	/// <para>Path: <#= template.Path #></para>
+	/// <para>ID: <#= template.ID.ToString() #></para>
 	/// </summary>
 	[SitecoreType(TemplateId=<#= AsInterfaceName(template.Name) #>Constants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface <#= AsInterfaceName(template.Name) #> : IGlassBase <#=GetObjectInheritanceDefinition(DefaultNamespace, template, true, (string s) => AsInterfaceName(s))#>
@@ -68,16 +67,15 @@ namespace <#= GetNamespace(DefaultNamespace, template)#>
 					/// <summary>
 					/// The <#=field.Name#> field.
 					/// <para><#= GetValue(field.SitecoreFields, "__Short description")#></para>
-					/// <para>Field Type: <#=field.Type#></para>		
+					/// <para>Field Type: <#=field.Type#></para>
 					/// <para>Field ID: <#=field.ID.ToString()#></para>
 					/// <para>Custom Data: <#=field.Data#></para>
 					/// </summary>
 					[SitecoreField(<#= AsInterfaceName(template.Name) #>Constants.<#= GetPropertyName(field) #>FieldName)]
 					<#=GetGlassFieldType(field)#> <#= GetPropertyName(field) #>  {get; set;}
-			
+
 			<#}#>
 	}
-
 
 	public static partial class <#= AsInterfaceName(template.Name) #>Constants{
 
@@ -86,40 +84,40 @@ namespace <#= GetNamespace(DefaultNamespace, template)#>
 			public const string TemplateName = "<#= template.Name #>";
 
 		<#foreach(SitecoreField field in GetFieldsForTemplate(template, true)){#>
-			
+
 			public static readonly ID <#= GetPropertyName(field) #>FieldId = new ID("<#=field.ID.ToString()#>");
 			public const string <#= GetPropertyName(field) #>FieldName = "<#=field.Name#>";
-			
-		<#}#>	
+
+		<#}#>
 
 	}
 
 <#
 // If the name of the template looks like an Interface, then don't generate a class definition
-if (!IsInterfaceWord(template.Name)){ #>	
+if (!IsInterfaceWord(template.Name)){ #>
 	/// <summary>
 	/// <#= AsClassName(template.Name) #>
 	/// <para><#= GetValue(template.SitecoreFields, "__Short description")#></para>
-	/// <para>Path: <#= template.Path #></para>	
-	/// <para>ID: <#= template.ID.ToString() #></para>	
+	/// <para>Path: <#= template.Path #></para>
+	/// <para>ID: <#= template.ID.ToString() #></para>
 	/// </summary>
 	[SitecoreType(TemplateId=<#= AsInterfaceName(template.Name) #>Constants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class <#= AsClassName(template.Name) #>  : GlassBase, <#=AsInterfaceName(template.Name)#> 
+	public partial class <#= AsClassName(template.Name) #>  : GlassBase, <#=AsInterfaceName(template.Name)#>
 	{
-	   
+
 		<#foreach(SitecoreField field in GetFieldsForTemplate(template, true)){#>
 				/// <summary>
 				/// The <#=field.Name#> field.
 				/// <para><#= GetValue(field.SitecoreFields, "__Short description")#></para>
-				/// <para>Field Type: <#=field.Type#></para>		
+				/// <para>Field Type: <#=field.Type#></para>
 				/// <para>Field ID: <#=field.ID.ToString()#></para>
 				/// <para>Custom Data: <#=field.Data#></para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("<#=Tool#>", "<#=ToolVersion#>")]
 				[SitecoreField(<#= AsInterfaceName(template.Name) #>Constants.<#= GetPropertyName(field) #>FieldName)]
 				public virtual <#=GetGlassFieldType(field)#> <#= GetPropertyName(field) #>  {get; set;}
-					
-		<#}#>	
+
+		<#}#>
 	}
 <#}#>
 }
@@ -152,7 +150,7 @@ public static string GetGlassFieldType(SitecoreField field)
 		// Pull out any 'type' param from the custom data field on the field in TDS
 		string customType = GetCustomProperty(field.Data, "type");
 		string generic = GetCustomProperty(field.Data, "generic");
-		
+
 		if (customType != "")
 		{
 			if (generic != "")
@@ -208,7 +206,7 @@ public static string GetGlassFieldType(SitecoreField field)
 			case "general link":
 			case "general link with search":
 				return "Link";
-			
+
 			case "password":
 			case "icon":
 			case "rich text":
@@ -224,15 +222,15 @@ public static string GetGlassFieldType(SitecoreField field)
 				return "string";
 			case "attachment":
 			case "word document":
-				return "System.IO.Stream";	   
+				return "System.IO.Stream";
 			case "name lookup value list":
 			case "name value list":
-				return "System.Collections.Specialized.NameValueCollection";                                                                                                                         
+				return "System.Collections.Specialized.NameValueCollection";
 			default:
 				return "object /* UNKNOWN */";
 		}
 	}
-	else 
+	else
 	{
 	   throw new Exception("There is no 'Type' field on the " + field.Name + " field.");
 	}

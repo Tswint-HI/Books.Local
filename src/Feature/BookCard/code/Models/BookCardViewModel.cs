@@ -9,20 +9,20 @@ namespace Books.Feature.BookCard.Models
 {
     public class BookCardViewModel
     {
-        private readonly IBook_Folder _bfDatasource;
-        private readonly IBookCard _bcDatasource;
-        public IMvcContext _context;
-        public Guid Id { get; set; }
-        public ICollection<IBookCard> Cards { get; set; }
-        public Image Img { get; set; }
-        public string Title { get; set; }
         public string Author { get; set; }
-        public Guid Genre { get; set; }
-        public DateTime PublishDate { get; set; }
         public string BookReview { get; set; }
+        public ICollection<IBookCard> Cards { get; set; }
+        public Guid Genre { get; set; }
+        public Guid Id { get; set; }
+        public Image Img { get; set; }
         public string Intro { get; set; }
-        public int Rating { get; set; }
         public Link Link { get; set; }
+        public DateTime PublishDate { get; set; }
+        public int Rating { get; set; }
+        public string Title { get; set; }
+        private readonly IBookCard _bcDatasource;
+        private readonly IBook_Folder _bfDatasource;
+        public IMvcContext _context;
 
         public BookCardViewModel(IBook_Folder datasource)
         {
@@ -48,20 +48,6 @@ namespace Books.Feature.BookCard.Models
         {
         }
 
-        internal static List<BookCardViewModel> GetBooksWithHighestRating(IBook_Folder datasource)
-        {
-            List<BookCardViewModel> bcVM = new List<BookCardViewModel>();
-            foreach (var card in datasource.Books)
-            {
-                if (card.Rating >= 4)
-                {
-                    BookCardViewModel tempVm = new BookCardViewModel(card);
-                    bcVM.Add(tempVm);
-                }
-            }
-            return bcVM;
-        }
-
         internal static List<BookCardViewModel> AllBooks(IBook_Folder ds, IMvcContext context)
         {
             string contextName = context.ContextItem.DisplayName.ToLowerInvariant();
@@ -70,6 +56,20 @@ namespace Books.Feature.BookCard.Models
             foreach (var card in ds.Books)
             {
                 if (card.Genre == genre)
+                {
+                    BookCardViewModel tempVm = new BookCardViewModel(card);
+                    bcVM.Add(tempVm);
+                }
+            }
+            return bcVM;
+        }
+
+        internal static List<BookCardViewModel> GetBooksWithHighestRating(IBook_Folder datasource)
+        {
+            List<BookCardViewModel> bcVM = new List<BookCardViewModel>();
+            foreach (var card in datasource.Books)
+            {
+                if (card.Rating >= 4)
                 {
                     BookCardViewModel tempVm = new BookCardViewModel(card);
                     bcVM.Add(tempVm);

@@ -8,13 +8,13 @@ namespace Books.Feature.Banner.ViewModels
 {
     public class BannerViewModel
     {
-        public Guid Id { get; set; }
-        public string Headline { get; set; }
-        public string Title { get; set; }
-        public string Sub { get; set; }
-        public Image Img { get; set; }
         public string Content { get; set; }
         public Link CTA { get; set; }
+        public string Headline { get; set; }
+        public Guid Id { get; set; }
+        public Image Img { get; set; }
+        public string Sub { get; set; }
+        public string Title { get; set; }
         private readonly IBanner _bannerDatasource;
         private readonly IBanner_Folder _bfDatasource;
 
