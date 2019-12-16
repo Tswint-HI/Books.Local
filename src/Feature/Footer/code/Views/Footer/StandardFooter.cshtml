@@ -1,14 +1,15 @@
-﻿@model Books.Feature.Footer.Models.StandardFooterViewModel
+﻿@using Glass.Mapper.Sc.Web.Mvc;
+@model Books.Feature.Footer.Models.StandardFooterViewModel
 <link href="~/Styles/Footer.css" rel="stylesheet" type="text/css" />
 <div class="footer">
     <div class="row">
         <div class="column" id="one">
-            <h3>@Html.Glass().Editable(Model, x=>x.Header)</h3>
-            <h6>@Html.Glass().Editable(Model, x=>x.Content)</h6>
+            <h3>@Html.Glass().Editable(Model, x => x.Header)</h3>
+            <h6>@Html.Glass().Editable(Model, x => x.Content)</h6>
         </div>
         <div class="column" id="two">
-            <h3>@Html.Glass().Editable(Model, x=>x.Subhead)</h3>
-            <h5>@Html.Glass().Editable(Model, x=>x.Copyright)</h5>
+            <h3>@Html.Glass().Editable(Model, x => x.Subhead)</h3>
+            <h5>@Html.Glass().Editable(Model, x => x.Copyright)</h5>
             <div class="footerbottom">
                 <h6>@Html.Glass().Editable(Model, x => x.Disclosure)</h6>
             </div>

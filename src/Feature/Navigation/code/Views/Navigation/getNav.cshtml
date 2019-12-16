@@ -1,10 +1,13 @@
-﻿@model Books.Feature.Navigation.ViewModels.HeaderViewModel
+﻿@using Glass.Mapper.Sc.Web.Mvc;
+@model Books.Feature.Navigation.ViewModels.HeaderViewModel
 <div class="navbar">
     <link href="~/Styles/Nav.css" rel="stylesheet" type="text/css" />
+    @if (Model != null)
+    {
     @(!Sitecore.Context.PageMode.IsNormal ?
-      @Html.Glass().RenderImage(Model, x => x._folder.Logo, new { @class = "navbar-brand" }, isEditable: true) :
-      @Html.Glass().RenderImage(Model, x => x._folder.Logo, new { @class = "navbar-brand" }))
-    @foreach (var item in Model._parentItems)
+              @Html.Glass().RenderImage(Model, x => x._folder.Logo, new { @class = "navbar-brand" }, isEditable: true) :
+              @Html.Glass().RenderImage(Model, x => x._folder.Logo, new { @class = "navbar-brand" }))
+    foreach (var item in Model._parentItems)
     {
     <div class="dropdown">
         @Html.Sitecore().Field("Link", item)
@@ -15,11 +18,12 @@
             {
         <div class="dropdown-content">
             @foreach (var child in Model._childItems)
-                    {
+            {
             @Html.Sitecore().Field("Link", child)
-                    }
+            }
         </div>
             }
     </div>
+        }
     }
 </div>
