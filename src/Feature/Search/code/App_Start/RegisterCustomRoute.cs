@@ -1,6 +1,7 @@
-﻿using Sitecore.Pipelines;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
+
+using Sitecore.Pipelines;
 
 namespace Books.Feature.Search.App_Start
 {

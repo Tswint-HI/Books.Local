@@ -1,8 +1,11 @@
-﻿using Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+using Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner;
+
 using Glass.Mapper.Sc.Fields;
 using Glass.Mapper.Sc.Web.Mvc;
-using System;
-using System.Collections.Generic;
 
 namespace Books.Feature.Banner.ViewModels
 {
@@ -30,21 +33,15 @@ namespace Books.Feature.Banner.ViewModels
             CTA = ds.CTA;
         }
 
-        public BannerViewModel(IBanner_Folder _Folder)
-        {
-            _bfDatasource = _Folder;
-        }
+        public BannerViewModel(IBanner_Folder _Folder) => _bfDatasource = _Folder;
 
         internal static List<BannerViewModel> GetAllBanners(IBanner_Folder ds, IMvcContext _context)
         {
-            List<BannerViewModel> bcVM = new List<BannerViewModel>();
-            var bf = _context.SitecoreService.GetItem<IBanner_Folder>(ds.Id);
-
-            foreach (var banner in bf.Banners)
-            {
-                BannerViewModel tempVm = new BannerViewModel(banner);
-                bcVM.Add(tempVm);
-            }
+            var bcVM = new List<BannerViewModel>();
+            IBanner_Folder bf = _context.SitecoreService.GetItem<IBanner_Folder>(ds.Id);
+            bcVM.AddRange(from IBanner banner in bf.Banners
+                          let tempVm = new BannerViewModel(banner)
+                          select tempVm);
             return bcVM;
         }
     }

@@ -12,9 +12,9 @@ namespace Books.Feature.Carousel.Models
         {
             Items = new List<CarouselItemViewModel>();
             Title = dataSource.Title;
-            for (int i = 0; i < dataSource.Items.Count(); i++)
+            for (var i = 0; i < dataSource.Items.Count(); i++)
             {
-                var item = dataSource.Items.ElementAt(i);
+                Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarouselItem item = dataSource.Items.ElementAt(i);
                 Items.Add(new CarouselItemViewModel
                 {
                     Index = i,

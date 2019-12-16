@@ -1,6 +1,7 @@
-﻿using Sitecore.ContentSearch;
+﻿using System.Runtime.Serialization;
+
+using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.SearchTypes;
-using System.Runtime.Serialization;
 
 namespace Books.Feature.Search.Models
 {

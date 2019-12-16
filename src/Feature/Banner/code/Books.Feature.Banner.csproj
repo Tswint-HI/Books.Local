@@ -54,7 +54,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\..\Foundation\ORM\code\bin\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc">
       <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.Mvc.dll</HintPath>
@@ -109,7 +109,9 @@
     <Content Include="Views\Banner\Layout\GenreBannerLayout.cshtml" />
     <Content Include="Views\Banner\GetAllGenres.cshtml" />
     <None Include="Properties\PublishProfiles\Banner.SC.pubxml" />
-    <None Include="Web.config" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BannerController.cs" />

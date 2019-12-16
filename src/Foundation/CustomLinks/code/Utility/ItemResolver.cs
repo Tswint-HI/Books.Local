@@ -10,7 +10,7 @@ namespace Books.Foundation.CustomLinks.Utility
         {
             Assert.ArgumentNotNull(args, "args");
 
-            string path = args.Url.ItemPath.ToLower();
+            var path = args.Url.ItemPath.ToLower();
             // If its the item im tageting *Books* update path and set the contextitem
             if (Context.Item == null && Context.Database != null && !string.IsNullOrEmpty(path))
             {

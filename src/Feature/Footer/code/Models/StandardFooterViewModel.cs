@@ -1,5 +1,6 @@
-﻿using Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base;
-using System;
+﻿using System;
+
+using Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base;
 
 namespace Books.Feature.Footer.Models
 {
@@ -15,13 +16,13 @@ namespace Books.Feature.Footer.Models
 
         public StandardFooterViewModel(IBase_Footer datasource)
         {
-            this._datasource = datasource;
+            _datasource = datasource;
             Id = _datasource.Id;
             Header = _datasource.Header;
             Subhead = _datasource.Subhead;
             Content = _datasource.Content;
             Copyright = _datasource.Copyright;
-            Disclosure = datasource.Disclosure;
+            Disclosure = _datasource.Disclosure;
         }
     }
 }

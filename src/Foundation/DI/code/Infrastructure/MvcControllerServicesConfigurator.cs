@@ -1,57 +1,40 @@
-﻿using Books.Foundation.Orm.Repo;
+﻿using System;
+
+using Books.Foundation.Orm.Repo;
+
 using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Web;
 using Glass.Mapper.Sc.Web.Mvc;
 using Glass.Mapper.Sc.Web.WebForms;
+
 using Microsoft.Extensions.DependencyInjection;
+
 using Sitecore.Data;
 using Sitecore.DependencyInjection;
-using System;
 
 namespace Books.Foundation.DI.Infrastructure
 {
     public class MvcControllerServicesConfigurator : IServicesConfigurator
     {
-        private static IGlassHtml CreateGlassHtml()
-        {
-            return new GlassHtml(Get<ISitecoreService>());
-        }
+        private static IGlassHtml CreateGlassHtml() => new GlassHtml(Get<ISitecoreService>());
 
-        private static IMvcContext CreateMvcContext()
-        {
-            return new MvcContext(Get<ISitecoreService>(), Get<IGlassHtml>());
-        }
+        private static IMvcContext CreateMvcContext() => new MvcContext(Get<ISitecoreService>(), Get<IGlassHtml>());
 
-        private static IRequestContext CreateRequestContext()
-        {
-            return new RequestContext(Get<ISitecoreService>());
-        }
+        private static IRequestContext CreateRequestContext() => new RequestContext(Get<ISitecoreService>());
 
         private static ISitecoreService CreateSitecoreContextService()
         {
-            var sitecoreServiceThunk = Get<Func<Database, ISitecoreService>>();
+            Func<Database, ISitecoreService> sitecoreServiceThunk = Get<Func<Database, ISitecoreService>>();
             return sitecoreServiceThunk(Sitecore.Context.ContentDatabase ?? Sitecore.Context.Database);
         }
 
-        private static SitecoreRepository CreateSitecoreRepository(IRequestContext requestContext)
-        {
-            return new SitecoreRepository(CreateRequestContext());
-        }
+        private static SitecoreRepository CreateSitecoreRepository(IRequestContext requestContext) => new SitecoreRepository(CreateRequestContext());
 
-        private static ISitecoreService CreateSitecoreService(Database database)
-        {
-            return new SitecoreService(database);
-        }
+        private static ISitecoreService CreateSitecoreService(Database database) => new SitecoreService(database);
 
-        private static IWebFormsContext CreateWebFormsContext()
-        {
-            return new WebFormsContext(Get<ISitecoreService>(), Get<IGlassHtml>());
-        }
+        private static IWebFormsContext CreateWebFormsContext() => new WebFormsContext(Get<ISitecoreService>(), Get<IGlassHtml>());
 
-        private static T Get<T>()
-        {
-            return ServiceLocator.ServiceProvider.GetService<T>();
-        }
+        private static T Get<T>() => ServiceLocator.ServiceProvider.GetService<T>();
 
         public void Configure(IServiceCollection serviceCollection)
         {

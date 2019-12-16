@@ -5,10 +5,6 @@ namespace Books.Feature.Banner.Pipelines
 {
     public class BannerGlassLoader : GetGlassLoadersProcessor
     {
-        public override void Process(GetGlassLoadersPipelineArgs args)
-        {
-            SitecoreAttributeConfigurationLoader loader = new SitecoreAttributeConfigurationLoader("Books.Feature.Banner");
-            args.Loaders.Add(loader);
-        }
+        public override void Process(GetGlassLoadersPipelineArgs args) => args.Loaders.Add(new SitecoreAttributeConfigurationLoader("Books.Feature.Banner"));
     }
 }

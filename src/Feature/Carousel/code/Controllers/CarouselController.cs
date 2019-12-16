@@ -1,8 +1,12 @@
-﻿using Books.Feature.Carousel.Models;
-using Books.Foundation.Orm.Repo;
-using Glass.Mapper.Sc.Web.Mvc;
-using System;
+﻿using System;
 using System.Web.Mvc;
+
+using Books.Feature.Carousel.Models;
+using Books.Foundation.Orm.Repo;
+
+using Glass.Mapper.Sc.Web.Mvc;
+
+using ICarousel = Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarousel;
 
 namespace Books.Feature.Carousel.Controllers
 {
@@ -18,15 +22,6 @@ namespace Books.Feature.Carousel.Controllers
         }
 
         // GET: Carousel
-        public ActionResult GetCarousel()
-        {
-            var dataSource = _context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarousel>();
-            if (dataSource == null)
-                return null;
-
-            CarouselViewModel viewModel = new CarouselViewModel(dataSource);
-
-            return View(viewModel);
-        }
+        public ActionResult GetCarousel() => _context.GetDataSourceItem<ICarousel>() == null ? null : View(new CarouselViewModel(_context.GetDataSourceItem<ICarousel>()));
     }
 }

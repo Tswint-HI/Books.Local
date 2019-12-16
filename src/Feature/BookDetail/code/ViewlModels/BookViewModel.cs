@@ -1,6 +1,8 @@
-﻿using Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base;
+﻿using System;
+
+using Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base;
+
 using Glass.Mapper.Sc.Fields;
-using System;
 
 namespace Books.Feature.BookDetail.ViewlModels
 {
@@ -17,7 +19,7 @@ namespace Books.Feature.BookDetail.ViewlModels
 
         public BookViewModel(IBase_Book datasource)
         {
-            this._datasource = datasource;
+            _datasource = datasource;
             Id = _datasource.Id;
             Img = _datasource.Img;
             Title = _datasource.Title;
@@ -27,9 +29,6 @@ namespace Books.Feature.BookDetail.ViewlModels
             BookReview = _datasource.BookReview;
         }
 
-        internal static BookViewModel VariantOne(BookViewModel vm)
-        {
-            return vm;
-        }
+        internal static BookViewModel VariantOne(BookViewModel vm) => vm;
     }
 }

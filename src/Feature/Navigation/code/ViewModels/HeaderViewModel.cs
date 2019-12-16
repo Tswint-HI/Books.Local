@@ -1,8 +1,11 @@
-﻿using Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation;
-using Glass.Mapper.Sc.Web.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
+using Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation;
+
+using Glass.Mapper.Sc.Web.Mvc;
+
 using Item = Sitecore.Data.Items.Item;
 
 namespace Books.Feature.Navigation.ViewModels
@@ -10,16 +13,15 @@ namespace Books.Feature.Navigation.ViewModels
     public class HeaderViewModel
     {
         public Guid Id { get; set; }
-        public IEnumerable<Sitecore.Data.Items.Item> _childItems;
+        public IEnumerable<Item> _childItems;
         public IMvcContext _context;
         public INavigation_Links_Folder _folder;
-        public IEnumerable<Sitecore.Data.Items.Item> _parentItems;
+        public IEnumerable<Item> _parentItems;
 
         public HeaderViewModel(INavigation_Links_Folder dataSource, IMvcContext context)
         {
             _context = context;
             _folder = dataSource;
-            //_folder.Logo = dataSource.Logo;
             GatherParents();
             GrabTheKids();
             RemoveItem(context);
@@ -30,30 +32,28 @@ namespace Books.Feature.Navigation.ViewModels
         // Goes through Parents property checks for children and assigns them to to child property
         private IEnumerable<Item> GrabTheKids()
         {
-            foreach (var item in _parentItems)
+            foreach (var item in _parentItems.Where(item => item.HasChildren).Select(item => item))
             {
-                if (item.HasChildren)
+                _childItems = new List<Item>();
+                var temp = new List<Item>();
+                var Kids = item.GetChildren().ToList();
+                foreach (Item children in Kids)
                 {
-                    _childItems = new List<Sitecore.Data.Items.Item>();
-                    List<Item> temp = new List<Sitecore.Data.Items.Item>();
-                    List<Item> Kids = item.GetChildren().ToList();
-
-                    foreach (var children in Kids)
-                    {
-                        temp.Add(children);
-                    }
-                    _childItems = temp;
+                    temp.Add(children);
                 }
+
+                _childItems = temp;
             }
+
             return _childItems;
         }
 
         // Checks what link item is == to contextname
         private void RemoveItem(IMvcContext context)
         {
-            string contextName = context.ContextItem.DisplayName.ToLowerInvariant();
-            List<Item> temp = new List<Item>();
-            foreach (var item in _parentItems)
+            var contextName = context.ContextItem.DisplayName.ToLowerInvariant();
+            var temp = new List<Item>();
+            foreach (Item item in _parentItems)
             {
                 temp.Add(item);
                 if (item.DisplayName.ToLowerInvariant() == contextName)
@@ -61,10 +61,10 @@ namespace Books.Feature.Navigation.ViewModels
 
                 _parentItems = temp;
             }
-            List<Item> temp2 = new List<Item>();
-            foreach (var items in _childItems)
+            var temp2 = new List<Item>();
+            foreach (Item items in _childItems)
             {
-                string itemName = items.DisplayName.ToString().Replace("-", string.Empty).ToLowerInvariant();
+                var itemName = items.DisplayName.ToString().Replace("-", string.Empty).ToLowerInvariant();
                 temp2.Add(items);
                 if (itemName == contextName)
                     temp2.Remove(items);

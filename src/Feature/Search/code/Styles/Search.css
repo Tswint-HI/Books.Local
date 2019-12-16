@@ -1,4 +1,9 @@
-﻿.searchbar {
+﻿.justify-content-center {
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+
+.searchbar {
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
@@ -2419,7 +2424,6 @@ hr {
 }
 
 .list-group-item-action {
-    width: 100%;
     color: #aaa;
     text-align: inherit;
 }

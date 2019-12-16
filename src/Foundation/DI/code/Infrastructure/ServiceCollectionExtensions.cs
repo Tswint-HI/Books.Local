@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -8,17 +7,19 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Web.Mvc;
 
+using Microsoft.Extensions.DependencyInjection;
+
 namespace Books.Foundation.DI.Infrastructure
 {
     public static class ServiceCollectionExtensions
     {
-        private const string DefaultControllerFilter = "*Controller";
+        private const string _defaultControllerFilter = "*Controller";
 
         private static void AddMvcControllers(this IServiceCollection serviceCollection, IEnumerable<Assembly> assemblies, string[] classFilters)
         {
-            var controllers = GetTypesImplementing(typeof(IController), assemblies, classFilters);
+            IEnumerable<Type> controllers = GetTypesImplementing(typeof(IController), assemblies, classFilters);
 
-            foreach (var controller in controllers)
+            foreach (Type controller in controllers)
             {
                 serviceCollection.Add(controller, Lifetime.Transient);
             }
@@ -26,8 +27,8 @@ namespace Books.Foundation.DI.Infrastructure
 
         private static Assembly[] GetAssemblies(IEnumerable<string> assemblyFilters)
         {
-            List<Assembly> assemblies = new List<Assembly>();
-            foreach (string assemblyFilter in assemblyFilters)
+            var assemblies = new List<Assembly>();
+            foreach (var assemblyFilter in assemblyFilters)
             {
                 assemblies.AddRange(AppDomain.CurrentDomain.GetAssemblies().Where(assembly => IsWildcardMatch(assembly.GetName().Name, assemblyFilter)).ToArray());
             }
@@ -65,7 +66,7 @@ namespace Books.Foundation.DI.Infrastructure
 
         private static IEnumerable<Type> GetTypesImplementing(Type implementsType, IEnumerable<Assembly> assemblies, params string[] classFilter)
         {
-            var types = GetTypesImplementing(implementsType, assemblies.ToArray());
+            IEnumerable<Type> types = GetTypesImplementing(implementsType, assemblies.ToArray());
             if (classFilter != null && classFilter.Any())
             {
                 types = types.Where(type => classFilter.Any(filter => IsWildcardMatch(type.FullName, filter)));
@@ -80,7 +81,7 @@ namespace Books.Foundation.DI.Infrastructure
                 return new Type[0];
             }
 
-            var targetType = implementsType;
+            Type targetType = implementsType;
 
             return assemblies
                 .Where(assembly => !assembly.IsDynamic)
@@ -92,23 +93,17 @@ namespace Books.Foundation.DI.Infrastructure
         /// <summary>
         ///     Checks if a string matches a wildcard argument (using regex)
         /// </summary>
-        private static bool IsWildcardMatch(string input, string wildcard)
-        {
-            return input == wildcard || Regex.IsMatch(input, "^" + Regex.Escape(wildcard).Replace("\\*", ".*").Replace("\\?", ".") + "$", RegexOptions.IgnoreCase);
-        }
+        private static bool IsWildcardMatch(string input, string wildcard) => input == wildcard || Regex.IsMatch(input, "^" + Regex.Escape(wildcard).Replace("\\*", ".*").Replace("\\?", ".") + "$", RegexOptions.IgnoreCase);
 
         public static void Add(this IServiceCollection serviceCollection, Lifetime lifetime, params Type[] types)
         {
-            foreach (var type in types)
+            foreach (Type type in types)
             {
                 serviceCollection.Add(type, lifetime);
             }
         }
 
-        public static void Add<T>(this IServiceCollection serviceCollection, Lifetime lifetime)
-        {
-            serviceCollection.Add(typeof(T), lifetime);
-        }
+        public static void Add<T>(this IServiceCollection serviceCollection, Lifetime lifetime) => serviceCollection.Add(typeof(T), lifetime);
 
         public static void Add(this IServiceCollection serviceCollection, Type type, Lifetime lifetime)
         {
@@ -149,19 +144,16 @@ namespace Books.Foundation.DI.Infrastructure
             if (assemblies == null || !assemblies.Any())
                 assemblies = new[] { Assembly.GetCallingAssembly() };
 
-            var types = GetTypesImplementing(typeof(object), assemblies, classFilter);
+            IEnumerable<Type> types = GetTypesImplementing(typeof(object), assemblies, classFilter);
 
             serviceCollection.Add(lifetime, types.ToArray());
         }
 
-        public static void AddClassesWithServiceAttribute(this IServiceCollection serviceCollection)
-        {
-            serviceCollection.AddClassesWithServiceAttribute(Assembly.GetCallingAssembly());
-        }
+        public static void AddClassesWithServiceAttribute(this IServiceCollection serviceCollection) => serviceCollection.AddClassesWithServiceAttribute(Assembly.GetCallingAssembly());
 
         public static void AddClassesWithServiceAttribute(this IServiceCollection serviceCollection, params string[] assemblyFilters)
         {
-            var assemblies = GetAssemblies(assemblyFilters);
+            Assembly[] assemblies = GetAssemblies(assemblyFilters);
             serviceCollection.AddClassesWithServiceAttribute(assemblies);
         }
 
@@ -183,40 +175,25 @@ namespace Books.Foundation.DI.Infrastructure
             }
         }
 
-        public static void AddMvcControllers(this IServiceCollection serviceCollection, params string[] assemblyFilters)
-        {
-            serviceCollection.AddMvcControllers(GetAssemblies(assemblyFilters));
-        }
+        public static void AddMvcControllers(this IServiceCollection serviceCollection, params string[] assemblyFilters) => serviceCollection.AddMvcControllers(GetAssemblies(assemblyFilters));
 
-        public static void AddMvcControllers(this IServiceCollection serviceCollection, params Assembly[] assemblies)
-        {
-            serviceCollection.AddMvcControllers(assemblies, new[] { DefaultControllerFilter });
-        }
+        public static void AddMvcControllers(this IServiceCollection serviceCollection, params Assembly[] assemblies) => serviceCollection.AddMvcControllers(assemblies, new[] { _defaultControllerFilter });
 
-        public static void AddMvcControllers(this IServiceCollection serviceCollection, string[] assemblyFilters, params string[] classFilters)
-        {
-            serviceCollection.AddMvcControllers(GetAssemblies(assemblyFilters), classFilters);
-        }
+        public static void AddMvcControllers(this IServiceCollection serviceCollection, string[] assemblyFilters, params string[] classFilters) => serviceCollection.AddMvcControllers(GetAssemblies(assemblyFilters), classFilters);
 
-        public static void AddMvcControllersInCurrentAssembly(this IServiceCollection serviceCollection, params string[] classFilters)
-        {
-            AddMvcControllers(serviceCollection, Assembly.GetCallingAssembly());
-        }
+        public static void AddMvcControllersInCurrentAssembly(this IServiceCollection serviceCollection, params string[] classFilters) => AddMvcControllers(serviceCollection, Assembly.GetCallingAssembly());
 
-        public static void AddTypesImplementing<T>(this IServiceCollection servicecollection, Lifetime lifetime, params string[] assemblies)
-        {
-            servicecollection.AddTypesImplementing<T>(lifetime, GetAssemblies(assemblies));
-        }
+        public static void AddTypesImplementing<T>(this IServiceCollection servicecollection, Lifetime lifetime, params string[] assemblies) => servicecollection.AddTypesImplementing<T>(lifetime, GetAssemblies(assemblies));
 
         public static void AddTypesImplementing<T>(this IServiceCollection serviceCollection, Lifetime lifetime, params Assembly[] assemblies)
         {
-            var types = GetTypesImplementing(typeof(T), assemblies);
+            IEnumerable<Type> types = GetTypesImplementing(typeof(T), assemblies);
             serviceCollection.Add(lifetime, types.ToArray());
         }
 
         public static void AddTypesImplementingInCurrentAssembly<T>(this IServiceCollection serviceCollection, Lifetime lifetime)
         {
-            var types = GetTypesImplementing(typeof(T), new[] { Assembly.GetCallingAssembly() });
+            IEnumerable<Type> types = GetTypesImplementing(typeof(T), new[] { Assembly.GetCallingAssembly() });
             serviceCollection.Add(lifetime, types.ToArray());
         }
     }

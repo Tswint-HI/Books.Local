@@ -1,8 +1,12 @@
-﻿using Books.Feature.Banner.ViewModels;
-using Glass.Mapper.Sc.Web.Mvc;
-using Sitecore.Mvc.Presentation;
-using System;
+﻿using System;
 using System.Web.Mvc;
+
+using Books.Feature.Banner.ViewModels;
+
+using Glass.Mapper.Sc.Web.Mvc;
+
+using Sitecore.Mvc.Presentation;
+
 using BannerFolder = Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner_Folder;
 using FeatureItem = Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner;
 
@@ -12,32 +16,21 @@ namespace Books.Feature.Banner.Controllers
     {
         private readonly IMvcContext _context;
 
-        public BannerController(IMvcContext context)
-        {
-            _context = context ?? throw new ArgumentNullException(nameof(context));
-        }
+        public BannerController(IMvcContext context) => _context = context ?? throw new ArgumentNullException(nameof(context));
 
         // Featured Genre for the home page
         public ActionResult FeaturedGenre()
         {
-            if (RenderingContext.Current.Rendering.Item != null)
-            {
-                BannerViewModel vm = null;
-                var datasource = _context.GetDataSourceItem<FeatureItem>();
-                return datasource == null ? null : View(vm = new BannerViewModel(datasource));
-            }
-            return View();
+            return RenderingContext.Current.Rendering.Item != null
+                ? _context.GetDataSourceItem<FeatureItem>() == null ? null : View(_ = new BannerViewModel(_context.GetDataSourceItem<FeatureItem>()))
+                : View();
         }
 
         public ActionResult GetAllGenres()
         {
-            if (RenderingContext.Current.Rendering.Item != null)
-            {
-                var ds = _context.GetDataSourceItem<BannerFolder>();
-                object bannerList = BannerViewModel.GetAllBanners(ds, _context);
-                return ds == null ? null : View(bannerList);
-            }
-            return View();
+            return RenderingContext.Current.Rendering.Item != null
+                ? _context.GetDataSourceItem<BannerFolder>() == null ? null : View(BannerViewModel.GetAllBanners(_context.GetDataSourceItem<BannerFolder>(), _context))
+                : View();
         }
     }
 }

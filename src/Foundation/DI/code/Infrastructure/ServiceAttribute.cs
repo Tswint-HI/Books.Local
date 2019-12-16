@@ -13,9 +13,6 @@ namespace Books.Foundation.DI.Infrastructure
         {
         }
 
-        public ServiceAttribute(Type serviceType)
-        {
-            this.ServiceType = serviceType;
-        }
+        public ServiceAttribute(Type serviceType) => ServiceType = serviceType;
     }
 }

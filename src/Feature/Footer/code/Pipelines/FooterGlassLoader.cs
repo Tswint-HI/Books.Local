@@ -5,10 +5,6 @@ namespace Books.Feature.Footer.Pipelines
 {
     public class FooterGlassLoader : GetGlassLoadersProcessor
     {
-        public override void Process(GetGlassLoadersPipelineArgs args)
-        {
-            SitecoreAttributeConfigurationLoader loader = new SitecoreAttributeConfigurationLoader("Books.Feature.Footer");
-            args.Loaders.Add(loader);
-        }
+        public override void Process(GetGlassLoadersPipelineArgs args) => args.Loaders.Add(new SitecoreAttributeConfigurationLoader("Books.Feature.Footer"));
     }
 }

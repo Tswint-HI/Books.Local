@@ -1,5 +1,6 @@
-﻿using Glass.Mapper.Sc.Fields;
-using System;
+﻿using System;
+
+using Glass.Mapper.Sc.Fields;
 
 namespace Books.Feature.Carousel.Models
 {

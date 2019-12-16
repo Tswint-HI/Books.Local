@@ -3,19 +3,22 @@
 <br />
 <br />
 <br />
+@if (Model != null)
+{
 <div class="card bg-dark text-white">
     @Html.Glass().RenderImage(x => x.Image, new
-    {
-        @class = "card-img"
-    }, isEditable: true)
+{
+   @class = "card-img"
+}, isEditable: true)
     <div class="card-body">
-        <h5 class="card-title">Error: @Html.Glass().Editable(Model, x=>x.Type_Error)</h5>
-        <p class="text-white card-text">@Html.Glass().Editable(Model, x=>x.Description__Error)</p>
+        <h5 class="card-title">Error: @Html.Glass().Editable(Model, x => x.Type_Error)</h5>
+        <p class="text-white card-text">@Html.Glass().Editable(Model, x => x.Description__Error)</p>
         <div class="card-footer text-muted">
             @Html.Glass().RenderLink(x => x.Link, new
-            {
-                @class = "btn btn-dark"
-            }, isEditable: false)
+       {
+           @class = "btn btn-dark"
+       }, isEditable: false)
         </div>
     </div>
 </div>
+}

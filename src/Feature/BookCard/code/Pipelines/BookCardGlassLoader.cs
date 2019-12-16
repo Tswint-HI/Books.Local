@@ -5,10 +5,6 @@ namespace Books.Feature.BookCard.Pipelines
 {
     public class BookCardGlassLoader : GetGlassLoadersProcessor
     {
-        public override void Process(GetGlassLoadersPipelineArgs args)
-        {
-            SitecoreAttributeConfigurationLoader loader = new SitecoreAttributeConfigurationLoader("Books.Feature.BookCard");
-            args.Loaders.Add(loader);
-        }
+        public override void Process(GetGlassLoadersPipelineArgs args) => args.Loaders.Add(new SitecoreAttributeConfigurationLoader("Books.Feature.BookCard"));
     }
 }

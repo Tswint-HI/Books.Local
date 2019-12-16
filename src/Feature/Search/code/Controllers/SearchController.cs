@@ -1,9 +1,11 @@
-﻿using Books.Feature.Search.Models;
-using Glass.Mapper.Sc.Web;
-using Glass.Mapper.Sc.Web.Mvc;
-using System;
+﻿using System;
 using System.Linq;
 using System.Web.Mvc;
+
+using Books.Feature.Search.Models;
+
+using Glass.Mapper.Sc.Web;
+using Glass.Mapper.Sc.Web.Mvc;
 
 namespace Books.Feature.Search.Controllers
 {
@@ -23,9 +25,9 @@ namespace Books.Feature.Search.Controllers
         {
             try
             {
+                ResponseItem model = new ResponseItem();
                 if (!string.IsNullOrEmpty(data.SearchTerm))
                 {
-                    ResponseItem model = new ResponseItem();
                     string termToSearch = data.SearchTerm;
                     var bookitems = Solr.SolrHelper.GetBookResults(termToSearch, _context, _sitecoreRequestContext);
                     var pageItems = Solr.SolrHelper.GetPageResults(termToSearch, _context, _sitecoreRequestContext);
@@ -39,12 +41,18 @@ namespace Books.Feature.Search.Controllers
                     }
                     return View(model);
                 }
+                else
+                {
+                    model.Message = _context.GetContextItem<Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBasePage>().Message;
+                    return View(model);
+                }
             }
             catch (System.NotSupportedException ex)
             {
                 Sitecore.Diagnostics.Log.Error("Error message", ex);
             }
-            return View();
+
+            return null;
         }
     }
 }

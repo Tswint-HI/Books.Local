@@ -1,6 +1,8 @@
-﻿using Books.Foundation.Orm.Repo;
-using System;
+﻿using System;
 using System.Web.Mvc;
+
+using Books.Foundation.Orm.Repo;
+
 using Errors = Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types.Error;
 
 namespace Books.Feature.Error.Controllers
@@ -9,25 +11,20 @@ namespace Books.Feature.Error.Controllers
     {
         public SitecoreRepository Repository { get; set; }
 
-        public ErrorController(SitecoreRepository repository)
-        {
-            this.Repository = repository;
-        }
+        public ErrorController(SitecoreRepository repository) => Repository = repository;
 
         // GET: Error
         public ActionResult Index()
         {
-            Errors model = null;
-            var contextId = Sitecore.Context.Item.ID.Guid;
             try
             {
-                model = Repository.FindById<Errors>(contextId);
+                Errors model = Repository.FindById<Errors>(Sitecore.Context.Item.ID.Guid);
             }
             catch (Exception ex)
             {
                 Sitecore.Diagnostics.Log.Error("UH OH", ex);
             }
-            return View(model);
+            return View((object)null);
         }
     }
 }

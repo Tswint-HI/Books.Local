@@ -1,6 +1,7 @@
-﻿using Sitecore.Diagnostics;
+﻿using System.Web;
+
+using Sitecore.Diagnostics;
 using Sitecore.Pipelines.HttpRequest;
-using System.Web;
 
 namespace Books.Foundation.CustomErrors.Pipelines
 {
@@ -10,10 +11,9 @@ namespace Books.Foundation.CustomErrors.Pipelines
         {
             Assert.ArgumentNotNull(args, "args");
 
-            var url = HttpContext.Current.Request.Url;
-            string path = HttpContext.Current.Request.Url.AbsolutePath.ToLower();
-            var siteContext = Sitecore.Sites.SiteContextFactory.GetSiteContext(url.Host, url.PathAndQuery);
-            string path404 = siteContext.StartPath + "/404";
+            System.Uri url = HttpContext.Current.Request.Url;
+            Sitecore.Sites.SiteContext siteContext = Sitecore.Sites.SiteContextFactory.GetSiteContext(url.Host, url.PathAndQuery);
+            var path404 = siteContext.StartPath + "/404";
 
             // Do nothing if the item is actually found
             if ((Sitecore.Context.Item != null && !Sitecore.Context.Item.Paths.Path.Equals(path404)) || Sitecore.Context.Database == null)
@@ -22,6 +22,7 @@ namespace Books.Foundation.CustomErrors.Pipelines
             if (Sitecore.Context.Site.Name.ToLower() != "website")
                 return;
 
+            var path = HttpContext.Current.Request.Url.AbsolutePath.ToLower();
             // all the icons and media library items
             // for the sitecore client need to be ignored
             if (path.StartsWith("/-/") ||
@@ -35,7 +36,7 @@ namespace Books.Foundation.CustomErrors.Pipelines
             // from multisite solutions. In a production
             // environment you would probably get the item from
             // your website configuration.
-            var notFoundPage = Sitecore.Context.Database.GetItem(path404);
+            Sitecore.Data.Items.Item notFoundPage = Sitecore.Context.Database.GetItem(path404);
             if (notFoundPage == null)
                 return;
 
