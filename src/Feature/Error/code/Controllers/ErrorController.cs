@@ -18,7 +18,7 @@ namespace Books.Feature.Error.Controllers
         {
             try
             {
-                Errors model = Repository.FindById<Errors>(Sitecore.Context.Item.ID.Guid);
+                var model = Repository.FindById<Errors>(Sitecore.Context.Item.ID.Guid);
             }
             catch (Exception ex)
             {

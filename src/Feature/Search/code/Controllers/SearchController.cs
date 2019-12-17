@@ -9,7 +9,6 @@ using Glass.Mapper.Sc.Web.Mvc;
 
 namespace Books.Feature.Search.Controllers
 {
-    [RoutePrefix("/search/")]
     public class SearchController : Controller
     {
         private readonly IMvcContext _context;
@@ -23,14 +22,13 @@ namespace Books.Feature.Search.Controllers
 
         public ActionResult Index(Data data)
         {
-            try
+            try 
             {
-                ResponseItem model = new ResponseItem();
+                var model = new ResponseItem();
                 if (!string.IsNullOrEmpty(data.SearchTerm))
                 {
-                    string termToSearch = data.SearchTerm;
-                    var bookitems = Solr.SolrHelper.GetBookResults(termToSearch, _context, _sitecoreRequestContext);
-                    var pageItems = Solr.SolrHelper.GetPageResults(termToSearch, _context, _sitecoreRequestContext);
+                    var bookitems = Solr.SolrHelper.GetBookResults(data.SearchTerm, _context, _sitecoreRequestContext);
+                    var pageItems = Solr.SolrHelper.GetPageResults(data.SearchTerm, _context, _sitecoreRequestContext);
                     if (bookitems.Any())
                     {
                         model.Books = bookitems;
@@ -43,7 +41,7 @@ namespace Books.Feature.Search.Controllers
                 }
                 else
                 {
-                    model.Message = _context.GetContextItem<Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBasePage>().Message;
+                    model.Message = _context.GetContextItem<Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBasePage>().Message;
                     return View(model);
                 }
             }

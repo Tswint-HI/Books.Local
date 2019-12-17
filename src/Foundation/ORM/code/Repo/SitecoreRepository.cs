@@ -19,7 +19,7 @@ namespace Books.Foundation.Orm.Repo
 
         public T CastItem<T>(Item item) where T : GlassBase
         {
-            Item resolvedItem = _sitecoreRequestContext.SitecoreService.ResolveItem(item);
+            var resolvedItem = _sitecoreRequestContext.SitecoreService.ResolveItem(item);
             return _sitecoreRequestContext.SitecoreService.GetItem<T>(new GetItemByIdOptions() { Id = resolvedItem.ID.Guid, Lazy = Glass.Mapper.LazyLoading.Enabled });
         }
 
@@ -37,7 +37,7 @@ namespace Books.Foundation.Orm.Repo
         {
             var itemPath = !path.StartsWith("/sitecore/content") ? string.Format("{0}{1}", Sitecore.Context.Site.StartPath, path) : path;
 
-            T item = _sitecoreRequestContext.SitecoreService.GetItem<T>(new GetItemByPathOptions() { Path = itemPath, Lazy = Glass.Mapper.LazyLoading.Enabled });
+            var item = _sitecoreRequestContext.SitecoreService.GetItem<T>(new GetItemByPathOptions() { Path = itemPath, Lazy = Glass.Mapper.LazyLoading.Enabled });
             if (item == null || string.IsNullOrEmpty(itemPath))
             {
                 return null;
@@ -46,7 +46,7 @@ namespace Books.Foundation.Orm.Repo
             var queryString = string.Format("{0}/*[@@TemplateID='{{{1}}}']", itemPath, templateId.ToString().ToUpper());
 
             var itemQuery = new Query(queryString);
-            IEnumerable<T> itemList = _sitecoreRequestContext.SitecoreService.GetItems<T>(itemQuery);
+            var itemList = _sitecoreRequestContext.SitecoreService.GetItems<T>(itemQuery);
 
             return itemList;
         }

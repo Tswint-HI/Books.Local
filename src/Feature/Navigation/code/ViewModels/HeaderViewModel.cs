@@ -37,7 +37,7 @@ namespace Books.Feature.Navigation.ViewModels
                 _childItems = new List<Item>();
                 var temp = new List<Item>();
                 var Kids = item.GetChildren().ToList();
-                foreach (Item children in Kids)
+                foreach (var children in Kids)
                 {
                     temp.Add(children);
                 }
@@ -48,12 +48,12 @@ namespace Books.Feature.Navigation.ViewModels
             return _childItems;
         }
 
-        // Checks what link item is == to contextname
+        // Checks what link item is == to contextname in order to remove it from the list of selectable links
         private void RemoveItem(IMvcContext context)
         {
             var contextName = context.ContextItem.DisplayName.ToLowerInvariant();
             var temp = new List<Item>();
-            foreach (Item item in _parentItems)
+            foreach (var item in _parentItems)
             {
                 temp.Add(item);
                 if (item.DisplayName.ToLowerInvariant() == contextName)
@@ -62,7 +62,7 @@ namespace Books.Feature.Navigation.ViewModels
                 _parentItems = temp;
             }
             var temp2 = new List<Item>();
-            foreach (Item items in _childItems)
+            foreach (var items in _childItems)
             {
                 var itemName = items.DisplayName.ToString().Replace("-", string.Empty).ToLowerInvariant();
                 temp2.Add(items);

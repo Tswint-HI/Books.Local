@@ -15,5 +15,8 @@ namespace Books.Feature.Search.Models
 
         [IndexField("title_t_en")]
         public string Title { get; set; }
+        [IndexField("author_t_en")]
+        public string Author { get; set; }
+
     }
 }

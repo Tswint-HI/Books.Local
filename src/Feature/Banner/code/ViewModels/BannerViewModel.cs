@@ -38,7 +38,7 @@ namespace Books.Feature.Banner.ViewModels
         internal static List<BannerViewModel> GetAllBanners(IBanner_Folder ds, IMvcContext _context)
         {
             var bcVM = new List<BannerViewModel>();
-            IBanner_Folder bf = _context.SitecoreService.GetItem<IBanner_Folder>(ds.Id);
+            var bf = _context.SitecoreService.GetItem<IBanner_Folder>(ds.Id);
             bcVM.AddRange(from IBanner banner in bf.Banners
                           let tempVm = new BannerViewModel(banner)
                           select tempVm);

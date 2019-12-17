@@ -20,15 +20,15 @@ namespace Books.Foundation.Orm.App_Start
     {
         public override IDependencyResolver CreateResolver()
         {
-            IDependencyResolver resolver = GlassMapperScCustom.CreateResolver();
+            var resolver = GlassMapperScCustom.CreateResolver();
             base.CreateResolver(resolver);
             return resolver;
         }
 
         public override IConfigurationLoader[] GetGlassLoaders(Context context)
         {
-            IConfigurationLoader[] loaders1 = GlassMapperScCustom.GlassLoaders();
-            IConfigurationLoader[] loaders2 = base.GetGlassLoaders(context);
+            var loaders1 = GlassMapperScCustom.GlassLoaders();
+            var loaders2 = base.GetGlassLoaders(context);
 
             return loaders1.Concat(loaders2).ToArray();
         }
@@ -47,7 +47,7 @@ namespace Books.Foundation.Orm.App_Start
             }
 
             IConfigurationMap configurationMap = new ConfigurationMap(dependencyResolver);
-            SitecoreFluentConfigurationLoader configurationLoader = configurationMap.GetConfigurationLoader<SitecoreFluentConfigurationLoader>();
+            var configurationLoader = configurationMap.GetConfigurationLoader<SitecoreFluentConfigurationLoader>();
             context.Load(configurationLoader);
 
             base.LoadConfigurationMaps(resolver, context);

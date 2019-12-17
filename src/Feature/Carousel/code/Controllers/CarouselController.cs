@@ -21,7 +21,7 @@ namespace Books.Feature.Carousel.Controllers
             _repository = repo ?? throw new ArgumentNullException(nameof(repo));
         }
 
-        // GET: Carousel
+        // Standard Carousel
         public ActionResult GetCarousel() => _context.GetDataSourceItem<ICarousel>() == null ? null : View(new CarouselViewModel(_context.GetDataSourceItem<ICarousel>()));
     }
 }

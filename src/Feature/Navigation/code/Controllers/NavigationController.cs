@@ -15,15 +15,13 @@ namespace Books.Feature.Navigation.Controllers
 
         public NavigationController(IMvcContext context) => _context = context ?? throw new ArgumentNullException(nameof(context));
 
-        public ActionResult getNav()
+        public ActionResult GetNav()
         {
-            if (RenderingContext.Current.Rendering.Item != null)
-            {
-                return _context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigation_Links_Folder>() == null
+            return RenderingContext.Current.Rendering.Item != null
+                ? _context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigation_Links_Folder>() == null
                     ? null
-                    : View(new HeaderViewModel(_context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigation_Links_Folder>(), _context));
-            }
-            return null;
+                    : View(new HeaderViewModel(_context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigation_Links_Folder>(), _context))
+                : null;
         }
     }
 }

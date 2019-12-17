@@ -14,7 +14,7 @@ namespace Books.Feature.Carousel.Models
             Title = dataSource.Title;
             for (var i = 0; i < dataSource.Items.Count(); i++)
             {
-                Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarouselItem item = dataSource.Items.ElementAt(i);
+                var item = dataSource.Items.ElementAt(i);
                 Items.Add(new CarouselItemViewModel
                 {
                     Index = i,

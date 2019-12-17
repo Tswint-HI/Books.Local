@@ -24,7 +24,7 @@ namespace Books.Foundation.DI.Infrastructure
 
         private static ISitecoreService CreateSitecoreContextService()
         {
-            Func<Database, ISitecoreService> sitecoreServiceThunk = Get<Func<Database, ISitecoreService>>();
+            var sitecoreServiceThunk = Get<Func<Database, ISitecoreService>>();
             return sitecoreServiceThunk(Sitecore.Context.ContentDatabase ?? Sitecore.Context.Database);
         }
 

@@ -17,7 +17,7 @@ namespace Books.Feature.BookDetail.Controllers
 
         public BookDetailController(IMvcContext context) => _context = context ?? throw new ArgumentNullException(nameof(context));
 
-        // GET: BookDetail
+        // Book detail page
         public ActionResult GetDetail()
         {
             return RenderingContext.Current.Rendering.Item != null

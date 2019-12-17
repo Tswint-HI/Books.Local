@@ -52,7 +52,7 @@ namespace Books.Feature.BookCard.Models
         internal static List<BookCardViewModel> AllBooks(IBook_Folder ds, IMvcContext context)
         {
             _ = context.ContextItem.DisplayName.ToLowerInvariant();
-            Guid genre = context.GetPageContextItem<Foundation.Orm.Models.sitecore.templates.Project.Page_Types.Genres>().Id;
+            var genre = context.GetPageContextItem<Foundation.Orm.Models.sitecore.templates.Project.Page_Types.Genres>().Id;
             return (ds.Books.Where(card => card.Genre == genre).Select(card => new BookCardViewModel(card))).ToList();
         }
 

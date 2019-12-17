@@ -25,7 +25,7 @@ namespace Books.Feature.Banner.Controllers
                 ? _context.GetDataSourceItem<FeatureItem>() == null ? null : View(_ = new BannerViewModel(_context.GetDataSourceItem<FeatureItem>()))
                 : View();
         }
-
+        // Genre list for Genre Page
         public ActionResult GetAllGenres()
         {
             return RenderingContext.Current.Rendering.Item != null

@@ -11,9 +11,8 @@ namespace Books.Foundation.CustomErrors.Pipelines
         {
             Assert.ArgumentNotNull(args, "args");
 
-            System.Uri url = HttpContext.Current.Request.Url;
-            Sitecore.Sites.SiteContext siteContext = Sitecore.Sites.SiteContextFactory.GetSiteContext(url.Host, url.PathAndQuery);
-            var path404 = siteContext.StartPath + "/404";
+            var url = HttpContext.Current.Request.Url;
+            var path404 = Sitecore.Sites.SiteContextFactory.GetSiteContext(url.Host, url.PathAndQuery).StartPath + "/404";
 
             // Do nothing if the item is actually found
             if ((Sitecore.Context.Item != null && !Sitecore.Context.Item.Paths.Path.Equals(path404)) || Sitecore.Context.Database == null)
@@ -36,7 +35,7 @@ namespace Books.Foundation.CustomErrors.Pipelines
             // from multisite solutions. In a production
             // environment you would probably get the item from
             // your website configuration.
-            Sitecore.Data.Items.Item notFoundPage = Sitecore.Context.Database.GetItem(path404);
+            var notFoundPage = Sitecore.Context.Database.GetItem(path404);
             if (notFoundPage == null)
                 return;
 

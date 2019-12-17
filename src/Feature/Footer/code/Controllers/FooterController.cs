@@ -17,13 +17,14 @@ namespace Books.Feature.Footer.Controllers
 
         public FooterController(IMvcContext context) => _context = context ?? throw new ArgumentNullException(nameof(context));
 
+        // TODO: Add support for another footer variant
         public ActionResult FooterVariant2() => View();
 
         public ActionResult StandardFooter()
         {
             if (RenderingContext.Current.Rendering.Item != null)
             {
-                IBaseFooter datasource = _context.HasDataSource
+                var datasource = _context.HasDataSource
                     ? _context.SitecoreService.Cast<IBaseFooter>(_context.DataSourceItem)
                     : _context.GetDataSourceItem<IBaseFooter>();
                 return datasource == null ? null : View(_ = new StandardFooterViewModel(datasource));

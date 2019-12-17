@@ -1044,6 +1044,66 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 {
 
  	/// <summary>
+	/// ISpecial_Heading Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/User Defined/Base/Special Heading</para>
+	/// <para>ID: 91b3544b-1d8d-4425-aca3-185b98a8ca84</para>
+	/// </summary>
+	[SitecoreType(TemplateId=ISpecial_HeadingConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
+	public partial interface ISpecial_Heading : IGlassBase 
+	{
+								/// <summary>
+					/// The Heading field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>
+					/// <para>Field ID: a2df64dc-a32c-45d3-95ca-c9ddcc855fe8</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(ISpecial_HeadingConstants.HeadingFieldName)]
+					string Heading  {get; set;}
+
+				}
+
+	public static partial class ISpecial_HeadingConstants{
+
+			public const string TemplateIdString = "91b3544b-1d8d-4425-aca3-185b98a8ca84";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "Special Heading";
+
+		
+			public static readonly ID HeadingFieldId = new ID("a2df64dc-a32c-45d3-95ca-c9ddcc855fe8");
+			public const string HeadingFieldName = "Heading";
+
+		
+	}
+
+	/// <summary>
+	/// Special_Heading
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/User Defined/Base/Special Heading</para>
+	/// <para>ID: 91b3544b-1d8d-4425-aca3-185b98a8ca84</para>
+	/// </summary>
+	[SitecoreType(TemplateId=ISpecial_HeadingConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
+	public partial class Special_Heading  : GlassBase, ISpecial_Heading
+	{
+
+						/// <summary>
+				/// The Heading field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>
+				/// <para>Field ID: a2df64dc-a32c-45d3-95ca-c9ddcc855fe8</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(ISpecial_HeadingConstants.HeadingFieldName)]
+				public virtual string Heading  {get; set;}
+
+			}
+}
+namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
+{
+
+ 	/// <summary>
 	/// IBase_Book Interface
 	/// <para></para>
 	/// <para>Path: /sitecore/templates/User Defined/Base/Base Book</para>
