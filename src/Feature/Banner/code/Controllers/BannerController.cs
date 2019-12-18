@@ -22,7 +22,8 @@ namespace Books.Feature.Banner.Controllers
         public ActionResult FeaturedGenre()
         {
             return RenderingContext.Current.Rendering.Item != null
-                ? _context.GetDataSourceItem<FeatureItem>() == null ? null : View(_ = new BannerViewModel(_context.GetDataSourceItem<FeatureItem>()))
+                ? _context.GetDataSourceItem<FeatureItem>() != null 
+                ? View(_ = new BannerViewModel(_context.GetDataSourceItem<FeatureItem>())) : null
                 : View();
         }
         // Genre list for Genre Page
