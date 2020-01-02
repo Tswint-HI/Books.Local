@@ -49,6 +49,12 @@
       <HintPath>..\..\..\..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.ExperienceForms">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.ExperienceForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ExperienceForms.Mvc">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.ExperienceForms.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Sitecore.Kernel.dll</HintPath>
@@ -60,6 +66,9 @@
     <Reference Include="Sitecore.Mvc.Analytics, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Sitecore.Mvc.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc.ExperienceEditor">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.Mvc.ExperienceEditor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />

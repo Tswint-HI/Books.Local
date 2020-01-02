@@ -24,10 +24,17 @@ key: compatible renderings
 content-length: 38
 
 {D0837D1D-1237-4B6E-91F8-3EDBECC466CC}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 34
+
+Control/16x16/multi_controls_b.png
 ----version----
 language: en
 version: 1
-revision: 6416b70b-5597-4eb1-917d-f4bc6557f504
+revision: 058ae65a-ce26-44c3-a003-0aa38702daef
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6416b70b-5597-4eb1-917d-f4bc6557f504
+058ae65a-ce26-44c3-a003-0aa38702daef
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191206T135529Z
+20191219T153254Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

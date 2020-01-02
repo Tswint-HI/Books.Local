@@ -17,10 +17,17 @@ key: path
 content-length: 23
 
 /Views/SearchBar.cshtml
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 25
+
+Apps/16x16/search (1).png
 ----version----
 language: en
 version: 1
-revision: 59830002-6566-4a09-b8ed-1bc281e1d6d5
+revision: e2af761b-650e-42d6-8c0f-e2ef18415356
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -35,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-59830002-6566-4a09-b8ed-1bc281e1d6d5
+e2af761b-650e-42d6-8c0f-e2ef18415356
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191209T195935Z
+20191219T153221Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

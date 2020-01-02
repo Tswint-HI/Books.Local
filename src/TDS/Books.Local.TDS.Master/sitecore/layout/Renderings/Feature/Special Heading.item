@@ -24,10 +24,31 @@ key: controller action
 content-length: 7
 
 Heading
+----field----
+field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
+name: Datasource Location
+key: datasource location
+content-length: 38
+
+{BBF62B78-4F2F-4474-907A-7FB1FC9FE29E}
+----field----
+field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
+name: Datasource Template
+key: datasource template
+content-length: 53
+
+/sitecore/templates/User Defined/Base/Special Heading
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 28
+
+Apps/16x16/special offer.png
 ----version----
 language: en
 version: 1
-revision: c3ff5dd4-349b-41de-aaee-98ab27d2d0da
+revision: b6f39362-2aa0-4e2d-9549-edbc82bee82a
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -42,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c3ff5dd4-349b-41de-aaee-98ab27d2d0da
+b6f39362-2aa0-4e2d-9549-edbc82bee82a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191217T150458Z
+20191219T153145Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
