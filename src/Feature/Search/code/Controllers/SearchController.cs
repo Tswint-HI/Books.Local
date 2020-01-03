@@ -22,7 +22,7 @@ namespace Books.Feature.Search.Controllers
 
         public ActionResult Index(Data data)
         {
-            try 
+            try
             {
                 var model = new ResponseItem();
                 if (!string.IsNullOrEmpty(data.SearchTerm))

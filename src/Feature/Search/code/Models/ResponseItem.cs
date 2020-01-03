@@ -8,9 +8,9 @@ namespace Books.Feature.Search.Models
 {
     public class ResponseItem
     {
+        public List<Book> Books { get; set; }
         public Guid Id { get; set; }
         public string Message { get; set; }
-        public List<Book> Books { get; set; }
         public List<Page> Pages { get; set; }
     }
 }
