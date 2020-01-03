@@ -103,6 +103,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:Books.Local/Books.Local.csproj
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+=======
     <Content Include="App_Config\Include\Feature\BookDetailLoader.config" />
     <Content Include="Style\Detail.css" />
     <Content Include="Views\BookDetail\GetDetail.cshtml" />
@@ -112,19 +122,32 @@
   <ItemGroup>
     <Compile Include="Controllers\BookDetailController.cs" />
     <Compile Include="Pipelines\BookDetailGlassLoader.cs" />
+>>>>>>> b36bbce826a2779786fc8ea6c88045f7d18aab6e:src/Feature/BookDetail/code/Books.Feature.BookDetail.csproj
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewlModels\BookViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\web.config" />
     <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+<<<<<<< HEAD
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+=======
     <ProjectReference Include="..\..\..\Foundation\ORM\code\Books.Foundation.Orm.csproj">
       <Project>{dc69f037-d421-4792-8e5a-2fdbeaac8a50}</Project>
       <Name>Books.Foundation.Orm</Name>
     </ProjectReference>
+>>>>>>> 750eea157f9c7a55a522429151dc9f819f4b1144
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
