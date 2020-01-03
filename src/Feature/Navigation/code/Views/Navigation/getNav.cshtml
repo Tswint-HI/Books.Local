@@ -1,0 +1,25 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model Books.Feature.Navigation.Controllers.HeaderViewModel
+
+<div class="navbar">
+    <link href="~/Styles/Nav.css" rel="stylesheet" type="text/css" />
+    @Html.Glass().RenderImage(x => x.Image, new { @class = "navbar-brand" })
+    @foreach (var item in Model.Navigation)
+    {
+        <div class="dropdown">
+        @Html.Glass().RenderLink(item, x => x.Link)
+        <button class="dropbtn">
+            <i class="fa fa-caret-down"></i>
+        </button>
+        @if (item.ChildLinks.Count() > 0)
+        {
+        <div class="dropdown-content">
+            @foreach (var child in item.ChildLinks)
+            {
+                @Html.Glass().RenderLink(child, x=> x.Link)
+            }
+        </div>
+        }
+    </div>
+    }
+</div>
