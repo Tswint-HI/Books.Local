@@ -1,25 +1,28 @@
-﻿using Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base;
+﻿using System;
+
+using Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base;
 
 namespace Books.Feature.Footer.Models
 {
     public class StandardFooterViewModel
     {
-        private readonly IBase_Footer _datasource;
-
-        public string Head { get; set; }
-        public string Subhead { get; set; }
         public string Content { get; set; }
-        public string Copy { get; set; }
+        public string Copyright { get; set; }
+        public string Disclosure { get; set; }
+        public string Header { get; set; }
+        public Guid Id { get; set; }
+        public string Subhead { get; set; }
+        private readonly IBase_Footer _datasource;
 
         public StandardFooterViewModel(IBase_Footer datasource)
         {
-            this._datasource = datasource;
-
-            Head = this._datasource.Header;
-            Subhead = this._datasource.Subhead;
-            Content = this._datasource.Content;
-            Copy = this._datasource.Copyright;
+            _datasource = datasource;
+            Id = _datasource.Id;
+            Header = _datasource.Header;
+            Subhead = _datasource.Subhead;
+            Content = _datasource.Content;
+            Copyright = _datasource.Copyright;
+            Disclosure = _datasource.Disclosure;
         }
-
     }
 }

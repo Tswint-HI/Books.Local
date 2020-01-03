@@ -30,11 +30,11 @@ name: __Icon
 key: __icon
 content-length: 35
 
-Applications/16x16/folder_green.png
+Applications/32x32/folder_green.png
 ----version----
 language: en
 version: 1
-revision: e9ec7c54-4fd7-4042-8318-ead3b1f93c58
+revision: b07137c8-b4f2-4d6c-baab-4eb0ecf2d77c
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e9ec7c54-4fd7-4042-8318-ead3b1f93c58
+b07137c8-b4f2-4d6c-baab-4eb0ecf2d77c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191122T192921Z
+20191204T151253Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -5,10 +5,6 @@ namespace Books.Feature.Error.Pipelines
 {
     public class ErrorLoader : GetGlassLoadersProcessor
     {
-        public override void Process(GetGlassLoadersPipelineArgs args)
-        {
-            SitecoreAttributeConfigurationLoader loader = new SitecoreAttributeConfigurationLoader("Books.Feature.Error");
-            args.Loaders.Add(loader);
-        }
+        public override void Process(GetGlassLoadersPipelineArgs args) => args.Loaders.Add(new SitecoreAttributeConfigurationLoader("Books.Feature.Error"));
     }
 }

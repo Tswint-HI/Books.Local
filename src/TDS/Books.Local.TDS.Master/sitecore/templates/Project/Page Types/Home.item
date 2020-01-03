@@ -14,9 +14,9 @@ created: 20191028T174658Z
 field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
 name: __Base template
 key: __base template
-content-length: 155
+content-length: 116
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{2D0BE1CE-5197-4110-A507-54FE2C4F753D}|{CA3AEA07-1534-4E4A-91FA-ED2EC2923A6C}|{B651325B-CF69-4B30-916D-7A8E51EA3FC5}
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{2D0BE1CE-5197-4110-A507-54FE2C4F753D}|{CA3AEA07-1534-4E4A-91FA-ED2EC2923A6C}
 ----field----
 field: {F7D48A55-2158-4F02-9356-756654404F73}
 name: __Standard values
@@ -41,7 +41,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 468b4aaa-42d6-42f9-9958-25b3cc682a9b
+revision: dcf0faad-23b8-4bae-b89d-5881e6ce436e
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -63,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-468b4aaa-42d6-42f9-9958-25b3cc682a9b
+dcf0faad-23b8-4bae-b89d-5881e6ce436e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191105T151214Z
+20191203T204333Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

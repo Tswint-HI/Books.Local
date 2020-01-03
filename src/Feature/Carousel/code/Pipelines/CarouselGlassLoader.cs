@@ -5,10 +5,6 @@ namespace Books.Feature.Carousel.Pipelines
 {
     public class CarouselGlassLoader : GetGlassLoadersProcessor
     {
-        public override void Process(GetGlassLoadersPipelineArgs args)
-        {
-            SitecoreAttributeConfigurationLoader loader = new SitecoreAttributeConfigurationLoader("Books.Feature.Carousel");
-            args.Loaders.Add(loader);
-        }
+        public override void Process(GetGlassLoadersPipelineArgs args) => args.Loaders.Add(new SitecoreAttributeConfigurationLoader("Books.Feature.Carousel"));
     }
 }

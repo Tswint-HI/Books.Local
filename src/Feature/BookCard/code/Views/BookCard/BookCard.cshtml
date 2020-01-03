@@ -1,21 +1,18 @@
-﻿@model Books.Feature.BookCard.Models.BookCardViewModel
-@using Glass.Mapper.Sc.Web.Mvc
-
-@*<div class="col-md">*@
-    <div class="col-sm-2 card text-white bg-dark">
-        @Html.Glass().RenderImage(x => x.Image, new
-                        {
-                         @class = "card-img-top"
-                        }, isEditable: true)
-        <div class="card-body">
-            <p>Author: @Model.Authour</p>
-            <p class="card-title">Title: @Model.Title</p>
-            <p>Rating: @Model.Rating/5</p>
-            <p class="card-text">Description: @Model.Introduction</p>
-            @Html.Glass().RenderLink(x => x.Link, new
+﻿@using Glass.Mapper.Sc.Web.Mvc;
+@model Books.Feature.BookCard.Models.BookCardViewModel
+<div class="col-sm-2 card text-white bg-dark">
+    @Html.Glass().RenderImage(x => x.Img, new
                     {
-                        @class = "btn btn-primary"
+                     @class = "card-img-top"
                     }, isEditable: true)
-        </div>
+    <div class="card-body">
+        <p>Author: @Html.Glass().Editable(Model, x => x.Author)</p>
+        <p class="card-title">Title: @Html.Glass().Editable(Model, x => x.Title)</p>
+        <p>Rating: @Model.Rating/5</p>
+        <p class="card-text">Description: @Html.Glass().Editable(Model, x => x.Intro)</p>
+        @Html.Glass().RenderLink(x => x.Link, new
+                {
+                    @class = "btn btn-primary"
+                }, isEditable: true)
     </div>
-@*</div>*@
+</div>

@@ -49,6 +49,12 @@
       <HintPath>..\..\..\..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.ExperienceForms">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.ExperienceForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ExperienceForms.Mvc">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.ExperienceForms.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Sitecore.Kernel.dll</HintPath>
@@ -60,6 +66,9 @@
     <Reference Include="Sitecore.Mvc.Analytics, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Sitecore.Mvc.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc.ExperienceEditor">
+      <HintPath>..\..\..\..\..\..\..\..\..\inetpub\wwwroot\Books.local.sc\bin\Sitecore.Mvc.ExperienceEditor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -113,9 +122,35 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Images\android-icon-144x144.png" />
+    <Content Include="Images\android-icon-192x192.png" />
+    <Content Include="Images\android-icon-36x36.png" />
+    <Content Include="Images\android-icon-48x48.png" />
+    <Content Include="Images\android-icon-72x72.png" />
+    <Content Include="Images\android-icon-96x96.png" />
+    <Content Include="Images\apple-icon-114x114.png" />
+    <Content Include="Images\apple-icon-120x120.png" />
+    <Content Include="Images\apple-icon-144x144.png" />
+    <Content Include="Images\apple-icon-152x152.png" />
+    <Content Include="Images\apple-icon-180x180.png" />
+    <Content Include="Images\apple-icon-57x57.png" />
+    <Content Include="Images\apple-icon-60x60.png" />
+    <Content Include="Images\apple-icon-72x72.png" />
+    <Content Include="Images\apple-icon-76x76.png" />
+    <Content Include="Images\apple-icon-precomposed.png" />
+    <Content Include="Images\apple-icon.png" />
     <Content Include="Images\bocker_svartvit_display.jpg" />
-    <Content Include="Images\Logo.png" />
+    <Content Include="Images\browserconfig.xml" />
+    <Content Include="Images\favicon-16x16.png" />
+    <Content Include="Images\favicon-32x32.png" />
+    <Content Include="Images\favicon-96x96.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\favicon.png" />
     <Content Include="Images\LogoWhite.png" />
+    <Content Include="Images\ms-icon-144x144.png" />
+    <Content Include="Images\ms-icon-150x150.png" />
+    <Content Include="Images\ms-icon-310x310.png" />
+    <Content Include="Images\ms-icon-70x70.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -227,6 +262,8 @@
     <Content Include="Content\bootstrap\bootstrap.scss" />
     <Content Include="Content\bootstrap\bootstrap-reboot.scss" />
     <Content Include="Content\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Images\manifest.json" />
+    <None Include="Properties\PublishProfiles\Web.sc.pubxml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -263,18 +300,9 @@
   <ItemGroup>
     <None Include="Views\web.config" />
     <None Include="packages.config" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Config\Include\" />
-    <Folder Include="App_Data\" />
-    <Folder Include="App_Start\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

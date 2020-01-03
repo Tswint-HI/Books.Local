@@ -1,8 +1,4 @@
-﻿@using Books.Foundation.Assets
-@using Books.Foundation.Assets.Models
-@using Books.Foundation.Assets.Service
-
-@using Sitecore.Mvc.Analytics.Extensions
+﻿@using Sitecore.Mvc.Analytics.Extensions
 @inherits WebViewPage
 @{
     Layout = null;
@@ -12,10 +8,6 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="~/Styles/grayscale.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     @if (!Sitecore.Context.PageMode.IsExperienceEditor)
     {
         @Html.Sitecore().Placeholder("head")
@@ -23,19 +15,36 @@
     @Html.Sitecore().VisitorIdentification()
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
-    <link rel="shortcut icon" type="image/icon" href="~/Images/ng" />
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Images/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
-<body class="masthead" @(Sitecore.Context.PageMode.IsNormal ? "" : (Sitecore.Context.PageMode.IsExperienceEditor ? "pagemode-edit" : "pagemode-preview"))">
+<body class="masthead" @(Sitecore.Context.PageMode.IsNormal ? "" : (Sitecore.Context.PageMode.IsExperienceEditor ? "pagemode-edit" : "pagemode-preview")) ">
     <div id="main-container">
-        @* Figure out what to do here*@
-        @*<header class="masthead">
-
-            </header>
-            <br>*@
         @Html.Sitecore().Placeholder("navbar")
+        <br />
+        <br />
         <main role="main" class="header-static">
             @Html.Sitecore().Placeholder("body")
         </main>
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <br />
         <br />
@@ -44,6 +53,5 @@
             @Html.Sitecore().Placeholder("footer")
         </footer>
     </div>
-    @*<script src="~/Scripts/grayscale.js"></script>*@
 </body>
 </html>

@@ -14,9 +14,9 @@ created: 20191105T133700Z
 field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
 name: __Base template
 key: __base template
-content-length: 38
+content-length: 77
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{B651325B-CF69-4B30-916D-7A8E51EA3FC5}
 ----field----
 field: {F7D48A55-2158-4F02-9356-756654404F73}
 name: __Standard values
@@ -34,7 +34,7 @@ Applications/32x32/folder_green.png
 ----version----
 language: en
 version: 1
-revision: b93f11cc-6c3d-45e2-8b72-9b865c9e573c
+revision: 172af006-3ed4-4d2f-901c-ff3d36f7bb1a
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b93f11cc-6c3d-45e2-8b72-9b865c9e573c
+172af006-3ed4-4d2f-901c-ff3d36f7bb1a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191122T135641Z
+20191203T204401Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

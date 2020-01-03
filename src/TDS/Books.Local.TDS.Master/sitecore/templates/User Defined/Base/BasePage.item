@@ -14,9 +14,9 @@ created: 20191105T142247Z
 field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
 name: __Base template
 key: __base template
-content-length: 38
+content-length: 77
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{D931423C-24C6-4068-AABF-FDDC0F380F0C}
 ----field----
 field: {F7D48A55-2158-4F02-9356-756654404F73}
 name: __Standard values
@@ -34,7 +34,7 @@ Office/32x32/document_text.png
 ----version----
 language: en
 version: 1
-revision: 9d3c2b8a-5ebe-411c-8698-d96c01aa95b7
+revision: 7ed16282-d94f-45c1-830e-89430f7d36c1
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9d3c2b8a-5ebe-411c-8698-d96c01aa95b7
+7ed16282-d94f-45c1-830e-89430f7d36c1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191119T171107Z
+20191216T141519Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

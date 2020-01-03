@@ -107,9 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\FooterLoader.config" />
-    <None Include="Properties\PublishProfiles\Sc.Footer.pubxml" />
     <Content Include="Styles\Footer.css" />
     <Content Include="Views\Footer\StandardFooter.cshtml" />
+    <None Include="Properties\PublishProfiles\Footer.sc.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

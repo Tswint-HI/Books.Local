@@ -1,16 +1,18 @@
 #region GlassMapperSc generated code
+
 /*************************************
 
 DO NOT CHANGE THIS FILE - UPDATE GlassMapperScCustom.cs
 
 **************************************/
 
+using System.Linq;
+
 using Glass.Mapper;
 using Glass.Mapper.Configuration;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.Configuration.Fluent;
 using Glass.Mapper.Sc.IoC;
-using System.Linq;
 
 namespace Books.Foundation.Orm.App_Start
 {
@@ -25,17 +27,15 @@ namespace Books.Foundation.Orm.App_Start
 
         public override IConfigurationLoader[] GetGlassLoaders(Context context)
         {
-
-
             var loaders1 = GlassMapperScCustom.GlassLoaders();
             var loaders2 = base.GetGlassLoaders(context);
 
             return loaders1.Concat(loaders2).ToArray();
         }
 
-        public override void LoadConfigurationMaps(IDependencyResolver resolver, Glass.Mapper.Context context)
+        public override void LoadConfigurationMaps(IDependencyResolver resolver, Context context)
         {
-            DependencyResolver dependencyResolver = resolver as DependencyResolver;
+            var dependencyResolver = resolver as DependencyResolver;
             if (dependencyResolver == null)
             {
                 return;
@@ -58,7 +58,7 @@ namespace Books.Foundation.Orm.App_Start
             GlassMapperScCustom.PostLoad();
             base.PostLoad(dependencyResolver);
         }
-
     }
 }
-#endregion
+
+#endregion GlassMapperSc generated code

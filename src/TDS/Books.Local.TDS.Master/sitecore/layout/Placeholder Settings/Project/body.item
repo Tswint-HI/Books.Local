@@ -21,13 +21,20 @@ body
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 116
+content-length: 350
 
-{173CE3D9-A0D7-497C-87D4-FDB8B76FE581}|{6A4CC9ED-11C5-45E2-97CE-3345BA26570E}|{FE1CEC72-BABA-4959-957C-48E4462D26E0}
+{173CE3D9-A0D7-497C-87D4-FDB8B76FE581}|{6A4CC9ED-11C5-45E2-97CE-3345BA26570E}|{FE1CEC72-BABA-4959-957C-48E4462D26E0}|{F44A05D0-8018-42F3-AD64-9CC130E6A034}|{B13FEE52-8FD9-4CF7-B83A-6D1A7FBC3407}|{0A6D5A2D-BB03-4036-B88D-49D60EA82E37}|{E30C82AA-1113-430D-82A7-1CC7487CF6A7}|{DDB95273-E762-463F-9D20-7C181495BAD2}|{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}
+----field----
+field: {14D0728A-82F9-4B01-AB16-1FE1577CEDE2}
+name: Editable
+key: editable
+content-length: 1
+
+1
 ----version----
 language: en
 version: 1
-revision: be84d217-6d7f-4966-a7c7-99a01122eb92
+revision: 0f32f561-0dda-412d-acfd-bd027074faaa
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -42,18 +49,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-be84d217-6d7f-4966-a7c7-99a01122eb92
+0f32f561-0dda-412d-acfd-bd027074faaa
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191121T203908Z
+20191223T171035Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

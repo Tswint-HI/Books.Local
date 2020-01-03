@@ -93,7 +93,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\CustonLinks.config" />
     <Content Include="App_Config\Include\Foundation\CustomItemResolver.config" />
-    <None Include="Properties\PublishProfiles\SC.Cu.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomLinks.sc.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

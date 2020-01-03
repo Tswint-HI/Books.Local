@@ -30,11 +30,11 @@ name: __Icon
 key: __icon
 content-length: 29
 
-Control/16x16/bar_hor_b_h.png
+Control/32x32/bar_hor_b_h.png
 ----version----
 language: en
 version: 1
-revision: cc15c7ec-98a5-4378-a211-0242683446fd
+revision: 9ae82bb7-3e99-43f2-960c-56fa06bdb2fb
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-cc15c7ec-98a5-4378-a211-0242683446fd
+9ae82bb7-3e99-43f2-960c-56fa06bdb2fb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191105T143746Z
+20191205T194108Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

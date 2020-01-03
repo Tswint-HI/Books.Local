@@ -63,12 +63,11 @@ namespace Books.Foundation.Orm.Models
 namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content
 {
 
-
  	/// <summary>
 	/// ICarouselItem Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Content/CarouselItem</para>	
-	/// <para>ID: 1ca6b74e-4583-4add-8544-ae0924fa932e</para>	
+	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Content/CarouselItem</para>
+	/// <para>ID: 1ca6b74e-4583-4add-8544-ae0924fa932e</para>
 	/// </summary>
 	[SitecoreType(TemplateId=ICarouselItemConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface ICarouselItem : IGlassBase 
@@ -76,55 +75,54 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carous
 								/// <summary>
 					/// The Caption field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: c8490278-12b9-492d-8a68-af5e3caa5127</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(ICarouselItemConstants.CaptionFieldName)]
 					string Caption  {get; set;}
-			
+
 								/// <summary>
 					/// The Class field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: 69a17318-c3b3-4968-b7d9-f78d91a1a89b</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(ICarouselItemConstants.ClassFieldName)]
 					string Class  {get; set;}
-			
+
 								/// <summary>
 					/// The Image field.
 					/// <para></para>
-					/// <para>Field Type: Image</para>		
+					/// <para>Field Type: Image</para>
 					/// <para>Field ID: a22e7b0a-391e-4ad2-ae1e-9f4f4488022d</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(ICarouselItemConstants.ImageFieldName)]
 					Image Image  {get; set;}
-			
+
 								/// <summary>
 					/// The ImageAlt field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: 9d51e97b-7f5d-4a34-b390-b5afec192821</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(ICarouselItemConstants.ImageAltFieldName)]
 					string ImageAlt  {get; set;}
-			
+
 								/// <summary>
 					/// The ShowCaption field.
 					/// <para></para>
-					/// <para>Field Type: Checkbox</para>		
+					/// <para>Field Type: Checkbox</para>
 					/// <para>Field ID: 32ac5148-d40d-4dfa-866f-db5d77c7261b</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(ICarouselItemConstants.ShowCaptionFieldName)]
 					bool ShowCaption  {get; set;}
-			
-				}
 
+				}
 
 	public static partial class ICarouselItemConstants{
 
@@ -132,108 +130,104 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carous
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "CarouselItem";
 
-					
+		
 			public static readonly ID CaptionFieldId = new ID("c8490278-12b9-492d-8a68-af5e3caa5127");
 			public const string CaptionFieldName = "Caption";
-			
-					
+
+		
 			public static readonly ID ClassFieldId = new ID("69a17318-c3b3-4968-b7d9-f78d91a1a89b");
 			public const string ClassFieldName = "Class";
-			
-					
+
+		
 			public static readonly ID ImageFieldId = new ID("a22e7b0a-391e-4ad2-ae1e-9f4f4488022d");
 			public const string ImageFieldName = "Image";
-			
-					
+
+		
 			public static readonly ID ImageAltFieldId = new ID("9d51e97b-7f5d-4a34-b390-b5afec192821");
 			public const string ImageAltFieldName = "ImageAlt";
-			
-					
+
+		
 			public static readonly ID ShowCaptionFieldId = new ID("32ac5148-d40d-4dfa-866f-db5d77c7261b");
 			public const string ShowCaptionFieldName = "ShowCaption";
-			
-			
 
+		
 	}
 
-	
 	/// <summary>
 	/// CarouselItem
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Content/CarouselItem</para>	
-	/// <para>ID: 1ca6b74e-4583-4add-8544-ae0924fa932e</para>	
+	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Content/CarouselItem</para>
+	/// <para>ID: 1ca6b74e-4583-4add-8544-ae0924fa932e</para>
 	/// </summary>
 	[SitecoreType(TemplateId=ICarouselItemConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class CarouselItem  : GlassBase, ICarouselItem 
+	public partial class CarouselItem  : GlassBase, ICarouselItem
 	{
-	   
+
 						/// <summary>
 				/// The Caption field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: c8490278-12b9-492d-8a68-af5e3caa5127</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(ICarouselItemConstants.CaptionFieldName)]
 				public virtual string Caption  {get; set;}
-					
+
 						/// <summary>
 				/// The Class field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: 69a17318-c3b3-4968-b7d9-f78d91a1a89b</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(ICarouselItemConstants.ClassFieldName)]
 				public virtual string Class  {get; set;}
-					
+
 						/// <summary>
 				/// The Image field.
 				/// <para></para>
-				/// <para>Field Type: Image</para>		
+				/// <para>Field Type: Image</para>
 				/// <para>Field ID: a22e7b0a-391e-4ad2-ae1e-9f4f4488022d</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(ICarouselItemConstants.ImageFieldName)]
 				public virtual Image Image  {get; set;}
-					
+
 						/// <summary>
 				/// The ImageAlt field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: 9d51e97b-7f5d-4a34-b390-b5afec192821</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(ICarouselItemConstants.ImageAltFieldName)]
 				public virtual string ImageAlt  {get; set;}
-					
+
 						/// <summary>
 				/// The ShowCaption field.
 				/// <para></para>
-				/// <para>Field Type: Checkbox</para>		
+				/// <para>Field Type: Checkbox</para>
 				/// <para>Field ID: 32ac5148-d40d-4dfa-866f-db5d77c7261b</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(ICarouselItemConstants.ShowCaptionFieldName)]
 				public virtual bool ShowCaption  {get; set;}
-					
-			
-	}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 {
 
-
  	/// <summary>
 	/// I_Base_Content Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/_Base Content</para>	
-	/// <para>ID: 2d0be1ce-5197-4110-a507-54fe2c4f753d</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/_Base Content</para>
+	/// <para>ID: 2d0be1ce-5197-4110-a507-54fe2c4f753d</para>
 	/// </summary>
 	[SitecoreType(TemplateId=I_Base_ContentConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface I_Base_Content : IGlassBase 
@@ -241,15 +235,14 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 								/// <summary>
 					/// The ContentBody field.
 					/// <para></para>
-					/// <para>Field Type: Multi-Line Text</para>		
+					/// <para>Field Type: Multi-Line Text</para>
 					/// <para>Field ID: 8af829a4-3a05-4df4-8028-9505c7fd3d65</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(I_Base_ContentConstants.ContentBodyFieldName)]
 					string ContentBody  {get; set;}
-			
-				}
 
+				}
 
 	public static partial class I_Base_ContentConstants{
 
@@ -257,54 +250,49 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "_Base Content";
 
-					
+		
 			public static readonly ID ContentBodyFieldId = new ID("8af829a4-3a05-4df4-8028-9505c7fd3d65");
 			public const string ContentBodyFieldName = "ContentBody";
-			
-			
 
+		
 	}
 
-	
 	/// <summary>
 	/// _Base_Content
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/_Base Content</para>	
-	/// <para>ID: 2d0be1ce-5197-4110-a507-54fe2c4f753d</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/_Base Content</para>
+	/// <para>ID: 2d0be1ce-5197-4110-a507-54fe2c4f753d</para>
 	/// </summary>
 	[SitecoreType(TemplateId=I_Base_ContentConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class _Base_Content  : GlassBase, I_Base_Content 
+	public partial class _Base_Content  : GlassBase, I_Base_Content
 	{
-	   
+
 						/// <summary>
 				/// The ContentBody field.
 				/// <para></para>
-				/// <para>Field Type: Multi-Line Text</para>		
+				/// <para>Field Type: Multi-Line Text</para>
 				/// <para>Field ID: 8af829a4-3a05-4df4-8028-9505c7fd3d65</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(I_Base_ContentConstants.ContentBodyFieldName)]
 				public virtual string ContentBody  {get; set;}
-					
-			
-	}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Footer
 {
 
-
  	/// <summary>
 	/// IFooter_Folder Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Footer/Footer Folder</para>	
-	/// <para>ID: 30c11690-92f2-457e-846c-804368424e1a</para>	
+	/// <para>Path: /sitecore/templates/Feature/Footer/Footer Folder</para>
+	/// <para>ID: 30c11690-92f2-457e-846c-804368424e1a</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IFooter_FolderConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface IFooter_Folder : IGlassBase 
 	{
 				}
-
 
 	public static partial class IFooter_FolderConstants{
 
@@ -312,79 +300,74 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Footer
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Footer Folder";
 
-			
-
+		
 	}
 
-	
 	/// <summary>
 	/// Footer_Folder
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Footer/Footer Folder</para>	
-	/// <para>ID: 30c11690-92f2-457e-846c-804368424e1a</para>	
+	/// <para>Path: /sitecore/templates/Feature/Footer/Footer Folder</para>
+	/// <para>ID: 30c11690-92f2-457e-846c-804368424e1a</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IFooter_FolderConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Footer_Folder  : GlassBase, IFooter_Folder 
+	public partial class Footer_Folder  : GlassBase, IFooter_Folder
 	{
-	   
-			
-	}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 {
 
-
  	/// <summary>
 	/// IBasePage Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/BasePage</para>	
-	/// <para>ID: 38c71966-b6ac-4280-a086-157cf33fa6ed</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/BasePage</para>
+	/// <para>ID: 38c71966-b6ac-4280-a086-157cf33fa6ed</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IBasePageConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
-	public partial interface IBasePage : IGlassBase 
+	public partial interface IBasePage : IGlassBase , global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.I_BaseData
 	{
 								/// <summary>
 					/// The Sub Title field.
 					/// <para></para>
-					/// <para>Field Type: Rich Text</para>		
+					/// <para>Field Type: Rich Text</para>
 					/// <para>Field ID: 43260204-717e-421e-aeb0-5b8e572a4d26</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBasePageConstants.Sub_TitleFieldName)]
 					string Sub_Title  {get; set;}
-			
+
 								/// <summary>
 					/// The Title field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: e8674014-f36c-407f-8217-9c16bd3d9adf</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBasePageConstants.TitleFieldName)]
 					string Title  {get; set;}
-			
+
 								/// <summary>
 					/// The MetaDescription field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: ed4089e1-c500-4c02-beaf-bd624ca82270</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBasePageConstants.MetaDescriptionFieldName)]
 					string MetaDescription  {get; set;}
-			
+
 								/// <summary>
 					/// The MetaTitle field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: 0f80d938-d0aa-4191-9f44-7f1c32a39ce4</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBasePageConstants.MetaTitleFieldName)]
 					string MetaTitle  {get; set;}
-			
-				}
 
+				}
 
 	public static partial class IBasePageConstants{
 
@@ -392,99 +375,109 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "BasePage";
 
-					
+		
 			public static readonly ID Sub_TitleFieldId = new ID("43260204-717e-421e-aeb0-5b8e572a4d26");
 			public const string Sub_TitleFieldName = "Sub Title";
-			
-					
+
+		
 			public static readonly ID TitleFieldId = new ID("e8674014-f36c-407f-8217-9c16bd3d9adf");
 			public const string TitleFieldName = "Title";
-			
-					
+
+		
 			public static readonly ID MetaDescriptionFieldId = new ID("ed4089e1-c500-4c02-beaf-bd624ca82270");
 			public const string MetaDescriptionFieldName = "MetaDescription";
-			
-					
+
+		
 			public static readonly ID MetaTitleFieldId = new ID("0f80d938-d0aa-4191-9f44-7f1c32a39ce4");
 			public const string MetaTitleFieldName = "MetaTitle";
-			
-			
 
+		
+			public static readonly ID MessageFieldId = new ID("392eac1a-2423-49c8-aa03-73b64f5f6f14");
+			public const string MessageFieldName = "Message";
+
+		
 	}
 
-	
 	/// <summary>
 	/// BasePage
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/BasePage</para>	
-	/// <para>ID: 38c71966-b6ac-4280-a086-157cf33fa6ed</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/BasePage</para>
+	/// <para>ID: 38c71966-b6ac-4280-a086-157cf33fa6ed</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IBasePageConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class BasePage  : GlassBase, IBasePage 
+	public partial class BasePage  : GlassBase, IBasePage
 	{
-	   
+
 						/// <summary>
 				/// The Sub Title field.
 				/// <para></para>
-				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field Type: Rich Text</para>
 				/// <para>Field ID: 43260204-717e-421e-aeb0-5b8e572a4d26</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBasePageConstants.Sub_TitleFieldName)]
 				public virtual string Sub_Title  {get; set;}
-					
+
 						/// <summary>
 				/// The Title field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: e8674014-f36c-407f-8217-9c16bd3d9adf</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBasePageConstants.TitleFieldName)]
 				public virtual string Title  {get; set;}
-					
+
 						/// <summary>
 				/// The MetaDescription field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: ed4089e1-c500-4c02-beaf-bd624ca82270</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBasePageConstants.MetaDescriptionFieldName)]
 				public virtual string MetaDescription  {get; set;}
-					
+
 						/// <summary>
 				/// The MetaTitle field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: 0f80d938-d0aa-4191-9f44-7f1c32a39ce4</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBasePageConstants.MetaTitleFieldName)]
 				public virtual string MetaTitle  {get; set;}
-					
-			
-	}
+
+						/// <summary>
+				/// The Message field.
+				/// <para></para>
+				/// <para>Field Type: Multi-Line Text</para>
+				/// <para>Field ID: 392eac1a-2423-49c8-aa03-73b64f5f6f14</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBasePageConstants.MessageFieldName)]
+				public virtual string Message  {get; set;}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 {
 
-
  	/// <summary>
 	/// IGenres Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Project/Page Types/Genres</para>	
-	/// <para>ID: 3cc45f70-a4cd-47ce-b4a1-aa05aa67a19d</para>	
+	/// <para>Path: /sitecore/templates/Project/Page Types/Genres</para>
+	/// <para>ID: 3cc45f70-a4cd-47ce-b4a1-aa05aa67a19d</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IGenresConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
-	public partial interface IGenres : IGlassBase , global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.I_Base_Navigation, global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Footer, global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBasePage
+	public partial interface IGenres : IGlassBase , global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Footer, global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBasePage
 	{
 				}
-
 
 	public static partial class IGenresConstants{
 
@@ -492,413 +485,179 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Genres";
 
-					
-			public static readonly ID ExcludeFromNavigationFieldId = new ID("c7e1e333-3593-40ae-8a54-4317665e813c");
-			public const string ExcludeFromNavigationFieldName = "ExcludeFromNavigation";
-			
-					
-			public static readonly ID LogoFieldId = new ID("bc85b31c-3d91-42d7-a006-07115abd58b0");
-			public const string LogoFieldName = "Logo";
-			
-					
-			public static readonly ID NavsFieldId = new ID("ebea49d4-1e27-4bc9-aae5-701ff22bd923");
-			public const string NavsFieldName = "Nav";
-			
-					
+		
 			public static readonly ID ContentFieldId = new ID("ff5ce688-42c6-47fe-97fc-ace47571a222");
 			public const string ContentFieldName = "Content";
-			
-					
+
+		
 			public static readonly ID CopyrightFieldId = new ID("477c7db6-ceb4-4da4-84d4-c482d897ac2c");
 			public const string CopyrightFieldName = "Copyright";
-			
-					
+
+		
+			public static readonly ID DisclosureFieldId = new ID("64881c52-b774-47b7-b946-07ab0a92c508");
+			public const string DisclosureFieldName = "Disclosure";
+
+		
 			public static readonly ID HeaderFieldId = new ID("672c7e6a-6e84-4936-a07e-0ff82aa2f957");
 			public const string HeaderFieldName = "Header";
-			
-					
+
+		
 			public static readonly ID SubheadFieldId = new ID("cb8bd673-36f1-4793-8310-3f02fdca1a86");
 			public const string SubheadFieldName = "Subhead";
-			
-					
+
+		
 			public static readonly ID Sub_TitleFieldId = new ID("43260204-717e-421e-aeb0-5b8e572a4d26");
 			public const string Sub_TitleFieldName = "Sub Title";
-			
-					
+
+		
 			public static readonly ID TitleFieldId = new ID("e8674014-f36c-407f-8217-9c16bd3d9adf");
 			public const string TitleFieldName = "Title";
-			
-					
+
+		
 			public static readonly ID MetaDescriptionFieldId = new ID("ed4089e1-c500-4c02-beaf-bd624ca82270");
 			public const string MetaDescriptionFieldName = "MetaDescription";
-			
-					
+
+		
 			public static readonly ID MetaTitleFieldId = new ID("0f80d938-d0aa-4191-9f44-7f1c32a39ce4");
 			public const string MetaTitleFieldName = "MetaTitle";
-			
-			
 
+		
+			public static readonly ID MessageFieldId = new ID("392eac1a-2423-49c8-aa03-73b64f5f6f14");
+			public const string MessageFieldName = "Message";
+
+		
 	}
 
-	
 	/// <summary>
 	/// Genres
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Project/Page Types/Genres</para>	
-	/// <para>ID: 3cc45f70-a4cd-47ce-b4a1-aa05aa67a19d</para>	
+	/// <para>Path: /sitecore/templates/Project/Page Types/Genres</para>
+	/// <para>ID: 3cc45f70-a4cd-47ce-b4a1-aa05aa67a19d</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IGenresConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Genres  : GlassBase, IGenres 
+	public partial class Genres  : GlassBase, IGenres
 	{
-	   
-						/// <summary>
-				/// The ExcludeFromNavigation field.
-				/// <para></para>
-				/// <para>Field Type: Checkbox</para>		
-				/// <para>Field ID: c7e1e333-3593-40ae-8a54-4317665e813c</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IGenresConstants.ExcludeFromNavigationFieldName)]
-				public virtual bool ExcludeFromNavigation  {get; set;}
-					
-						/// <summary>
-				/// The Logo field.
-				/// <para></para>
-				/// <para>Field Type: Image</para>		
-				/// <para>Field ID: bc85b31c-3d91-42d7-a006-07115abd58b0</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IGenresConstants.LogoFieldName)]
-				public virtual Image Logo  {get; set;}
-					
-						/// <summary>
-				/// The Nav field.
-				/// <para></para>
-				/// <para>Field Type: Multilist</para>		
-				/// <para>Field ID: ebea49d4-1e27-4bc9-aae5-701ff22bd923</para>
-				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem</para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IGenresConstants.NavsFieldName)]
-				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Navs  {get; set;}
-					
+
 						/// <summary>
 				/// The Content field.
 				/// <para></para>
-				/// <para>Field Type: Multi-Line Text</para>		
+				/// <para>Field Type: Multi-Line Text</para>
 				/// <para>Field ID: ff5ce688-42c6-47fe-97fc-ace47571a222</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IGenresConstants.ContentFieldName)]
 				public virtual string Content  {get; set;}
-					
+
 						/// <summary>
 				/// The Copyright field.
 				/// <para></para>
-				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field Type: Rich Text</para>
 				/// <para>Field ID: 477c7db6-ceb4-4da4-84d4-c482d897ac2c</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IGenresConstants.CopyrightFieldName)]
 				public virtual string Copyright  {get; set;}
-					
+
+						/// <summary>
+				/// The Disclosure field.
+				/// <para></para>
+				/// <para>Field Type: Rich Text</para>
+				/// <para>Field ID: 64881c52-b774-47b7-b946-07ab0a92c508</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IGenresConstants.DisclosureFieldName)]
+				public virtual string Disclosure  {get; set;}
+
 						/// <summary>
 				/// The Header field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: 672c7e6a-6e84-4936-a07e-0ff82aa2f957</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IGenresConstants.HeaderFieldName)]
 				public virtual string Header  {get; set;}
-					
+
 						/// <summary>
 				/// The Subhead field.
 				/// <para></para>
-				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field Type: Rich Text</para>
 				/// <para>Field ID: cb8bd673-36f1-4793-8310-3f02fdca1a86</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IGenresConstants.SubheadFieldName)]
 				public virtual string Subhead  {get; set;}
-					
+
 						/// <summary>
 				/// The Sub Title field.
 				/// <para></para>
-				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field Type: Rich Text</para>
 				/// <para>Field ID: 43260204-717e-421e-aeb0-5b8e572a4d26</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IGenresConstants.Sub_TitleFieldName)]
 				public virtual string Sub_Title  {get; set;}
-					
+
 						/// <summary>
 				/// The Title field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: e8674014-f36c-407f-8217-9c16bd3d9adf</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IGenresConstants.TitleFieldName)]
 				public virtual string Title  {get; set;}
-					
+
 						/// <summary>
 				/// The MetaDescription field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: ed4089e1-c500-4c02-beaf-bd624ca82270</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IGenresConstants.MetaDescriptionFieldName)]
 				public virtual string MetaDescription  {get; set;}
-					
+
 						/// <summary>
 				/// The MetaTitle field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: 0f80d938-d0aa-4191-9f44-7f1c32a39ce4</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IGenresConstants.MetaTitleFieldName)]
 				public virtual string MetaTitle  {get; set;}
-					
-			
-	}
-}
-namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard
-{
 
-
- 	/// <summary>
-	/// IBookCard Interface
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/BookCard/BookCard</para>	
-	/// <para>ID: 42c0b316-5245-4fbc-879f-b533c27ccbc1</para>	
-	/// </summary>
-	[SitecoreType(TemplateId=IBookCardConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
-	public partial interface IBookCard : IGlassBase 
-	{
-								/// <summary>
-					/// The Author field.
-					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
-					/// <para>Field ID: 7a184e83-7d1b-49b8-a19b-b9493bc3bf82</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IBookCardConstants.AuthorFieldName)]
-					string Author  {get; set;}
-			
-								/// <summary>
-					/// The Genre field.
-					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
-					/// <para>Field ID: dec07cd2-a042-48a1-9661-364942ef4d11</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IBookCardConstants.GenreFieldName)]
-					string Genre  {get; set;}
-			
-								/// <summary>
-					/// The Image field.
-					/// <para></para>
-					/// <para>Field Type: Image</para>		
-					/// <para>Field ID: 78c6b2a9-ec3a-443d-8dde-5a67bcb3c5e1</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IBookCardConstants.ImageFieldName)]
-					Image Image  {get; set;}
-			
-								/// <summary>
-					/// The Intro field.
-					/// <para></para>
-					/// <para>Field Type: Multi-Line Text</para>		
-					/// <para>Field ID: e4e00d32-4827-4642-93c4-3cdc98d6f502</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IBookCardConstants.IntroFieldName)]
-					string Intro  {get; set;}
-			
-								/// <summary>
-					/// The Link field.
-					/// <para></para>
-					/// <para>Field Type: General Link</para>		
-					/// <para>Field ID: c80edbce-22e2-4659-9a38-2cc601e8797d</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IBookCardConstants.LinkFieldName)]
-					Link Link  {get; set;}
-			
-								/// <summary>
-					/// The Rating field.
-					/// <para></para>
-					/// <para>Field Type: Integer</para>		
-					/// <para>Field ID: c6f322d7-f71a-40fd-83b6-0c0ec526263d</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IBookCardConstants.RatingFieldName)]
-					int Rating  {get; set;}
-			
-								/// <summary>
-					/// The Title field.
-					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
-					/// <para>Field ID: 5d59da07-6d03-475d-8593-598cfe31d333</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IBookCardConstants.TitleFieldName)]
-					string Title  {get; set;}
-			
-				}
-
-
-	public static partial class IBookCardConstants{
-
-			public const string TemplateIdString = "42c0b316-5245-4fbc-879f-b533c27ccbc1";
-			public static readonly ID TemplateId = new ID(TemplateIdString);
-			public const string TemplateName = "BookCard";
-
-					
-			public static readonly ID AuthorFieldId = new ID("7a184e83-7d1b-49b8-a19b-b9493bc3bf82");
-			public const string AuthorFieldName = "Author";
-			
-					
-			public static readonly ID GenreFieldId = new ID("dec07cd2-a042-48a1-9661-364942ef4d11");
-			public const string GenreFieldName = "Genre";
-			
-					
-			public static readonly ID ImageFieldId = new ID("78c6b2a9-ec3a-443d-8dde-5a67bcb3c5e1");
-			public const string ImageFieldName = "Image";
-			
-					
-			public static readonly ID IntroFieldId = new ID("e4e00d32-4827-4642-93c4-3cdc98d6f502");
-			public const string IntroFieldName = "Intro";
-			
-					
-			public static readonly ID LinkFieldId = new ID("c80edbce-22e2-4659-9a38-2cc601e8797d");
-			public const string LinkFieldName = "Link";
-			
-					
-			public static readonly ID RatingFieldId = new ID("c6f322d7-f71a-40fd-83b6-0c0ec526263d");
-			public const string RatingFieldName = "Rating";
-			
-					
-			public static readonly ID TitleFieldId = new ID("5d59da07-6d03-475d-8593-598cfe31d333");
-			public const string TitleFieldName = "Title";
-			
-			
-
-	}
-
-	
-	/// <summary>
-	/// BookCard
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/BookCard/BookCard</para>	
-	/// <para>ID: 42c0b316-5245-4fbc-879f-b533c27ccbc1</para>	
-	/// </summary>
-	[SitecoreType(TemplateId=IBookCardConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class BookCard  : GlassBase, IBookCard 
-	{
-	   
 						/// <summary>
-				/// The Author field.
+				/// The Message field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
-				/// <para>Field ID: 7a184e83-7d1b-49b8-a19b-b9493bc3bf82</para>
+				/// <para>Field Type: Multi-Line Text</para>
+				/// <para>Field ID: 392eac1a-2423-49c8-aa03-73b64f5f6f14</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBookCardConstants.AuthorFieldName)]
-				public virtual string Author  {get; set;}
-					
-						/// <summary>
-				/// The Genre field.
-				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
-				/// <para>Field ID: dec07cd2-a042-48a1-9661-364942ef4d11</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBookCardConstants.GenreFieldName)]
-				public virtual string Genre  {get; set;}
-					
-						/// <summary>
-				/// The Image field.
-				/// <para></para>
-				/// <para>Field Type: Image</para>		
-				/// <para>Field ID: 78c6b2a9-ec3a-443d-8dde-5a67bcb3c5e1</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBookCardConstants.ImageFieldName)]
-				public virtual Image Image  {get; set;}
-					
-						/// <summary>
-				/// The Intro field.
-				/// <para></para>
-				/// <para>Field Type: Multi-Line Text</para>		
-				/// <para>Field ID: e4e00d32-4827-4642-93c4-3cdc98d6f502</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBookCardConstants.IntroFieldName)]
-				public virtual string Intro  {get; set;}
-					
-						/// <summary>
-				/// The Link field.
-				/// <para></para>
-				/// <para>Field Type: General Link</para>		
-				/// <para>Field ID: c80edbce-22e2-4659-9a38-2cc601e8797d</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBookCardConstants.LinkFieldName)]
-				public virtual Link Link  {get; set;}
-					
-						/// <summary>
-				/// The Rating field.
-				/// <para></para>
-				/// <para>Field Type: Integer</para>		
-				/// <para>Field ID: c6f322d7-f71a-40fd-83b6-0c0ec526263d</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBookCardConstants.RatingFieldName)]
-				public virtual int Rating  {get; set;}
-					
-						/// <summary>
-				/// The Title field.
-				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
-				/// <para>Field ID: 5d59da07-6d03-475d-8593-598cfe31d333</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBookCardConstants.TitleFieldName)]
-				public virtual string Title  {get; set;}
-					
-			
-	}
+				[SitecoreField(IGenresConstants.MessageFieldName)]
+				public virtual string Message  {get; set;}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content
 {
 
-
  	/// <summary>
 	/// ICarousel Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Content/Carousel</para>	
-	/// <para>ID: 49393afb-4a02-4f34-acf1-fec86916bb47</para>	
+	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Content/Carousel</para>
+	/// <para>ID: 49393afb-4a02-4f34-acf1-fec86916bb47</para>
 	/// </summary>
 	[SitecoreType(TemplateId=ICarouselConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface ICarousel : IGlassBase 
@@ -906,25 +665,24 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carous
 								/// <summary>
 					/// The Items field.
 					/// <para></para>
-					/// <para>Field Type: Multilist</para>		
+					/// <para>Field Type: Multilist</para>
 					/// <para>Field ID: 24071b88-2093-4f1e-9b6a-f3aa274a64ac</para>
 					/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarouselItem</para>
 					/// </summary>
 					[SitecoreField(ICarouselConstants.ItemsFieldName)]
 					IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarouselItem> Items  {get; set;}
-			
+
 								/// <summary>
 					/// The Title field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: edaf25d3-c80a-45b2-8d90-7ca4db15080e</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(ICarouselConstants.TitleFieldName)]
 					string Title  {get; set;}
-			
-				}
 
+				}
 
 	public static partial class ICarouselConstants{
 
@@ -932,69 +690,319 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carous
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Carousel";
 
-					
+		
 			public static readonly ID ItemsFieldId = new ID("24071b88-2093-4f1e-9b6a-f3aa274a64ac");
 			public const string ItemsFieldName = "Items";
-			
-					
+
+		
 			public static readonly ID TitleFieldId = new ID("edaf25d3-c80a-45b2-8d90-7ca4db15080e");
 			public const string TitleFieldName = "Title";
-			
-			
 
+		
 	}
 
-	
 	/// <summary>
 	/// Carousel
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Content/Carousel</para>	
-	/// <para>ID: 49393afb-4a02-4f34-acf1-fec86916bb47</para>	
+	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Content/Carousel</para>
+	/// <para>ID: 49393afb-4a02-4f34-acf1-fec86916bb47</para>
 	/// </summary>
 	[SitecoreType(TemplateId=ICarouselConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Carousel  : GlassBase, ICarousel 
+	public partial class Carousel  : GlassBase, ICarousel
 	{
-	   
+
 						/// <summary>
 				/// The Items field.
 				/// <para></para>
-				/// <para>Field Type: Multilist</para>		
+				/// <para>Field Type: Multilist</para>
 				/// <para>Field ID: 24071b88-2093-4f1e-9b6a-f3aa274a64ac</para>
 				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarouselItem</para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(ICarouselConstants.ItemsFieldName)]
 				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarouselItem> Items  {get; set;}
-					
+
 						/// <summary>
 				/// The Title field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: edaf25d3-c80a-45b2-8d90-7ca4db15080e</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(ICarouselConstants.TitleFieldName)]
 				public virtual string Title  {get; set;}
-					
-			
+
+			}
+}
+namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner
+{
+
+ 	/// <summary>
+	/// IBanner Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Banner/Banner</para>
+	/// <para>ID: 5639421c-d88b-43bb-9f80-fc69a8e66f4a</para>
+	/// </summary>
+	[SitecoreType(TemplateId=IBannerConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
+	public partial interface IBanner : IGlassBase 
+	{
+								/// <summary>
+					/// The Content field.
+					/// <para></para>
+					/// <para>Field Type: Rich Text</para>
+					/// <para>Field ID: cfe9bb32-5380-47c7-9b59-8f63c8e9148e</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBannerConstants.ContentFieldName)]
+					string Content  {get; set;}
+
+								/// <summary>
+					/// The CTA field.
+					/// <para></para>
+					/// <para>Field Type: General Link</para>
+					/// <para>Field ID: 4d96c033-0158-4b1b-87ef-cd5ce563fd6c</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBannerConstants.CTAFieldName)]
+					Link CTA  {get; set;}
+
+								/// <summary>
+					/// The HeadLine field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>
+					/// <para>Field ID: 6ad9e896-a753-4ad8-8448-3dfa44a8241d</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBannerConstants.HeadLineFieldName)]
+					string HeadLine  {get; set;}
+
+								/// <summary>
+					/// The Img field.
+					/// <para></para>
+					/// <para>Field Type: Image</para>
+					/// <para>Field ID: ae012d8d-e0c9-4b93-a141-61b0e6ee3acf</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBannerConstants.ImgFieldName)]
+					Image Img  {get; set;}
+
+								/// <summary>
+					/// The Sub field.
+					/// <para></para>
+					/// <para>Field Type: Multi-Line Text</para>
+					/// <para>Field ID: 7c4c7eeb-fe18-4bdb-b532-f0eb1f84f606</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBannerConstants.SubFieldName)]
+					string Sub  {get; set;}
+
+								/// <summary>
+					/// The Title field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>
+					/// <para>Field ID: 279a8736-2ebf-4903-8fa4-5d63826a89b3</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBannerConstants.TitleFieldName)]
+					string Title  {get; set;}
+
+				}
+
+	public static partial class IBannerConstants{
+
+			public const string TemplateIdString = "5639421c-d88b-43bb-9f80-fc69a8e66f4a";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "Banner";
+
+		
+			public static readonly ID ContentFieldId = new ID("cfe9bb32-5380-47c7-9b59-8f63c8e9148e");
+			public const string ContentFieldName = "Content";
+
+		
+			public static readonly ID CTAFieldId = new ID("4d96c033-0158-4b1b-87ef-cd5ce563fd6c");
+			public const string CTAFieldName = "CTA";
+
+		
+			public static readonly ID HeadLineFieldId = new ID("6ad9e896-a753-4ad8-8448-3dfa44a8241d");
+			public const string HeadLineFieldName = "HeadLine";
+
+		
+			public static readonly ID ImgFieldId = new ID("ae012d8d-e0c9-4b93-a141-61b0e6ee3acf");
+			public const string ImgFieldName = "Img";
+
+		
+			public static readonly ID SubFieldId = new ID("7c4c7eeb-fe18-4bdb-b532-f0eb1f84f606");
+			public const string SubFieldName = "Sub";
+
+		
+			public static readonly ID TitleFieldId = new ID("279a8736-2ebf-4903-8fa4-5d63826a89b3");
+			public const string TitleFieldName = "Title";
+
+		
 	}
+
+	/// <summary>
+	/// Banner
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Banner/Banner</para>
+	/// <para>ID: 5639421c-d88b-43bb-9f80-fc69a8e66f4a</para>
+	/// </summary>
+	[SitecoreType(TemplateId=IBannerConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
+	public partial class Banner  : GlassBase, IBanner
+	{
+
+						/// <summary>
+				/// The Content field.
+				/// <para></para>
+				/// <para>Field Type: Rich Text</para>
+				/// <para>Field ID: cfe9bb32-5380-47c7-9b59-8f63c8e9148e</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBannerConstants.ContentFieldName)]
+				public virtual string Content  {get; set;}
+
+						/// <summary>
+				/// The CTA field.
+				/// <para></para>
+				/// <para>Field Type: General Link</para>
+				/// <para>Field ID: 4d96c033-0158-4b1b-87ef-cd5ce563fd6c</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBannerConstants.CTAFieldName)]
+				public virtual Link CTA  {get; set;}
+
+						/// <summary>
+				/// The HeadLine field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>
+				/// <para>Field ID: 6ad9e896-a753-4ad8-8448-3dfa44a8241d</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBannerConstants.HeadLineFieldName)]
+				public virtual string HeadLine  {get; set;}
+
+						/// <summary>
+				/// The Img field.
+				/// <para></para>
+				/// <para>Field Type: Image</para>
+				/// <para>Field ID: ae012d8d-e0c9-4b93-a141-61b0e6ee3acf</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBannerConstants.ImgFieldName)]
+				public virtual Image Img  {get; set;}
+
+						/// <summary>
+				/// The Sub field.
+				/// <para></para>
+				/// <para>Field Type: Multi-Line Text</para>
+				/// <para>Field ID: 7c4c7eeb-fe18-4bdb-b532-f0eb1f84f606</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBannerConstants.SubFieldName)]
+				public virtual string Sub  {get; set;}
+
+						/// <summary>
+				/// The Title field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>
+				/// <para>Field ID: 279a8736-2ebf-4903-8fa4-5d63826a89b3</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBannerConstants.TitleFieldName)]
+				public virtual string Title  {get; set;}
+
+			}
+}
+namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner
+{
+
+ 	/// <summary>
+	/// IBanner_Folder Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Banner/Banner Folder</para>
+	/// <para>ID: 57c301eb-640e-4b71-ad51-e805b912af5d</para>
+	/// </summary>
+	[SitecoreType(TemplateId=IBanner_FolderConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
+	public partial interface IBanner_Folder : IGlassBase 
+	{
+								/// <summary>
+					/// The Banners field.
+					/// <para></para>
+					/// <para>Field Type: Multilist</para>
+					/// <para>Field ID: b77a0399-4dd0-43f9-a122-feb9c89a23b6</para>
+					/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner</para>
+					/// </summary>
+					[SitecoreField(IBanner_FolderConstants.BannersFieldName)]
+					IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner> Banners  {get; set;}
+
+				}
+
+	public static partial class IBanner_FolderConstants{
+
+			public const string TemplateIdString = "57c301eb-640e-4b71-ad51-e805b912af5d";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "Banner Folder";
+
+		
+			public static readonly ID BannersFieldId = new ID("b77a0399-4dd0-43f9-a122-feb9c89a23b6");
+			public const string BannersFieldName = "Banners";
+
+		
+	}
+
+	/// <summary>
+	/// Banner_Folder
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/Feature/Banner/Banner Folder</para>
+	/// <para>ID: 57c301eb-640e-4b71-ad51-e805b912af5d</para>
+	/// </summary>
+	[SitecoreType(TemplateId=IBanner_FolderConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
+	public partial class Banner_Folder  : GlassBase, IBanner_Folder
+	{
+
+						/// <summary>
+				/// The Banners field.
+				/// <para></para>
+				/// <para>Field Type: Multilist</para>
+				/// <para>Field ID: b77a0399-4dd0-43f9-a122-feb9c89a23b6</para>
+				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner</para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBanner_FolderConstants.BannersFieldName)]
+				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Banner.IBanner> Banners  {get; set;}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 {
 
-
  	/// <summary>
 	/// IBook_Folder Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/Book Folder</para>	
-	/// <para>ID: 8d1770ff-6ac6-4aff-bad2-b24c92c31635</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/Book Folder</para>
+	/// <para>ID: 8d1770ff-6ac6-4aff-bad2-b24c92c31635</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IBook_FolderConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface IBook_Folder : IGlassBase 
 	{
-				}
+								/// <summary>
+					/// The Books field.
+					/// <para></para>
+					/// <para>Field Type: Multilist</para>
+					/// <para>Field ID: 7e598646-b904-4d02-9c61-a230ff08067d</para>
+					/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Book</para>
+					/// </summary>
+					[SitecoreField(IBook_FolderConstants.BooksFieldName)]
+					IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Book> Books  {get; set;}
 
+				}
 
 	public static partial class IBook_FolderConstants{
 
@@ -1002,99 +1010,199 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Book Folder";
 
-			
+		
+			public static readonly ID BooksFieldId = new ID("7e598646-b904-4d02-9c61-a230ff08067d");
+			public const string BooksFieldName = "Books";
 
+		
 	}
 
-	
 	/// <summary>
 	/// Book_Folder
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/Book Folder</para>	
-	/// <para>ID: 8d1770ff-6ac6-4aff-bad2-b24c92c31635</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/Book Folder</para>
+	/// <para>ID: 8d1770ff-6ac6-4aff-bad2-b24c92c31635</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IBook_FolderConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Book_Folder  : GlassBase, IBook_Folder 
+	public partial class Book_Folder  : GlassBase, IBook_Folder
 	{
-	   
-			
-	}
+
+						/// <summary>
+				/// The Books field.
+				/// <para></para>
+				/// <para>Field Type: Multilist</para>
+				/// <para>Field ID: 7e598646-b904-4d02-9c61-a230ff08067d</para>
+				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Book</para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBook_FolderConstants.BooksFieldName)]
+				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Book> Books  {get; set;}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 {
 
+ 	/// <summary>
+	/// ISpecial_Heading Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/User Defined/Base/Special Heading</para>
+	/// <para>ID: 91b3544b-1d8d-4425-aca3-185b98a8ca84</para>
+	/// </summary>
+	[SitecoreType(TemplateId=ISpecial_HeadingConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
+	public partial interface ISpecial_Heading : IGlassBase 
+	{
+								/// <summary>
+					/// The Heading field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>
+					/// <para>Field ID: a2df64dc-a32c-45d3-95ca-c9ddcc855fe8</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(ISpecial_HeadingConstants.HeadingFieldName)]
+					string Heading  {get; set;}
+
+				}
+
+	public static partial class ISpecial_HeadingConstants{
+
+			public const string TemplateIdString = "91b3544b-1d8d-4425-aca3-185b98a8ca84";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "Special Heading";
+
+		
+			public static readonly ID HeadingFieldId = new ID("a2df64dc-a32c-45d3-95ca-c9ddcc855fe8");
+			public const string HeadingFieldName = "Heading";
+
+		
+	}
+
+	/// <summary>
+	/// Special_Heading
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/User Defined/Base/Special Heading</para>
+	/// <para>ID: 91b3544b-1d8d-4425-aca3-185b98a8ca84</para>
+	/// </summary>
+	[SitecoreType(TemplateId=ISpecial_HeadingConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
+	public partial class Special_Heading  : GlassBase, ISpecial_Heading
+	{
+
+						/// <summary>
+				/// The Heading field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>
+				/// <para>Field ID: a2df64dc-a32c-45d3-95ca-c9ddcc855fe8</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(ISpecial_HeadingConstants.HeadingFieldName)]
+				public virtual string Heading  {get; set;}
+
+			}
+}
+namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
+{
 
  	/// <summary>
 	/// IBase_Book Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/Base Book</para>	
-	/// <para>ID: 99712e59-a583-46fa-afcd-cc2a5223bc41</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/Base Book</para>
+	/// <para>ID: 99712e59-a583-46fa-afcd-cc2a5223bc41</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IBase_BookConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
-	public partial interface IBase_Book : IGlassBase 
+	public partial interface IBase_Book : IGlassBase , global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Navigation
 	{
 								/// <summary>
-					/// The BookAuthor field.
+					/// The Author field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: 671e4567-9664-4394-b62e-a109b0719dda</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
-					[SitecoreField(IBase_BookConstants.BookAuthorFieldName)]
-					string BookAuthor  {get; set;}
-			
-								/// <summary>
-					/// The BookGenre field.
-					/// <para></para>
-					/// <para>Field Type: Droplink</para>		
-					/// <para>Field ID: 5399d9b2-b652-4561-a2fe-73002e3b93be</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IBase_BookConstants.BookGenreFieldName)]
-					Guid BookGenre  {get; set;}
-			
-								/// <summary>
-					/// The BookImg field.
-					/// <para></para>
-					/// <para>Field Type: Image</para>		
-					/// <para>Field ID: 22a8e1f4-55b3-4a9e-8b9d-0fb46db6ff5f</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IBase_BookConstants.BookImgFieldName)]
-					Image BookImg  {get; set;}
-			
-								/// <summary>
-					/// The BookPublishDate field.
-					/// <para></para>
-					/// <para>Field Type: Date</para>		
-					/// <para>Field ID: 7415e376-8e56-44dc-b027-69d51d5e01dc</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IBase_BookConstants.BookPublishDateFieldName)]
-					DateTime BookPublishDate  {get; set;}
-			
+					[SitecoreField(IBase_BookConstants.AuthorFieldName)]
+					string Author  {get; set;}
+
 								/// <summary>
 					/// The BookReview field.
 					/// <para></para>
-					/// <para>Field Type: Rich Text</para>		
+					/// <para>Field Type: Rich Text</para>
 					/// <para>Field ID: f31d59bd-8101-4121-bd64-6cb140b15276</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBase_BookConstants.BookReviewFieldName)]
 					string BookReview  {get; set;}
-			
+
 								/// <summary>
-					/// The BookTitle field.
+					/// The Genre field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Droplink</para>
+					/// <para>Field ID: 5399d9b2-b652-4561-a2fe-73002e3b93be</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_BookConstants.GenreFieldName)]
+					Guid Genre  {get; set;}
+
+								/// <summary>
+					/// The Img field.
+					/// <para></para>
+					/// <para>Field Type: Image</para>
+					/// <para>Field ID: 22a8e1f4-55b3-4a9e-8b9d-0fb46db6ff5f</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_BookConstants.ImgFieldName)]
+					Image Img  {get; set;}
+
+								/// <summary>
+					/// The Intro field.
+					/// <para></para>
+					/// <para>Field Type: Multi-Line Text</para>
+					/// <para>Field ID: 3a7ff6b1-0a29-4c0e-aa05-b7d3f04671c5</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_BookConstants.IntroFieldName)]
+					string Intro  {get; set;}
+
+								/// <summary>
+					/// The Link field.
+					/// <para></para>
+					/// <para>Field Type: General Link</para>
+					/// <para>Field ID: 8c449327-2659-43e0-baea-01d4dfe4b9ae</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_BookConstants.LinkFieldName)]
+					Link Link  {get; set;}
+
+								/// <summary>
+					/// The PublishDate field.
+					/// <para></para>
+					/// <para>Field Type: Date</para>
+					/// <para>Field ID: 7415e376-8e56-44dc-b027-69d51d5e01dc</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_BookConstants.PublishDateFieldName)]
+					DateTime PublishDate  {get; set;}
+
+								/// <summary>
+					/// The Rating field.
+					/// <para></para>
+					/// <para>Field Type: Integer</para>
+					/// <para>Field ID: ddd976bb-8631-465c-bcf3-484bd8971b92</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_BookConstants.RatingFieldName)]
+					int Rating  {get; set;}
+
+								/// <summary>
+					/// The Title field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: 1649878b-0c2d-45a1-a84d-c125c641c98c</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
-					[SitecoreField(IBase_BookConstants.BookTitleFieldName)]
-					string BookTitle  {get; set;}
-			
-				}
+					[SitecoreField(IBase_BookConstants.TitleFieldName)]
+					string Title  {get; set;}
 
+				}
 
 	public static partial class IBase_BookConstants{
 
@@ -1102,123 +1210,194 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Base Book";
 
-					
-			public static readonly ID BookAuthorFieldId = new ID("671e4567-9664-4394-b62e-a109b0719dda");
-			public const string BookAuthorFieldName = "BookAuthor";
-			
-					
-			public static readonly ID BookGenreFieldId = new ID("5399d9b2-b652-4561-a2fe-73002e3b93be");
-			public const string BookGenreFieldName = "BookGenre";
-			
-					
-			public static readonly ID BookImgFieldId = new ID("22a8e1f4-55b3-4a9e-8b9d-0fb46db6ff5f");
-			public const string BookImgFieldName = "BookImg";
-			
-					
-			public static readonly ID BookPublishDateFieldId = new ID("7415e376-8e56-44dc-b027-69d51d5e01dc");
-			public const string BookPublishDateFieldName = "BookPublishDate";
-			
-					
+		
+			public static readonly ID AuthorFieldId = new ID("671e4567-9664-4394-b62e-a109b0719dda");
+			public const string AuthorFieldName = "Author";
+
+		
 			public static readonly ID BookReviewFieldId = new ID("f31d59bd-8101-4121-bd64-6cb140b15276");
 			public const string BookReviewFieldName = "BookReview";
-			
-					
-			public static readonly ID BookTitleFieldId = new ID("1649878b-0c2d-45a1-a84d-c125c641c98c");
-			public const string BookTitleFieldName = "BookTitle";
-			
-			
 
+		
+			public static readonly ID GenreFieldId = new ID("5399d9b2-b652-4561-a2fe-73002e3b93be");
+			public const string GenreFieldName = "Genre";
+
+		
+			public static readonly ID ImgFieldId = new ID("22a8e1f4-55b3-4a9e-8b9d-0fb46db6ff5f");
+			public const string ImgFieldName = "Img";
+
+		
+			public static readonly ID IntroFieldId = new ID("3a7ff6b1-0a29-4c0e-aa05-b7d3f04671c5");
+			public const string IntroFieldName = "Intro";
+
+		
+			public static readonly ID LinkFieldId = new ID("8c449327-2659-43e0-baea-01d4dfe4b9ae");
+			public const string LinkFieldName = "Link";
+
+		
+			public static readonly ID PublishDateFieldId = new ID("7415e376-8e56-44dc-b027-69d51d5e01dc");
+			public const string PublishDateFieldName = "PublishDate";
+
+		
+			public static readonly ID RatingFieldId = new ID("ddd976bb-8631-465c-bcf3-484bd8971b92");
+			public const string RatingFieldName = "Rating";
+
+		
+			public static readonly ID TitleFieldId = new ID("1649878b-0c2d-45a1-a84d-c125c641c98c");
+			public const string TitleFieldName = "Title";
+
+		
+			public static readonly ID ExcludeFromNavigationFieldId = new ID("c7e1e333-3593-40ae-8a54-4317665e813c");
+			public const string ExcludeFromNavigationFieldName = "ExcludeFromNavigation";
+
+		
+			public static readonly ID LogoFieldId = new ID("700f5aa2-1ab1-435b-9ced-cc4b71cd5c0d");
+			public const string LogoFieldName = "Logo";
+
+		
 	}
 
-	
 	/// <summary>
 	/// Base_Book
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/Base Book</para>	
-	/// <para>ID: 99712e59-a583-46fa-afcd-cc2a5223bc41</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/Base Book</para>
+	/// <para>ID: 99712e59-a583-46fa-afcd-cc2a5223bc41</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IBase_BookConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Base_Book  : GlassBase, IBase_Book 
+	public partial class Base_Book  : GlassBase, IBase_Book
 	{
-	   
+
 						/// <summary>
-				/// The BookAuthor field.
+				/// The Author field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: 671e4567-9664-4394-b62e-a109b0719dda</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBase_BookConstants.BookAuthorFieldName)]
-				public virtual string BookAuthor  {get; set;}
-					
-						/// <summary>
-				/// The BookGenre field.
-				/// <para></para>
-				/// <para>Field Type: Droplink</para>		
-				/// <para>Field ID: 5399d9b2-b652-4561-a2fe-73002e3b93be</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBase_BookConstants.BookGenreFieldName)]
-				public virtual Guid BookGenre  {get; set;}
-					
-						/// <summary>
-				/// The BookImg field.
-				/// <para></para>
-				/// <para>Field Type: Image</para>		
-				/// <para>Field ID: 22a8e1f4-55b3-4a9e-8b9d-0fb46db6ff5f</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBase_BookConstants.BookImgFieldName)]
-				public virtual Image BookImg  {get; set;}
-					
-						/// <summary>
-				/// The BookPublishDate field.
-				/// <para></para>
-				/// <para>Field Type: Date</para>		
-				/// <para>Field ID: 7415e376-8e56-44dc-b027-69d51d5e01dc</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBase_BookConstants.BookPublishDateFieldName)]
-				public virtual DateTime BookPublishDate  {get; set;}
-					
+				[SitecoreField(IBase_BookConstants.AuthorFieldName)]
+				public virtual string Author  {get; set;}
+
 						/// <summary>
 				/// The BookReview field.
 				/// <para></para>
-				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field Type: Rich Text</para>
 				/// <para>Field ID: f31d59bd-8101-4121-bd64-6cb140b15276</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBase_BookConstants.BookReviewFieldName)]
 				public virtual string BookReview  {get; set;}
-					
+
 						/// <summary>
-				/// The BookTitle field.
+				/// The Genre field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Droplink</para>
+				/// <para>Field ID: 5399d9b2-b652-4561-a2fe-73002e3b93be</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_BookConstants.GenreFieldName)]
+				public virtual Guid Genre  {get; set;}
+
+						/// <summary>
+				/// The Img field.
+				/// <para></para>
+				/// <para>Field Type: Image</para>
+				/// <para>Field ID: 22a8e1f4-55b3-4a9e-8b9d-0fb46db6ff5f</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_BookConstants.ImgFieldName)]
+				public virtual Image Img  {get; set;}
+
+						/// <summary>
+				/// The Intro field.
+				/// <para></para>
+				/// <para>Field Type: Multi-Line Text</para>
+				/// <para>Field ID: 3a7ff6b1-0a29-4c0e-aa05-b7d3f04671c5</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_BookConstants.IntroFieldName)]
+				public virtual string Intro  {get; set;}
+
+						/// <summary>
+				/// The Link field.
+				/// <para></para>
+				/// <para>Field Type: General Link</para>
+				/// <para>Field ID: 8c449327-2659-43e0-baea-01d4dfe4b9ae</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_BookConstants.LinkFieldName)]
+				public virtual Link Link  {get; set;}
+
+						/// <summary>
+				/// The PublishDate field.
+				/// <para></para>
+				/// <para>Field Type: Date</para>
+				/// <para>Field ID: 7415e376-8e56-44dc-b027-69d51d5e01dc</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_BookConstants.PublishDateFieldName)]
+				public virtual DateTime PublishDate  {get; set;}
+
+						/// <summary>
+				/// The Rating field.
+				/// <para></para>
+				/// <para>Field Type: Integer</para>
+				/// <para>Field ID: ddd976bb-8631-465c-bcf3-484bd8971b92</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_BookConstants.RatingFieldName)]
+				public virtual int Rating  {get; set;}
+
+						/// <summary>
+				/// The Title field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: 1649878b-0c2d-45a1-a84d-c125c641c98c</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IBase_BookConstants.BookTitleFieldName)]
-				public virtual string BookTitle  {get; set;}
-					
-			
-	}
+				[SitecoreField(IBase_BookConstants.TitleFieldName)]
+				public virtual string Title  {get; set;}
+
+						/// <summary>
+				/// The ExcludeFromNavigation field.
+				/// <para></para>
+				/// <para>Field Type: Checkbox</para>
+				/// <para>Field ID: c7e1e333-3593-40ae-8a54-4317665e813c</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_BookConstants.ExcludeFromNavigationFieldName)]
+				public virtual bool ExcludeFromNavigation  {get; set;}
+
+						/// <summary>
+				/// The Logo field.
+				/// <para></para>
+				/// <para>Field Type: Image</para>
+				/// <para>Field ID: 700f5aa2-1ab1-435b-9ced-cc4b71cd5c0d</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_BookConstants.LogoFieldName)]
+				public virtual Image Logo  {get; set;}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation
 {
 
-
  	/// <summary>
 	/// INavigationItem Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Navigation/NavigationItem</para>	
-	/// <para>ID: b2eec395-f134-463d-bcac-baf3735ca4f7</para>	
+	/// <para>Path: /sitecore/templates/Feature/Navigation/NavigationItem</para>
+	/// <para>ID: b2eec395-f134-463d-bcac-baf3735ca4f7</para>
 	/// </summary>
 	[SitecoreType(TemplateId=INavigationItemConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface INavigationItem : IGlassBase 
@@ -1226,45 +1405,44 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation
 								/// <summary>
 					/// The Active field.
 					/// <para></para>
-					/// <para>Field Type: Checkbox</para>		
+					/// <para>Field Type: Checkbox</para>
 					/// <para>Field ID: a04bd9aa-683d-44f4-b900-5a99c6f5dfed</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(INavigationItemConstants.ActiveFieldName)]
 					bool Active  {get; set;}
-			
+
 								/// <summary>
 					/// The ChildLinks field.
 					/// <para></para>
-					/// <para>Field Type: Multilist</para>		
+					/// <para>Field Type: Multilist</para>
 					/// <para>Field ID: 324e751f-491a-4da6-a211-0e63bd157f18</para>
 					/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem</para>
 					/// </summary>
 					[SitecoreField(INavigationItemConstants.ChildLinksFieldName)]
 					IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> ChildLinks  {get; set;}
-			
+
 								/// <summary>
 					/// The Link field.
 					/// <para></para>
-					/// <para>Field Type: General Link</para>		
+					/// <para>Field Type: General Link</para>
 					/// <para>Field ID: 2ed8e0bb-2dcc-4b29-8fa4-a16b06c48be2</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(INavigationItemConstants.LinkFieldName)]
 					Link Link  {get; set;}
-			
+
 								/// <summary>
 					/// The Title field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: d5d53323-62fb-4530-8de6-a4a82f4ebb30</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(INavigationItemConstants.TitleFieldName)]
 					string Title  {get; set;}
-			
-				}
 
+				}
 
 	public static partial class INavigationItemConstants{
 
@@ -1272,279 +1450,179 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "NavigationItem";
 
-					
+		
 			public static readonly ID ActiveFieldId = new ID("a04bd9aa-683d-44f4-b900-5a99c6f5dfed");
 			public const string ActiveFieldName = "Active";
-			
-					
+
+		
 			public static readonly ID ChildLinksFieldId = new ID("324e751f-491a-4da6-a211-0e63bd157f18");
 			public const string ChildLinksFieldName = "ChildLinks";
-			
-					
+
+		
 			public static readonly ID LinkFieldId = new ID("2ed8e0bb-2dcc-4b29-8fa4-a16b06c48be2");
 			public const string LinkFieldName = "Link";
-			
-					
+
+		
 			public static readonly ID TitleFieldId = new ID("d5d53323-62fb-4530-8de6-a4a82f4ebb30");
 			public const string TitleFieldName = "Title";
-			
-			
 
+		
 	}
 
-	
 	/// <summary>
 	/// NavigationItem
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Navigation/NavigationItem</para>	
-	/// <para>ID: b2eec395-f134-463d-bcac-baf3735ca4f7</para>	
+	/// <para>Path: /sitecore/templates/Feature/Navigation/NavigationItem</para>
+	/// <para>ID: b2eec395-f134-463d-bcac-baf3735ca4f7</para>
 	/// </summary>
 	[SitecoreType(TemplateId=INavigationItemConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class NavigationItem  : GlassBase, INavigationItem 
+	public partial class NavigationItem  : GlassBase, INavigationItem
 	{
-	   
+
 						/// <summary>
 				/// The Active field.
 				/// <para></para>
-				/// <para>Field Type: Checkbox</para>		
+				/// <para>Field Type: Checkbox</para>
 				/// <para>Field ID: a04bd9aa-683d-44f4-b900-5a99c6f5dfed</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(INavigationItemConstants.ActiveFieldName)]
 				public virtual bool Active  {get; set;}
-					
+
 						/// <summary>
 				/// The ChildLinks field.
 				/// <para></para>
-				/// <para>Field Type: Multilist</para>		
+				/// <para>Field Type: Multilist</para>
 				/// <para>Field ID: 324e751f-491a-4da6-a211-0e63bd157f18</para>
 				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem</para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(INavigationItemConstants.ChildLinksFieldName)]
 				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> ChildLinks  {get; set;}
-					
+
 						/// <summary>
 				/// The Link field.
 				/// <para></para>
-				/// <para>Field Type: General Link</para>		
+				/// <para>Field Type: General Link</para>
 				/// <para>Field ID: 2ed8e0bb-2dcc-4b29-8fa4-a16b06c48be2</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(INavigationItemConstants.LinkFieldName)]
 				public virtual Link Link  {get; set;}
-					
+
 						/// <summary>
 				/// The Title field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: d5d53323-62fb-4530-8de6-a4a82f4ebb30</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(INavigationItemConstants.TitleFieldName)]
 				public virtual string Title  {get; set;}
-					
-			
-	}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 {
 
-
  	/// <summary>
-	/// I_Base_Navigation Interface
+	/// IBase_Navigation Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/_Base Navigation</para>	
-	/// <para>ID: b651325b-cf69-4b30-916d-7a8e51ea3fc5</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/Base Navigation</para>
+	/// <para>ID: b651325b-cf69-4b30-916d-7a8e51ea3fc5</para>
 	/// </summary>
-	[SitecoreType(TemplateId=I_Base_NavigationConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
-	public partial interface I_Base_Navigation : IGlassBase 
+	[SitecoreType(TemplateId=IBase_NavigationConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
+	public partial interface IBase_Navigation : IGlassBase 
 	{
 								/// <summary>
 					/// The ExcludeFromNavigation field.
 					/// <para></para>
-					/// <para>Field Type: Checkbox</para>		
+					/// <para>Field Type: Checkbox</para>
 					/// <para>Field ID: c7e1e333-3593-40ae-8a54-4317665e813c</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
-					[SitecoreField(I_Base_NavigationConstants.ExcludeFromNavigationFieldName)]
+					[SitecoreField(IBase_NavigationConstants.ExcludeFromNavigationFieldName)]
 					bool ExcludeFromNavigation  {get; set;}
-			
+
 								/// <summary>
 					/// The Logo field.
 					/// <para></para>
-					/// <para>Field Type: Image</para>		
-					/// <para>Field ID: bc85b31c-3d91-42d7-a006-07115abd58b0</para>
+					/// <para>Field Type: Image</para>
+					/// <para>Field ID: 700f5aa2-1ab1-435b-9ced-cc4b71cd5c0d</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
-					[SitecoreField(I_Base_NavigationConstants.LogoFieldName)]
+					[SitecoreField(IBase_NavigationConstants.LogoFieldName)]
 					Image Logo  {get; set;}
-			
-								/// <summary>
-					/// The Nav field.
-					/// <para></para>
-					/// <para>Field Type: Multilist</para>		
-					/// <para>Field ID: ebea49d4-1e27-4bc9-aae5-701ff22bd923</para>
-					/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem</para>
-					/// </summary>
-					[SitecoreField(I_Base_NavigationConstants.NavsFieldName)]
-					IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Navs  {get; set;}
-			
+
 				}
 
-
-	public static partial class I_Base_NavigationConstants{
+	public static partial class IBase_NavigationConstants{
 
 			public const string TemplateIdString = "b651325b-cf69-4b30-916d-7a8e51ea3fc5";
 			public static readonly ID TemplateId = new ID(TemplateIdString);
-			public const string TemplateName = "_Base Navigation";
+			public const string TemplateName = "Base Navigation";
 
-					
+		
 			public static readonly ID ExcludeFromNavigationFieldId = new ID("c7e1e333-3593-40ae-8a54-4317665e813c");
 			public const string ExcludeFromNavigationFieldName = "ExcludeFromNavigation";
-			
-					
-			public static readonly ID LogoFieldId = new ID("bc85b31c-3d91-42d7-a006-07115abd58b0");
-			public const string LogoFieldName = "Logo";
-			
-					
-			public static readonly ID NavsFieldId = new ID("ebea49d4-1e27-4bc9-aae5-701ff22bd923");
-			public const string NavsFieldName = "Nav";
-			
-			
 
+		
+			public static readonly ID LogoFieldId = new ID("700f5aa2-1ab1-435b-9ced-cc4b71cd5c0d");
+			public const string LogoFieldName = "Logo";
+
+		
 	}
 
-	
 	/// <summary>
-	/// _Base_Navigation
+	/// Base_Navigation
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/_Base Navigation</para>	
-	/// <para>ID: b651325b-cf69-4b30-916d-7a8e51ea3fc5</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/Base Navigation</para>
+	/// <para>ID: b651325b-cf69-4b30-916d-7a8e51ea3fc5</para>
 	/// </summary>
-	[SitecoreType(TemplateId=I_Base_NavigationConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class _Base_Navigation  : GlassBase, I_Base_Navigation 
+	[SitecoreType(TemplateId=IBase_NavigationConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
+	public partial class Base_Navigation  : GlassBase, IBase_Navigation
 	{
-	   
+
 						/// <summary>
 				/// The ExcludeFromNavigation field.
 				/// <para></para>
-				/// <para>Field Type: Checkbox</para>		
+				/// <para>Field Type: Checkbox</para>
 				/// <para>Field ID: c7e1e333-3593-40ae-8a54-4317665e813c</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(I_Base_NavigationConstants.ExcludeFromNavigationFieldName)]
+				[SitecoreField(IBase_NavigationConstants.ExcludeFromNavigationFieldName)]
 				public virtual bool ExcludeFromNavigation  {get; set;}
-					
+
 						/// <summary>
 				/// The Logo field.
 				/// <para></para>
-				/// <para>Field Type: Image</para>		
-				/// <para>Field ID: bc85b31c-3d91-42d7-a006-07115abd58b0</para>
+				/// <para>Field Type: Image</para>
+				/// <para>Field ID: 700f5aa2-1ab1-435b-9ced-cc4b71cd5c0d</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(I_Base_NavigationConstants.LogoFieldName)]
+				[SitecoreField(IBase_NavigationConstants.LogoFieldName)]
 				public virtual Image Logo  {get; set;}
-					
-						/// <summary>
-				/// The Nav field.
-				/// <para></para>
-				/// <para>Field Type: Multilist</para>		
-				/// <para>Field ID: ebea49d4-1e27-4bc9-aae5-701ff22bd923</para>
-				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem</para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(I_Base_NavigationConstants.NavsFieldName)]
-				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Navs  {get; set;}
-					
-			
-	}
-}
-namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard
-{
 
-
- 	/// <summary>
-	/// ICard_Folder Interface
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/BookCard/Card Folder</para>	
-	/// <para>ID: b828d791-a324-48ac-9f96-6bdae535590a</para>	
-	/// </summary>
-	[SitecoreType(TemplateId=ICard_FolderConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
-	public partial interface ICard_Folder : IGlassBase 
-	{
-								/// <summary>
-					/// The BookCards field.
-					/// <para></para>
-					/// <para>Field Type: Multilist</para>		
-					/// <para>Field ID: 588b3f84-a153-4f00-a9c7-6bbfaac7a8f1</para>
-					/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard.IBookCard</para>
-					/// </summary>
-					[SitecoreField(ICard_FolderConstants.BookCardsFieldName)]
-					IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard.IBookCard> BookCards  {get; set;}
-			
-				}
-
-
-	public static partial class ICard_FolderConstants{
-
-			public const string TemplateIdString = "b828d791-a324-48ac-9f96-6bdae535590a";
-			public static readonly ID TemplateId = new ID(TemplateIdString);
-			public const string TemplateName = "Card Folder";
-
-					
-			public static readonly ID BookCardsFieldId = new ID("588b3f84-a153-4f00-a9c7-6bbfaac7a8f1");
-			public const string BookCardsFieldName = "BookCards";
-			
-			
-
-	}
-
-	
-	/// <summary>
-	/// Card_Folder
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/BookCard/Card Folder</para>	
-	/// <para>ID: b828d791-a324-48ac-9f96-6bdae535590a</para>	
-	/// </summary>
-	[SitecoreType(TemplateId=ICard_FolderConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Card_Folder  : GlassBase, ICard_Folder 
-	{
-	   
-						/// <summary>
-				/// The BookCards field.
-				/// <para></para>
-				/// <para>Field Type: Multilist</para>		
-				/// <para>Field ID: 588b3f84-a153-4f00-a9c7-6bbfaac7a8f1</para>
-				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard.IBookCard</para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(ICard_FolderConstants.BookCardsFieldName)]
-				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.BookCard.IBookCard> BookCards  {get; set;}
-					
-			
-	}
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined
 {
 
-
  	/// <summary>
 	/// IData Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Data</para>	
-	/// <para>ID: c2bd0ead-3823-4a5e-ad3d-dd95758def1d</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Data</para>
+	/// <para>ID: c2bd0ead-3823-4a5e-ad3d-dd95758def1d</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IDataConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface IData : IGlassBase 
 	{
 				}
-
 
 	public static partial class IDataConstants{
 
@@ -1552,33 +1630,29 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Data";
 
-			
-
+		
 	}
 
-	
 	/// <summary>
 	/// Data
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Data</para>	
-	/// <para>ID: c2bd0ead-3823-4a5e-ad3d-dd95758def1d</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Data</para>
+	/// <para>ID: c2bd0ead-3823-4a5e-ad3d-dd95758def1d</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IDataConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Data  : GlassBase, IData 
+	public partial class Data  : GlassBase, IData
 	{
-	   
-			
-	}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 {
 
-
  	/// <summary>
 	/// I_Base_Heading_Decoration Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/_Base Heading Decoration</para>	
-	/// <para>ID: ca3aea07-1534-4e4a-91fa-ed2ec2923a6c</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/_Base Heading Decoration</para>
+	/// <para>ID: ca3aea07-1534-4e4a-91fa-ed2ec2923a6c</para>
 	/// </summary>
 	[SitecoreType(TemplateId=I_Base_Heading_DecorationConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface I_Base_Heading_Decoration : IGlassBase 
@@ -1586,15 +1660,14 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 								/// <summary>
 					/// The DecorationBanner field.
 					/// <para></para>
-					/// <para>Field Type: Image</para>		
+					/// <para>Field Type: Image</para>
 					/// <para>Field ID: 34f8fde4-8e5e-46dd-8a3f-2e93b475742e</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(I_Base_Heading_DecorationConstants.DecorationBannerFieldName)]
 					Image DecorationBanner  {get; set;}
-			
-				}
 
+				}
 
 	public static partial class I_Base_Heading_DecorationConstants{
 
@@ -1602,54 +1675,59 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "_Base Heading Decoration";
 
-					
+		
 			public static readonly ID DecorationBannerFieldId = new ID("34f8fde4-8e5e-46dd-8a3f-2e93b475742e");
 			public const string DecorationBannerFieldName = "DecorationBanner";
-			
-			
 
+		
 	}
 
-	
 	/// <summary>
 	/// _Base_Heading_Decoration
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/_Base Heading Decoration</para>	
-	/// <para>ID: ca3aea07-1534-4e4a-91fa-ed2ec2923a6c</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/_Base Heading Decoration</para>
+	/// <para>ID: ca3aea07-1534-4e4a-91fa-ed2ec2923a6c</para>
 	/// </summary>
 	[SitecoreType(TemplateId=I_Base_Heading_DecorationConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class _Base_Heading_Decoration  : GlassBase, I_Base_Heading_Decoration 
+	public partial class _Base_Heading_Decoration  : GlassBase, I_Base_Heading_Decoration
 	{
-	   
+
 						/// <summary>
 				/// The DecorationBanner field.
 				/// <para></para>
-				/// <para>Field Type: Image</para>		
+				/// <para>Field Type: Image</para>
 				/// <para>Field ID: 34f8fde4-8e5e-46dd-8a3f-2e93b475742e</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(I_Base_Heading_DecorationConstants.DecorationBannerFieldName)]
 				public virtual Image DecorationBanner  {get; set;}
-					
-			
-	}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation
 {
 
-
  	/// <summary>
 	/// INavigation_Links_Folder Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Navigation/Navigation Links Folder</para>	
-	/// <para>ID: d3c0f83d-45c5-4b15-a70c-a2032d119a1d</para>	
+	/// <para>Path: /sitecore/templates/Feature/Navigation/Navigation Links Folder</para>
+	/// <para>ID: d3c0f83d-45c5-4b15-a70c-a2032d119a1d</para>
 	/// </summary>
 	[SitecoreType(TemplateId=INavigation_Links_FolderConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
-	public partial interface INavigation_Links_Folder : IGlassBase 
+	public partial interface INavigation_Links_Folder : IGlassBase , global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBase_Navigation
 	{
-				}
+								/// <summary>
+					/// The Items field.
+					/// <para></para>
+					/// <para>Field Type: Multilist</para>
+					/// <para>Field ID: a2658dba-b4d9-4836-8f2f-7efd7c9eaaa6</para>
+					/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem</para>
+					/// </summary>
+					[SitecoreField(INavigation_Links_FolderConstants.ItemsFieldName)]
+					IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Items  {get; set;}
 
+				}
 
 	public static partial class INavigation_Links_FolderConstants{
 
@@ -1657,39 +1735,79 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Navigation Links Folder";
 
-			
+		
+			public static readonly ID ItemsFieldId = new ID("a2658dba-b4d9-4836-8f2f-7efd7c9eaaa6");
+			public const string ItemsFieldName = "Items";
 
+		
+			public static readonly ID ExcludeFromNavigationFieldId = new ID("c7e1e333-3593-40ae-8a54-4317665e813c");
+			public const string ExcludeFromNavigationFieldName = "ExcludeFromNavigation";
+
+		
+			public static readonly ID LogoFieldId = new ID("700f5aa2-1ab1-435b-9ced-cc4b71cd5c0d");
+			public const string LogoFieldName = "Logo";
+
+		
 	}
 
-	
 	/// <summary>
 	/// Navigation_Links_Folder
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Navigation/Navigation Links Folder</para>	
-	/// <para>ID: d3c0f83d-45c5-4b15-a70c-a2032d119a1d</para>	
+	/// <para>Path: /sitecore/templates/Feature/Navigation/Navigation Links Folder</para>
+	/// <para>ID: d3c0f83d-45c5-4b15-a70c-a2032d119a1d</para>
 	/// </summary>
 	[SitecoreType(TemplateId=INavigation_Links_FolderConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Navigation_Links_Folder  : GlassBase, INavigation_Links_Folder 
+	public partial class Navigation_Links_Folder  : GlassBase, INavigation_Links_Folder
 	{
-	   
-			
-	}
+
+						/// <summary>
+				/// The Items field.
+				/// <para></para>
+				/// <para>Field Type: Multilist</para>
+				/// <para>Field ID: a2658dba-b4d9-4836-8f2f-7efd7c9eaaa6</para>
+				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem</para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(INavigation_Links_FolderConstants.ItemsFieldName)]
+				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Items  {get; set;}
+
+						/// <summary>
+				/// The ExcludeFromNavigation field.
+				/// <para></para>
+				/// <para>Field Type: Checkbox</para>
+				/// <para>Field ID: c7e1e333-3593-40ae-8a54-4317665e813c</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(INavigation_Links_FolderConstants.ExcludeFromNavigationFieldName)]
+				public virtual bool ExcludeFromNavigation  {get; set;}
+
+						/// <summary>
+				/// The Logo field.
+				/// <para></para>
+				/// <para>Field Type: Image</para>
+				/// <para>Field ID: 700f5aa2-1ab1-435b-9ced-cc4b71cd5c0d</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(INavigation_Links_FolderConstants.LogoFieldName)]
+				public virtual Image Logo  {get; set;}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel
 {
 
-
  	/// <summary>
 	/// ICarousel_Folder Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Folder</para>	
-	/// <para>ID: d3ed7aa7-33ac-46f4-a730-e5eb84cc017b</para>	
+	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Folder</para>
+	/// <para>ID: d3ed7aa7-33ac-46f4-a730-e5eb84cc017b</para>
 	/// </summary>
 	[SitecoreType(TemplateId=ICarousel_FolderConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface ICarousel_Folder : IGlassBase 
 	{
 				}
-
 
 	public static partial class ICarousel_FolderConstants{
 
@@ -1697,39 +1815,94 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Feature.Carousel
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Carousel Folder";
 
-			
-
+		
 	}
 
-	
 	/// <summary>
 	/// Carousel_Folder
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Folder</para>	
-	/// <para>ID: d3ed7aa7-33ac-46f4-a730-e5eb84cc017b</para>	
+	/// <para>Path: /sitecore/templates/Feature/Carousel/Carousel Folder</para>
+	/// <para>ID: d3ed7aa7-33ac-46f4-a730-e5eb84cc017b</para>
 	/// </summary>
 	[SitecoreType(TemplateId=ICarousel_FolderConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Carousel_Folder  : GlassBase, ICarousel_Folder 
+	public partial class Carousel_Folder  : GlassBase, ICarousel_Folder
 	{
-	   
-			
+
+			}
+}
+namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
+{
+
+ 	/// <summary>
+	/// I_BaseData Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/User Defined/Base/_BaseData</para>
+	/// <para>ID: d931423c-24c6-4068-aabf-fddc0f380f0c</para>
+	/// </summary>
+	[SitecoreType(TemplateId=I_BaseDataConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
+	public partial interface I_BaseData : IGlassBase 
+	{
+								/// <summary>
+					/// The Message field.
+					/// <para></para>
+					/// <para>Field Type: Multi-Line Text</para>
+					/// <para>Field ID: 392eac1a-2423-49c8-aa03-73b64f5f6f14</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(I_BaseDataConstants.MessageFieldName)]
+					string Message  {get; set;}
+
+				}
+
+	public static partial class I_BaseDataConstants{
+
+			public const string TemplateIdString = "d931423c-24c6-4068-aabf-fddc0f380f0c";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "_BaseData";
+
+		
+			public static readonly ID MessageFieldId = new ID("392eac1a-2423-49c8-aa03-73b64f5f6f14");
+			public const string MessageFieldName = "Message";
+
+		
 	}
+
+	/// <summary>
+	/// _BaseData
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/User Defined/Base/_BaseData</para>
+	/// <para>ID: d931423c-24c6-4068-aabf-fddc0f380f0c</para>
+	/// </summary>
+	[SitecoreType(TemplateId=I_BaseDataConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
+	public partial class _BaseData  : GlassBase, I_BaseData
+	{
+
+						/// <summary>
+				/// The Message field.
+				/// <para></para>
+				/// <para>Field Type: Multi-Line Text</para>
+				/// <para>Field ID: 392eac1a-2423-49c8-aa03-73b64f5f6f14</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(I_BaseDataConstants.MessageFieldName)]
+				public virtual string Message  {get; set;}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 {
 
-
  	/// <summary>
 	/// IHome Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Project/Page Types/Home</para>	
-	/// <para>ID: e006e803-dd5c-46ab-aa6b-419a52b657be</para>	
+	/// <para>Path: /sitecore/templates/Project/Page Types/Home</para>
+	/// <para>ID: e006e803-dd5c-46ab-aa6b-419a52b657be</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IHomeConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
-	public partial interface IHome : IGlassBase , global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.I_Base_Content, global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.I_Base_Heading_Decoration, global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.I_Base_Navigation
+	public partial interface IHome : IGlassBase , global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.I_Base_Content, global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.I_Base_Heading_Decoration
 	{
 				}
-
 
 	public static partial class IHomeConstants{
 
@@ -1737,108 +1910,59 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Home";
 
-					
+		
 			public static readonly ID ContentBodyFieldId = new ID("8af829a4-3a05-4df4-8028-9505c7fd3d65");
 			public const string ContentBodyFieldName = "ContentBody";
-			
-					
+
+		
 			public static readonly ID DecorationBannerFieldId = new ID("34f8fde4-8e5e-46dd-8a3f-2e93b475742e");
 			public const string DecorationBannerFieldName = "DecorationBanner";
-			
-					
-			public static readonly ID ExcludeFromNavigationFieldId = new ID("c7e1e333-3593-40ae-8a54-4317665e813c");
-			public const string ExcludeFromNavigationFieldName = "ExcludeFromNavigation";
-			
-					
-			public static readonly ID LogoFieldId = new ID("bc85b31c-3d91-42d7-a006-07115abd58b0");
-			public const string LogoFieldName = "Logo";
-			
-					
-			public static readonly ID NavsFieldId = new ID("ebea49d4-1e27-4bc9-aae5-701ff22bd923");
-			public const string NavsFieldName = "Nav";
-			
-			
 
+		
 	}
 
-	
 	/// <summary>
 	/// Home
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Project/Page Types/Home</para>	
-	/// <para>ID: e006e803-dd5c-46ab-aa6b-419a52b657be</para>	
+	/// <para>Path: /sitecore/templates/Project/Page Types/Home</para>
+	/// <para>ID: e006e803-dd5c-46ab-aa6b-419a52b657be</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IHomeConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Home  : GlassBase, IHome 
+	public partial class Home  : GlassBase, IHome
 	{
-	   
+
 						/// <summary>
 				/// The ContentBody field.
 				/// <para></para>
-				/// <para>Field Type: Multi-Line Text</para>		
+				/// <para>Field Type: Multi-Line Text</para>
 				/// <para>Field ID: 8af829a4-3a05-4df4-8028-9505c7fd3d65</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IHomeConstants.ContentBodyFieldName)]
 				public virtual string ContentBody  {get; set;}
-					
+
 						/// <summary>
 				/// The DecorationBanner field.
 				/// <para></para>
-				/// <para>Field Type: Image</para>		
+				/// <para>Field Type: Image</para>
 				/// <para>Field ID: 34f8fde4-8e5e-46dd-8a3f-2e93b475742e</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IHomeConstants.DecorationBannerFieldName)]
 				public virtual Image DecorationBanner  {get; set;}
-					
-						/// <summary>
-				/// The ExcludeFromNavigation field.
-				/// <para></para>
-				/// <para>Field Type: Checkbox</para>		
-				/// <para>Field ID: c7e1e333-3593-40ae-8a54-4317665e813c</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IHomeConstants.ExcludeFromNavigationFieldName)]
-				public virtual bool ExcludeFromNavigation  {get; set;}
-					
-						/// <summary>
-				/// The Logo field.
-				/// <para></para>
-				/// <para>Field Type: Image</para>		
-				/// <para>Field ID: bc85b31c-3d91-42d7-a006-07115abd58b0</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IHomeConstants.LogoFieldName)]
-				public virtual Image Logo  {get; set;}
-					
-						/// <summary>
-				/// The Nav field.
-				/// <para></para>
-				/// <para>Field Type: Multilist</para>		
-				/// <para>Field ID: ebea49d4-1e27-4bc9-aae5-701ff22bd923</para>
-				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem</para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IHomeConstants.NavsFieldName)]
-				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Navs  {get; set;}
-					
-			
-	}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 {
 
-
  	/// <summary>
 	/// IBase_Footer Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/Base Footer</para>	
-	/// <para>ID: e1860135-0069-461d-a435-08602253fb5c</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/Base Footer</para>
+	/// <para>ID: e1860135-0069-461d-a435-08602253fb5c</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IBase_FooterConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
 	public partial interface IBase_Footer : IGlassBase 
@@ -1846,45 +1970,54 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 								/// <summary>
 					/// The Content field.
 					/// <para></para>
-					/// <para>Field Type: Multi-Line Text</para>		
+					/// <para>Field Type: Multi-Line Text</para>
 					/// <para>Field ID: ff5ce688-42c6-47fe-97fc-ace47571a222</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBase_FooterConstants.ContentFieldName)]
 					string Content  {get; set;}
-			
+
 								/// <summary>
 					/// The Copyright field.
 					/// <para></para>
-					/// <para>Field Type: Rich Text</para>		
+					/// <para>Field Type: Rich Text</para>
 					/// <para>Field ID: 477c7db6-ceb4-4da4-84d4-c482d897ac2c</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBase_FooterConstants.CopyrightFieldName)]
 					string Copyright  {get; set;}
-			
+
+								/// <summary>
+					/// The Disclosure field.
+					/// <para></para>
+					/// <para>Field Type: Rich Text</para>
+					/// <para>Field ID: 64881c52-b774-47b7-b946-07ab0a92c508</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IBase_FooterConstants.DisclosureFieldName)]
+					string Disclosure  {get; set;}
+
 								/// <summary>
 					/// The Header field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: 672c7e6a-6e84-4936-a07e-0ff82aa2f957</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBase_FooterConstants.HeaderFieldName)]
 					string Header  {get; set;}
-			
+
 								/// <summary>
 					/// The Subhead field.
 					/// <para></para>
-					/// <para>Field Type: Rich Text</para>		
+					/// <para>Field Type: Rich Text</para>
 					/// <para>Field ID: cb8bd673-36f1-4793-8310-3f02fdca1a86</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IBase_FooterConstants.SubheadFieldName)]
 					string Subhead  {get; set;}
-			
-				}
 
+				}
 
 	public static partial class IBase_FooterConstants{
 
@@ -1892,139 +2025,149 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Base Footer";
 
-					
+		
 			public static readonly ID ContentFieldId = new ID("ff5ce688-42c6-47fe-97fc-ace47571a222");
 			public const string ContentFieldName = "Content";
-			
-					
+
+		
 			public static readonly ID CopyrightFieldId = new ID("477c7db6-ceb4-4da4-84d4-c482d897ac2c");
 			public const string CopyrightFieldName = "Copyright";
-			
-					
+
+		
+			public static readonly ID DisclosureFieldId = new ID("64881c52-b774-47b7-b946-07ab0a92c508");
+			public const string DisclosureFieldName = "Disclosure";
+
+		
 			public static readonly ID HeaderFieldId = new ID("672c7e6a-6e84-4936-a07e-0ff82aa2f957");
 			public const string HeaderFieldName = "Header";
-			
-					
+
+		
 			public static readonly ID SubheadFieldId = new ID("cb8bd673-36f1-4793-8310-3f02fdca1a86");
 			public const string SubheadFieldName = "Subhead";
-			
-			
 
+		
 	}
 
-	
 	/// <summary>
 	/// Base_Footer
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/User Defined/Base/Base Footer</para>	
-	/// <para>ID: e1860135-0069-461d-a435-08602253fb5c</para>	
+	/// <para>Path: /sitecore/templates/User Defined/Base/Base Footer</para>
+	/// <para>ID: e1860135-0069-461d-a435-08602253fb5c</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IBase_FooterConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Base_Footer  : GlassBase, IBase_Footer 
+	public partial class Base_Footer  : GlassBase, IBase_Footer
 	{
-	   
+
 						/// <summary>
 				/// The Content field.
 				/// <para></para>
-				/// <para>Field Type: Multi-Line Text</para>		
+				/// <para>Field Type: Multi-Line Text</para>
 				/// <para>Field ID: ff5ce688-42c6-47fe-97fc-ace47571a222</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBase_FooterConstants.ContentFieldName)]
 				public virtual string Content  {get; set;}
-					
+
 						/// <summary>
 				/// The Copyright field.
 				/// <para></para>
-				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field Type: Rich Text</para>
 				/// <para>Field ID: 477c7db6-ceb4-4da4-84d4-c482d897ac2c</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBase_FooterConstants.CopyrightFieldName)]
 				public virtual string Copyright  {get; set;}
-					
+
+						/// <summary>
+				/// The Disclosure field.
+				/// <para></para>
+				/// <para>Field Type: Rich Text</para>
+				/// <para>Field ID: 64881c52-b774-47b7-b946-07ab0a92c508</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IBase_FooterConstants.DisclosureFieldName)]
+				public virtual string Disclosure  {get; set;}
+
 						/// <summary>
 				/// The Header field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: 672c7e6a-6e84-4936-a07e-0ff82aa2f957</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBase_FooterConstants.HeaderFieldName)]
 				public virtual string Header  {get; set;}
-					
+
 						/// <summary>
 				/// The Subhead field.
 				/// <para></para>
-				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field Type: Rich Text</para>
 				/// <para>Field ID: cb8bd673-36f1-4793-8310-3f02fdca1a86</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IBase_FooterConstants.SubheadFieldName)]
 				public virtual string Subhead  {get; set;}
-					
-			
-	}
+
+			}
 }
 namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 {
 
-
  	/// <summary>
 	/// IError Interface
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Project/Page Types/Error</para>	
-	/// <para>ID: e6fbf178-9a2e-4c9f-8d77-3c5c428e43b2</para>	
+	/// <para>Path: /sitecore/templates/Project/Page Types/Error</para>
+	/// <para>ID: e6fbf178-9a2e-4c9f-8d77-3c5c428e43b2</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IErrorConstants.TemplateIdString, AutoMap = true )] //, Cachable = true
-	public partial interface IError : IGlassBase , global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBasePage, global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.I_Base_Navigation
+	public partial interface IError : IGlassBase , global::Books.Foundation.Orm.Models.sitecore.templates.User_Defined.Base.IBasePage
 	{
 								/// <summary>
 					/// The Description__Error field.
 					/// <para></para>
-					/// <para>Field Type: Rich Text</para>		
+					/// <para>Field Type: Rich Text</para>
 					/// <para>Field ID: d7f75437-3b1d-4ed6-88ca-d2afc7b02478</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IErrorConstants.Description__ErrorFieldName)]
 					string Description__Error  {get; set;}
-			
+
 								/// <summary>
 					/// The Image field.
 					/// <para></para>
-					/// <para>Field Type: Image</para>		
+					/// <para>Field Type: Image</para>
 					/// <para>Field ID: 207a38ee-390d-4e76-9fd0-06225f9bc984</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IErrorConstants.ImageFieldName)]
 					Image Image  {get; set;}
-			
+
 								/// <summary>
 					/// The Link field.
 					/// <para></para>
-					/// <para>Field Type: General Link</para>		
+					/// <para>Field Type: General Link</para>
 					/// <para>Field ID: 6fce48b7-50ab-4427-96d5-fc074f252a1c</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IErrorConstants.LinkFieldName)]
 					Link Link  {get; set;}
-			
+
 								/// <summary>
 					/// The Type_Error field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Single-Line Text</para>
 					/// <para>Field ID: 8d62cded-21d8-437e-baa2-ad39fed1f623</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IErrorConstants.Type_ErrorFieldName)]
 					string Type_Error  {get; set;}
-			
-				}
 
+				}
 
 	public static partial class IErrorConstants{
 
@@ -2032,186 +2175,153 @@ namespace Books.Foundation.Orm.Models.sitecore.templates.Project.Page_Types
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Error";
 
-					
+		
 			public static readonly ID Description__ErrorFieldId = new ID("d7f75437-3b1d-4ed6-88ca-d2afc7b02478");
 			public const string Description__ErrorFieldName = "Description__Error";
-			
-					
+
+		
 			public static readonly ID ImageFieldId = new ID("207a38ee-390d-4e76-9fd0-06225f9bc984");
 			public const string ImageFieldName = "Image";
-			
-					
+
+		
 			public static readonly ID LinkFieldId = new ID("6fce48b7-50ab-4427-96d5-fc074f252a1c");
 			public const string LinkFieldName = "Link";
-			
-					
+
+		
 			public static readonly ID Type_ErrorFieldId = new ID("8d62cded-21d8-437e-baa2-ad39fed1f623");
 			public const string Type_ErrorFieldName = "Type_Error";
-			
-					
+
+		
 			public static readonly ID Sub_TitleFieldId = new ID("43260204-717e-421e-aeb0-5b8e572a4d26");
 			public const string Sub_TitleFieldName = "Sub Title";
-			
-					
+
+		
 			public static readonly ID TitleFieldId = new ID("e8674014-f36c-407f-8217-9c16bd3d9adf");
 			public const string TitleFieldName = "Title";
-			
-					
+
+		
 			public static readonly ID MetaDescriptionFieldId = new ID("ed4089e1-c500-4c02-beaf-bd624ca82270");
 			public const string MetaDescriptionFieldName = "MetaDescription";
-			
-					
+
+		
 			public static readonly ID MetaTitleFieldId = new ID("0f80d938-d0aa-4191-9f44-7f1c32a39ce4");
 			public const string MetaTitleFieldName = "MetaTitle";
-			
-					
-			public static readonly ID ExcludeFromNavigationFieldId = new ID("c7e1e333-3593-40ae-8a54-4317665e813c");
-			public const string ExcludeFromNavigationFieldName = "ExcludeFromNavigation";
-			
-					
-			public static readonly ID LogoFieldId = new ID("bc85b31c-3d91-42d7-a006-07115abd58b0");
-			public const string LogoFieldName = "Logo";
-			
-					
-			public static readonly ID NavsFieldId = new ID("ebea49d4-1e27-4bc9-aae5-701ff22bd923");
-			public const string NavsFieldName = "Nav";
-			
-			
 
+		
+			public static readonly ID MessageFieldId = new ID("392eac1a-2423-49c8-aa03-73b64f5f6f14");
+			public const string MessageFieldName = "Message";
+
+		
 	}
 
-	
 	/// <summary>
 	/// Error
 	/// <para></para>
-	/// <para>Path: /sitecore/templates/Project/Page Types/Error</para>	
-	/// <para>ID: e6fbf178-9a2e-4c9f-8d77-3c5c428e43b2</para>	
+	/// <para>Path: /sitecore/templates/Project/Page Types/Error</para>
+	/// <para>ID: e6fbf178-9a2e-4c9f-8d77-3c5c428e43b2</para>
 	/// </summary>
 	[SitecoreType(TemplateId=IErrorConstants.TemplateIdString, AutoMap = true)] //, Cachable = true
-	public partial class Error  : GlassBase, IError 
+	public partial class Error  : GlassBase, IError
 	{
-	   
+
 						/// <summary>
 				/// The Description__Error field.
 				/// <para></para>
-				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field Type: Rich Text</para>
 				/// <para>Field ID: d7f75437-3b1d-4ed6-88ca-d2afc7b02478</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IErrorConstants.Description__ErrorFieldName)]
 				public virtual string Description__Error  {get; set;}
-					
+
 						/// <summary>
 				/// The Image field.
 				/// <para></para>
-				/// <para>Field Type: Image</para>		
+				/// <para>Field Type: Image</para>
 				/// <para>Field ID: 207a38ee-390d-4e76-9fd0-06225f9bc984</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IErrorConstants.ImageFieldName)]
 				public virtual Image Image  {get; set;}
-					
+
 						/// <summary>
 				/// The Link field.
 				/// <para></para>
-				/// <para>Field Type: General Link</para>		
+				/// <para>Field Type: General Link</para>
 				/// <para>Field ID: 6fce48b7-50ab-4427-96d5-fc074f252a1c</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IErrorConstants.LinkFieldName)]
 				public virtual Link Link  {get; set;}
-					
+
 						/// <summary>
 				/// The Type_Error field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: 8d62cded-21d8-437e-baa2-ad39fed1f623</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IErrorConstants.Type_ErrorFieldName)]
 				public virtual string Type_Error  {get; set;}
-					
+
 						/// <summary>
 				/// The Sub Title field.
 				/// <para></para>
-				/// <para>Field Type: Rich Text</para>		
+				/// <para>Field Type: Rich Text</para>
 				/// <para>Field ID: 43260204-717e-421e-aeb0-5b8e572a4d26</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IErrorConstants.Sub_TitleFieldName)]
 				public virtual string Sub_Title  {get; set;}
-					
+
 						/// <summary>
 				/// The Title field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: e8674014-f36c-407f-8217-9c16bd3d9adf</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IErrorConstants.TitleFieldName)]
 				public virtual string Title  {get; set;}
-					
+
 						/// <summary>
 				/// The MetaDescription field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: ed4089e1-c500-4c02-beaf-bd624ca82270</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IErrorConstants.MetaDescriptionFieldName)]
 				public virtual string MetaDescription  {get; set;}
-					
+
 						/// <summary>
 				/// The MetaTitle field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Single-Line Text</para>
 				/// <para>Field ID: 0f80d938-d0aa-4191-9f44-7f1c32a39ce4</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IErrorConstants.MetaTitleFieldName)]
 				public virtual string MetaTitle  {get; set;}
-					
+
 						/// <summary>
-				/// The ExcludeFromNavigation field.
+				/// The Message field.
 				/// <para></para>
-				/// <para>Field Type: Checkbox</para>		
-				/// <para>Field ID: c7e1e333-3593-40ae-8a54-4317665e813c</para>
+				/// <para>Field Type: Multi-Line Text</para>
+				/// <para>Field ID: 392eac1a-2423-49c8-aa03-73b64f5f6f14</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IErrorConstants.ExcludeFromNavigationFieldName)]
-				public virtual bool ExcludeFromNavigation  {get; set;}
-					
-						/// <summary>
-				/// The Logo field.
-				/// <para></para>
-				/// <para>Field Type: Image</para>		
-				/// <para>Field ID: bc85b31c-3d91-42d7-a006-07115abd58b0</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IErrorConstants.LogoFieldName)]
-				public virtual Image Logo  {get; set;}
-					
-						/// <summary>
-				/// The Nav field.
-				/// <para></para>
-				/// <para>Field Type: Multilist</para>		
-				/// <para>Field ID: ebea49d4-1e27-4bc9-aae5-701ff22bd923</para>
-				/// <para>Custom Data: generic=Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem</para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IErrorConstants.NavsFieldName)]
-				public virtual IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Navs  {get; set;}
-					
-			
-	}
+				[SitecoreField(IErrorConstants.MessageFieldName)]
+				public virtual string Message  {get; set;}
+
+			}
 }

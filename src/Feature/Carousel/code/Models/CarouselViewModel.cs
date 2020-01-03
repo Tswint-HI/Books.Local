@@ -5,20 +5,21 @@ namespace Books.Feature.Carousel.Models
 {
     public class CarouselViewModel
     {
-        public string Title { get; set; }
         public IList<CarouselItemViewModel> Items { get; set; }
+        public string Title { get; set; }
 
         public CarouselViewModel(Foundation.Orm.Models.sitecore.templates.Feature.Carousel.Carousel_Content.ICarousel dataSource)
         {
             Items = new List<CarouselItemViewModel>();
             Title = dataSource.Title;
-            for (int i = 0; i < dataSource.Items.Count(); i++)
+            for (var i = 0; i < dataSource.Items.Count(); i++)
             {
                 var item = dataSource.Items.ElementAt(i);
                 Items.Add(new CarouselItemViewModel
                 {
                     Index = i,
-                    ImageUrl = item.Image?.Src,
+                    Id = item.Id,
+                    Image = item.Image,
                     ImageAlt = item.Image?.Alt,
                     ShowCaption = item.ShowCaption,
                     Caption = item.Caption,

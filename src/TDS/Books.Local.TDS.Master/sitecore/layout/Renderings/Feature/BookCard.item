@@ -37,14 +37,14 @@ name: Datasource Location
 key: datasource location
 content-length: 38
 
-{50B93F82-CBAB-4CE4-ACBD-973D79FB20DD}
+{BBF62B78-4F2F-4474-907A-7FB1FC9FE29E}
 ----field----
 field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
 name: Datasource Template
 key: datasource template
-content-length: 45
+content-length: 47
 
-/sitecore/templates/Feature/BookCard/BookCard
+/sitecore/templates/User Defined/Base/Base Book
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
@@ -52,10 +52,17 @@ key: __icon
 content-length: 36
 
 Office/16x16/playing_card_spades.png
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+200
 ----version----
 language: en
 version: 1
-revision: 49b95df9-7b97-4008-80a8-26788e2643d1
+revision: 87a81d04-c39d-4957-8aa7-0eb5b68c80d9
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -70,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-49b95df9-7b97-4008-80a8-26788e2643d1
+87a81d04-c39d-4957-8aa7-0eb5b68c80d9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191115T170204Z
+20191206T135850Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

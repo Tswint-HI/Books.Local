@@ -24,6 +24,13 @@ key: __sortorder
 content-length: 3
 
 500
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 183
+
+ar|sitecore\BRC&Editor|pe|-item:rename|-item:delete|+item:read|-item:admin|-item:write|-item:create|^*|pd|-item:rename|-item:delete|+item:read|-item:admin|-item:write|-item:create|^*|
 ----version----
 language: da
 version: 1
@@ -135,7 +142,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: 5608a78c-e368-44ea-8a29-397b1ca43ccc
+revision: b28bdb49-12ab-4f86-b045-395d2bdbe348
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -164,21 +171,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5608a78c-e368-44ea-8a29-397b1ca43ccc
+b28bdb49-12ab-4f86-b045-395d2bdbe348
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20180718T163255Z
+20191212T145016Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
 ----version----
 language: ja-JP
 version: 1

@@ -16,7 +16,7 @@ name: __Base template
 key: __base template
 content-length: 116
 
-{B651325B-CF69-4B30-916D-7A8E51EA3FC5}|{E1860135-0069-461D-A435-08602253FB5C}|{38C71966-B6AC-4280-A086-157CF33FA6ED}
+{E1860135-0069-461D-A435-08602253FB5C}|{38C71966-B6AC-4280-A086-157CF33FA6ED}|{1930BBEB-7805-471A-A3BE-4858AC7CF696}
 ----field----
 field: {F7D48A55-2158-4F02-9356-756654404F73}
 name: __Standard values
@@ -30,11 +30,11 @@ name: __Icon
 key: __icon
 content-length: 35
 
-ApplicationsV2/16x16/books_blue.png
+ApplicationsV2/32x32/books_blue.png
 ----version----
 language: en
 version: 1
-revision: 899eac0c-1fc2-4b00-bbb3-2164aa229f02
+revision: a696ba40-a83e-4ad7-9eb7-b84dc47d4ab5
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-899eac0c-1fc2-4b00-bbb3-2164aa229f02
+a696ba40-a83e-4ad7-9eb7-b84dc47d4ab5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191122T162902Z
+20191212T140824Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

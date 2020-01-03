@@ -10,18 +10,25 @@ template: {3CC45F70-A4CD-47CE-B4A1-AA05AA67A19D}
 templatekey: Genres
 created: 20191122T152824Z
 
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{3CC45F70-A4CD-47CE-B4A1-AA05AA67A19D}
 ----version----
 language: en
 version: 1
-revision: bfa33ac6-bab8-4c02-b5eb-2f41c90c5560
+revision: 62eb6ab8-c068-43e4-91b2-f92c8aeb8d48
 
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 186
+content-length: 906
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{66B96BAD-744B-4E51-A85F-152205C9D4B6}" s:ds="{E1860135-0069-461D-A435-08602253FB5C}" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{04A385E5-092E-4337-86CF-AE287091EC2D}" p:before="*" s:id="{03F11886-3B99-467E-AF24-5D21F11248A8}" s:ph="navbar" /><r uid="{EC8EB6CA-1AF2-4AC2-AD5A-39F63110812F}" p:after="r[@uid='{04A385E5-092E-4337-86CF-AE287091EC2D}']" s:id="{B13FEE52-8FD9-4CF7-B83A-6D1A7FBC3407}" s:ph="body" /><r uid="{DD5C255E-BAF2-4321-9A5F-4FEC93FBE7B8}" p:after="r[@uid='{EC8EB6CA-1AF2-4AC2-AD5A-39F63110812F}']" s:ds="{9906C4FE-25E8-446B-BE61-907E8486FB74}" s:id="{2EA52E2B-1C24-4B86-8466-D2977E156AF6}" s:ph="footer" /><r uid="{E8E809C1-2FB2-45CC-9D0D-CAB93C961767}" p:after="r[@uid='{DD5C255E-BAF2-4321-9A5F-4FEC93FBE7B8}']" s:ds="{F471D630-4ED3-40A2-ABB5-F2E38922AFA0}" s:id="{1E7637FB-3778-4A80-9C9A-146C8B53B6A7}" s:ph="navbar" /><r uid="{66B96BAD-744B-4E51-A85F-152205C9D4B6}" s:ds="{E1860135-0069-461D-A435-08602253FB5C}" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -35,18 +42,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-bfa33ac6-bab8-4c02-b5eb-2f41c90c5560
+62eb6ab8-c068-43e4-91b2-f92c8aeb8d48
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20191122T162902Z
+20191217T160727Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

@@ -106,7 +106,7 @@
     <Content Include="App_Config\Include\Feature\ErrorLoader.config" />
     <Content Include="Style\Error.css" />
     <Content Include="Views\Error\Index.cshtml" />
-    <None Include="Properties\PublishProfiles\SC.Ft.E.pubxml" />
+    <None Include="Properties\PublishProfiles\Error.sc.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -118,9 +118,7 @@
     <None Include="Views\web.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\ORM\code\Books.Foundation.Orm.csproj">
       <Project>{DC69F037-D421-4792-8E5A-2FDBEAAC8A50}</Project>

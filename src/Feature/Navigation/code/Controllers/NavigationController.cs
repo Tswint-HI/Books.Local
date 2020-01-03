@@ -1,33 +1,27 @@
-﻿using Glass.Mapper.Sc.Web.Mvc;
-using Sitecore.Mvc.Presentation;
-using System;
+﻿using System;
 using System.Web.Mvc;
+
+using Books.Feature.Navigation.ViewModels;
+
+using Glass.Mapper.Sc.Web.Mvc;
+
+using Sitecore.Mvc.Presentation;
 
 namespace Books.Feature.Navigation.Controllers
 {
     public class NavigationController : Controller
     {
         private readonly IMvcContext _context;
-        public NavigationController(IMvcContext context)
+
+        public NavigationController(IMvcContext context) => _context = context ?? throw new ArgumentNullException(nameof(context));
+
+        public ActionResult GetNav()
         {
-            _context = context ?? throw new ArgumentNullException(nameof(context));
+            return RenderingContext.Current.Rendering.Item != null
+                ? _context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigation_Links_Folder>() == null
+                    ? null
+                    : View(new HeaderViewModel(_context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigation_Links_Folder>(), _context))
+                : null;
         }
-        public ActionResult getNav()
-        {
-            if (RenderingContext.Current.Rendering.Item != null)
-            {
-
-                var home = _context.GetHomeItem<Foundation.Orm.Models.sitecore.templates.Project.Page_Types.IHome>();
-                HeaderViewModel vm = new HeaderViewModel(_context)
-                {
-                    Navigation = home.Navs
-                };
-
-                return View(vm);
-
-            }
-            return null;
-        }
-
     }
 }

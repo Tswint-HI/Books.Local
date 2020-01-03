@@ -1,0 +1,42 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc;
+@model Books.Feature.Search.Models.ResponseItem
+
+<link href="~/Styles/Search.css" rel="stylesheet" />
+@if (Model != null && (Model.Books != null || (Model.Pages != null)))
+{
+    <div>
+
+        @if (Model.Books != null)
+        {
+            foreach (var book in Model.Books)
+            {
+                <div class="results list-group list-group-flush">
+                    @Html.Glass().RenderLink(book, x => x.Link, new { @class = "list-group-item list-group-item-action" })
+                    @Html.Glass().Editable(book, x => x.Img)
+                </div>
+            }
+
+        }
+        @if (Model.Pages != null)
+        {
+            foreach (var page in Model.Pages)
+            {
+                <div class="results list-group list-group-flush">
+                    @Html.Glass().RenderLink(page, x => x.Link, new { @class = "list-group-item list-group-item-action" })
+                </div>
+            }
+        }
+    </div>
+}
+else
+{
+    <div class="jumbotron text-white">
+        <h2 class="display-4">
+            @Html.Sitecore().Field("Message")
+        </h2>
+    </div>
+}
+<br />
+<br />
+<br />
+<br />

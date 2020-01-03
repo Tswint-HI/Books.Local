@@ -1,22 +1,75 @@
-﻿using Glass.Mapper.Sc.Fields;
-using Glass.Mapper.Sc.Web.Mvc;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace Books.Feature.Navigation.Controllers
+using Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation;
+
+using Glass.Mapper.Sc.Web.Mvc;
+
+using Item = Sitecore.Data.Items.Item;
+
+namespace Books.Feature.Navigation.ViewModels
 {
     public class HeaderViewModel
     {
-        public IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigationItem> Navigation { get; set; }
-        public IEnumerable<Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.NavigationItem> NavigationLinks { get; set; }
-        public Link NavLink { get; internal set; }
-        public IMvcContext Context { get; internal set; }
-        public virtual Image Image { get; set; }
+        public Guid Id { get; set; }
+        public IEnumerable<Item> _childItems;
+        public IMvcContext _context;
+        public INavigation_Links_Folder _folder;
+        public IEnumerable<Item> _parentItems;
 
-        public HeaderViewModel(IMvcContext _context)
+        public HeaderViewModel(INavigation_Links_Folder dataSource, IMvcContext context)
         {
-            Image = _context.GetContextItem<Foundation.Orm.Models.sitecore.templates.User_Defined.Base.I_Base_Navigation>().Logo;
+            _context = context;
+            _folder = dataSource;
+            GatherParents();
+            GrabTheKids();
+            RemoveItem(context);
+        }
 
-            NavLink = _context.GetContextItem<Foundation.Orm.Models.sitecore.templates.Project.Page_Types.IHome>().Navs as Link;
+        private IEnumerable<Item> GatherParents() => _parentItems = _context.DataSourceItem.GetChildren().ToList();
+
+        // Goes through Parents property checks for children and assigns them to to child property
+        private IEnumerable<Item> GrabTheKids()
+        {
+            foreach (var item in _parentItems.Where(item => item.HasChildren).Select(item => item))
+            {
+                _childItems = new List<Item>();
+                var temp = new List<Item>();
+                var Kids = item.GetChildren().ToList();
+                foreach (var children in Kids)
+                {
+                    temp.Add(children);
+                }
+
+                _childItems = temp;
+            }
+
+            return _childItems;
+        }
+
+        // Checks what link item is == to contextname in order to remove it from the list of selectable links
+        private void RemoveItem(IMvcContext context)
+        {
+            var contextName = context.ContextItem.DisplayName.ToLowerInvariant();
+            var temp = new List<Item>();
+            foreach (var item in _parentItems)
+            {
+                temp.Add(item);
+                if (item.DisplayName.ToLowerInvariant() == contextName)
+                    temp.Remove(item);
+
+                _parentItems = temp;
+            }
+            var temp2 = new List<Item>();
+            foreach (var items in _childItems)
+            {
+                var itemName = items.DisplayName.ToString().Replace("-", string.Empty).ToLowerInvariant();
+                temp2.Add(items);
+                if (itemName == contextName)
+                    temp2.Remove(items);
+            }
+            _childItems = temp2;
         }
     }
 }

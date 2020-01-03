@@ -35,9 +35,9 @@ content-length: 3
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 217
+content-length: 252
 
-ar|sitecore\Sitecore Client Maintaining|pe|+item:create|+item:delete|+item:publish|+item:write|pd|+item:create|+item:delete|+item:publish|+item:write|ar|sitecore\Sitecore Client Securing|pe|+item:admin|pd|+item:admin|
+ar|sitecore\Sitecore Client Maintaining|pe|+item:create|+item:delete|ar|sitecore\BRC&Editor|pe|-item:rename|-item:delete|+item:read|-item:admin|-item:write|-item:create|^*|pd|-item:rename|-item:delete|+item:read|-item:admin|-item:write|-item:create|^*|
 ----version----
 language: da
 version: 1
@@ -149,7 +149,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: 97834ce2-7e61-473e-b0ae-17af6363aac8
+revision: c35edacc-2db8-4c41-91b8-d8dbabd2ece4
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -178,21 +178,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-97834ce2-7e61-473e-b0ae-17af6363aac8
+c35edacc-2db8-4c41-91b8-d8dbabd2ece4
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20180718T163254Z
+20191212T145024Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
 ----version----
 language: ja-JP
 version: 1
