@@ -8,7 +8,7 @@
 <#+
 
     /// <summary>
-    /// The Inflector class transforms words from one
+    /// The Inflector class transforms words from one 
     /// form to another. For example, from singular to plural.
     /// </summary>
     public static class Inflector
@@ -179,5 +179,5 @@
 
             return result ?? word; // worse case, return the original word
         }
-    }
+    }		
 #>

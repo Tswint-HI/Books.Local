@@ -28,7 +28,7 @@ ancestors.Reverse();
 
 namespace <#= DefaultNamespace#>
 {
-	<#=BuildClassDefinition("ItemTree")#>
+	<#=BuildClassDefinition("ItemTree")#>	
 <#
 PushIndent("\t");
 
@@ -42,14 +42,14 @@ PushIndent("\t");
 /// <summary>
 /// <#= Model.Name #> Item
 /// <para><#= GetValue(Model.SitecoreFields, "__Short description")#></para>
-/// <para>Path: <#= Model.Path #></para>
-/// <para>ID: <#= Model.ID.ToString() #></para>
+/// <para>Path: <#= Model.Path #></para>	
+/// <para>ID: <#= Model.ID.ToString() #></para>	
 /// </summary>
 <#=BuildClassDefinition(Model)#>
 	public static global::Sitecore.Data.ID ItemID { get { return new global::Sitecore.Data.ID("<#=Model.ID#>"); } }
 	public static string ItemName { get { return  "<#=Model.Name#>"; } }
 	public static string ItemPath { get { return  "<#=Model.Path#>"; } }
-
+	
 	public static global::Sitecore.Data.ID TemplateID { get { return  new global::Sitecore.Data.ID("<#=Model.TemplateId#>"); } }
 	public static string TemplateName { get { return "<#=Model.TemplateName#>"; } }
 }
@@ -64,6 +64,8 @@ PopIndent();
 #>
 	}
 }
+
+
 
 <#+
 private string BuildClassDefinition(SitecoreItem item){

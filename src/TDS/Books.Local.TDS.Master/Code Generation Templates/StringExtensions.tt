@@ -37,7 +37,7 @@ public static string AsInterfaceName(string word)
     // Something -> ISomething
     // ISomething -> ISomething
 
-    string interfaceWord = GetFormattedWord(word, TitleCase);
+    string interfaceWord = GetFormattedWord(word, TitleCase); 
 
     // Only prefix the word with a 'I' if we don't have a word that already looks like an interface.
     if (!IsInterfaceWord(word))
@@ -64,14 +64,14 @@ public static string AsPropertyName(string word, bool pluralize = false)
 
 public static string AsFieldName(string word)
 {
-    // return _someParam.
+    // return _someParam. 
     // Note, this isn't MS guideline, but it easier to deal with than using this. everywhere to avoid name collisions
     return GetFormattedWord(word, CamelCase, (string s) => "_" + s);
 }
-
+       
 /// <summary>
-/// Tests whether the words conflicts with reserved or language keywords, and if so, attempts to return
-/// valid words that do not conflict. Usually the returned words are only slightly modified to differentiate
+/// Tests whether the words conflicts with reserved or language keywords, and if so, attempts to return 
+/// valid words that do not conflict. Usually the returned words are only slightly modified to differentiate 
 /// the identifier from the keyword; for example, the word might be preceded by the underscore ("_") character.
 /// </summary>
 /// <param name="words">The words.</param>
@@ -85,8 +85,8 @@ public static System.Collections.Generic.IEnumerable<string> AsValidWords(System
 }
 
 /// <summary>
-/// Tests whether the word conflicts with reserved or language keywords, and if so, attempts to return a
-/// valid word that does not conflict. Usually the returned word is only slightly modified to differentiate
+/// Tests whether the word conflicts with reserved or language keywords, and if so, attempts to return a 
+/// valid word that does not conflict. Usually the returned word is only slightly modified to differentiate 
 /// the identifier from the keyword; for example, the word might be preceded by the underscore ("_") character.
 /// <para>
 /// Valid identifiers in C# are defined in the C# Language Specification, item 2.4.2. The rules are very simple:
@@ -111,14 +111,14 @@ public static string AsValidWord(string word)
     // C# Identifiers - http://msdn.microsoft.com/en-us/library/aa664670(VS.71).aspx
     // replace all illegal chars with an '_'
     System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Nl}\p{Mn}\p{Mc}\p{Cf}\p{Pc}\p{Lm}]");
-    identifier = regex.Replace(identifier, "_");
-
+    identifier = regex.Replace(identifier, "_"); 
+            
     //The identifier must start with a character or '_'
     if (! (char.IsLetter(identifier, 0) || identifier[0] == '_'))
     {
         identifier = string.Concat("_", identifier);
     }
-
+ 
     // fix language specific reserved words
     identifier = FixReservedWord(identifier);
 
@@ -132,7 +132,7 @@ public static string AsValidWord(string word)
 /// <para>Each word is passed through the <c>AsValidWord</c> method ensuring that it is a valid for a namespace segment.</para>
 /// <para>Leading, trailing, and more than one consecutive '.' are removed.</para>
 /// </summary>
-/// <example>
+/// <example> 
 /// This sample shows how to call the <see cref="AsNamespace"/> method.
 /// <code>
 ///     string[] segments = new string[5]{ ".My", "Namespace.", "For", "The...Sample..", "Project."};
@@ -160,7 +160,7 @@ public static string AsNamespace(System.Collections.Generic.IEnumerable<string> 
     string ns = string.Join(".", joinedNamespace.ToArray());
     return ns;
 }
-
+        
 /// <summary>
 /// Remplacement des caract?res accentu?s
 /// </summary>
@@ -182,8 +182,8 @@ private static string RemoveDiacritics(string s)
 }
 
 /// <summary>
-/// Tests whether the word conflicts with reserved or language keywords, and if so, attempts to return a
-/// valid word that does not conflict. Usually the returned word is only slightly modified to differentiate
+/// Tests whether the word conflicts with reserved or language keywords, and if so, attempts to return a 
+/// valid word that does not conflict. Usually the returned word is only slightly modified to differentiate 
 /// the identifier from the keyword; for example, the word might be preceded by the underscore ("_") character.
 /// </summary>
 /// <param name="word">The word.</param>
@@ -206,7 +206,7 @@ private static string GetFormattedWord(string word, params Func<string, string>[
             newWord = item(newWord);
         }
     }
-    // Now that the basic transforms are done, make sure we have a valid word to use
+    // Now that the basic transforms are done, make sure we have a valid word to use 
     newWord = AsValidWord(newWord);
     return newWord;
 }
