@@ -8,7 +8,7 @@
     <div class="card-body">
         <p>Author: @Html.Glass().Editable(Model, x => x.Author)</p>
         <p class="card-title">Title: @Html.Glass().Editable(Model, x => x.Title)</p>
-        <p>Rating: @Model.Rating/5</p>
+        <p>Rating: @Html.Glass().Editable(Model, x => x.Rating)/5</p>
         <p class="card-text">Description: @Html.Glass().Editable(Model, x => x.Intro)</p>
         @Html.Glass().RenderLink(x => x.Link, new
                 {

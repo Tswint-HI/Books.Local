@@ -122,9 +122,7 @@
     <None Include="Views\web.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\ORM\code\Books.Foundation.Orm.csproj">
       <Project>{dc69f037-d421-4792-8e5a-2fdbeaac8a50}</Project>

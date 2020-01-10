@@ -22,7 +22,7 @@ namespace Books.Feature.Search.Controllers
 
         public ActionResult Index(Data data)
         {
-            try 
+            try
             {
                 var model = new ResponseItem();
                 if (!string.IsNullOrEmpty(data.SearchTerm))
@@ -47,7 +47,7 @@ namespace Books.Feature.Search.Controllers
             }
             catch (System.NotSupportedException ex)
             {
-                Sitecore.Diagnostics.Log.Error("Error message", ex);
+                Sitecore.Diagnostics.Log.Error("There was an issue with Solr or your Response item + ", ex);
             }
 
             return null;
