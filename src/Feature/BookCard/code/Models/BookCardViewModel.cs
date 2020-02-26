@@ -39,6 +39,7 @@ namespace Books.Feature.BookCard.Models
             Author = _bcDatasource.Author;
             Genre = _bcDatasource.Genre;
             PublishDate = _bcDatasource.PublishDate;
+
             Intro = _bcDatasource.Intro;
             BookReview = _bcDatasource.BookReview;
             Rating = _bcDatasource.Rating;

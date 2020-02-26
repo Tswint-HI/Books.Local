@@ -7,6 +7,8 @@ using Glass.Mapper.Sc.Web.Mvc;
 
 using Sitecore.Mvc.Presentation;
 
+using LinksFolder = Books.Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigation_Links_Folder;
+
 namespace Books.Feature.Navigation.Controllers
 {
     public class NavigationController : Controller
@@ -15,13 +17,11 @@ namespace Books.Feature.Navigation.Controllers
 
         public NavigationController(IMvcContext context) => _context = context ?? throw new ArgumentNullException(nameof(context));
 
-        public ActionResult GetNav()
-        {
-            return RenderingContext.Current.Rendering.Item != null
-                ? _context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigation_Links_Folder>() == null
+        public ActionResult GetNav() =>
+            RenderingContext.Current.Rendering.Item != null
+                ? _context.GetDataSourceItem<LinksFolder>() == null
                     ? null
-                    : View(new HeaderViewModel(_context.GetDataSourceItem<Foundation.Orm.Models.sitecore.templates.Feature.Navigation.INavigation_Links_Folder>(), _context))
+                    : View(new HeaderViewModel(_context.GetDataSourceItem<LinksFolder>(), _context))
                 : null;
-        }
     }
 }

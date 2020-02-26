@@ -26,16 +26,13 @@ namespace Books.Foundation.Orm.App_Start
             return dependencyResolver;
         }
 
-        public static IConfigurationLoader[] GlassLoaders()
-        {
-            /* USE THIS AREA TO ADD FLUENT CONFIGURATION LOADERS
+        /* USE THIS AREA TO ADD FLUENT CONFIGURATION LOADERS
              *
              * If you are using Attribute Configuration or automapping/on-demand mapping you don't need to do anything!
              *
              */
 
-            return new IConfigurationLoader[] { };
-        }
+        public static IConfigurationLoader[] GlassLoaders() => new IConfigurationLoader[] { };
 
         public static void PostLoad()
         {

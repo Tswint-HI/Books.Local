@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Sitecore.Data;
 using Sitecore.DependencyInjection;
 
+// Register all galss mapper services with Sitecore Container
 namespace Books.Foundation.DI.Infrastructure
 {
     public class MvcControllerServicesConfigurator : IServicesConfigurator

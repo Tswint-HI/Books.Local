@@ -19,20 +19,16 @@ namespace Books.Feature.Banner.Controllers
         public BannerController(IMvcContext context) => _context = context ?? throw new ArgumentNullException(nameof(context));
 
         // Featured Genre for the home page
-        public ActionResult FeaturedGenre()
-        {
-            return RenderingContext.Current.Rendering.Item != null
+        public ActionResult FeaturedGenre() =>
+            RenderingContext.Current.Rendering.Item != null
                 ? _context.GetDataSourceItem<FeatureItem>() != null
-                ? View(_ = new BannerViewModel(_context.GetDataSourceItem<FeatureItem>())) : null
+                    ? View(_ = new BannerViewModel(_context.GetDataSourceItem<FeatureItem>())) : null
                 : View();
-        }
 
         // Genre list for Genre Page
-        public ActionResult GetAllGenres()
-        {
-            return RenderingContext.Current.Rendering.Item != null
+        public ActionResult GetAllGenres() =>
+            RenderingContext.Current.Rendering.Item != null
                 ? _context.GetDataSourceItem<BannerFolder>() == null ? null : View(BannerViewModel.GetAllBanners(_context.GetDataSourceItem<BannerFolder>(), _context))
                 : View();
-        }
     }
 }

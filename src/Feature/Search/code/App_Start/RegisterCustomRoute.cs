@@ -14,9 +14,6 @@ namespace Books.Feature.Search.App_Start
                 new { Controller = "Search", Action = "Index", Id = UrlParameter.Optional });
         }
 
-        public virtual void Process(PipelineArgs args)
-        {
-            Register();
-        }
+        public virtual void Process(PipelineArgs args) => Register();
     }
 }

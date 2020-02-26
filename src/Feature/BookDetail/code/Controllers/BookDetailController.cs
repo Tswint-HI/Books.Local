@@ -18,11 +18,9 @@ namespace Books.Feature.BookDetail.Controllers
         public BookDetailController(IMvcContext context) => _context = context ?? throw new ArgumentNullException(nameof(context));
 
         // Book detail page
-        public ActionResult GetDetail()
-        {
-            return RenderingContext.Current.Rendering.Item != null
+        public ActionResult GetDetail() =>
+            RenderingContext.Current.Rendering.Item != null
                 ? _context.GetContextItem<Book>() == null ? null : View(_ = new BookViewModel(_context.GetContextItem<Book>()))
                 : View();
-        }
     }
 }

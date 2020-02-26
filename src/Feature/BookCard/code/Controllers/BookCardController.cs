@@ -20,26 +20,23 @@ namespace Books.Feature.BookCard.Controllers
         public BookCardController(IMvcContext context) => _context = context ?? throw new ArgumentNullException(nameof(context));
 
         // Single Card
-        public ActionResult BookCard()
-        {
-            return RenderingContext.Current.Rendering.Item != null
+        public ActionResult BookCard() =>
+            RenderingContext.Current.Rendering.Item != null
                 ? _context.GetDataSourceItem<Card>() == null ? null : View(_ = new BookCardViewModel(_context.GetDataSourceItem<Card>()))
                 : View();
-        }
-        // Gets only the books that match critera 
-        public ActionResult BookCardHighRatings()
-        {
-            return RenderingContext.Current.Rendering.Item != null
+
+        // Gets only the books that match criteria
+        public ActionResult BookCardHighRatings() =>
+            RenderingContext.Current.Rendering.Item != null
                 ? _context.GetDataSourceItem<Folder>() == null ? null : View(BookCardViewModel.GetBooksWithHighestRating(_context.GetDataSourceItem<Folder>()))
                 : View();
-        }
+
         // Gets books of specified genre
-        public ActionResult BooksByGenre()
-        {
-            return RenderingContext.Current.Rendering.Item != null
+        public ActionResult BooksByGenre() =>
+            RenderingContext.Current.Rendering.Item != null
                 ? _context.GetDataSourceItem<Folder>() == null ? null : View(BookCardViewModel.AllBooks(_context.GetDataSourceItem<Folder>(), _context))
                 : View();
-        }
+
         // Gets the Book card Heading
         public ActionResult Heading() => RenderingContext.Current.Rendering.Item != null ? View(new HeaderViewModel(_context.GetDataSourceItem<Header>())) : null;
     }
